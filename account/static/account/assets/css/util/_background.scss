@@ -1,0 +1,289 @@
+/* ###### 9.1 Background  ###### */
+
+.bg-transparent {
+	background-color: transparent;
+  }
+  
+  .bg-gray-100 {
+	background-color: $gray-100;
+  }
+  
+  .bg-gray-200 {
+	background-color: $gray-200;
+  }
+  
+  .bg-gray-300 {
+	background-color: $gray-300;
+  }
+  
+  .bg-gray-400 {
+	background-color: $gray-400;
+  }
+  
+  .bg-gray-500 {
+	background-color: $gray-500;
+  }
+  
+  .bg-gray-600 {
+	background-color: $gray-600;
+  }
+  
+  .bg-gray-700 {
+	background-color: $gray-700;
+  }
+  
+  .bg-gray-800 {
+	background-color: $gray-800;
+  }
+  
+  .bg-gray-900 {
+	background-color: $gray-900;
+  }
+  
+  .bg-white-1 {
+	background-color: $white-1;
+  }
+  
+  .bg-white-2 {
+	background-color: $white-2;
+  }
+  
+  .bg-white-3 {
+	background-color: $white-3;
+  }
+  
+  .bg-white-4 {
+	background-color: $white-4;
+  }
+  
+  .bg-white-5 {
+	background-color: $white-5;
+  }
+  
+  .bg-white-6 {
+	background-color: $white-6;
+  }
+  
+  .bg-white-7 {
+	background-color: $white-7;
+  }
+  
+  .bg-white-8 {
+	background-color: $white-8;
+  }
+  
+  .bg-white-9 {
+	background-color: $white-9;
+  }
+  
+  .bg-black-1 {
+	background-color: $black-1;
+  }
+  
+  .bg-black-2 {
+	background-color: $black-2;
+  }
+  
+  .bg-black-3 {
+	background-color: $black-3;
+  }
+  
+  .bg-black-4 {
+	background-color: $black-4;
+  }
+  
+  .bg-black-5 {
+	background-color: $black-5;
+  }
+  
+  .bg-black-6 {
+	background-color: $black-6;
+  }
+  
+  .bg-black-7 {
+	background-color: $black-7;
+  }
+  
+  .bg-black-8 {
+	background-color: $black-8;
+  }
+  
+  .bg-black-9 {
+	background-color: $black-9;
+  }
+  
+  .bg-indigo {
+	background-color: $primary;
+  }
+  
+  .bg-purple {
+	background-color: $purple;
+  }
+  
+  .bg-pink {
+	background-color: $pink;
+  }
+  
+  .bg-orange {
+	background-color: $orange;
+  }
+  
+  .bg-teal {
+	background-color: $teal !important;
+  }
+  
+  .bg-purple-dark {
+	background-color: #59339d;
+  }
+  
+  .bg-primary {
+	background-color: $primary !important;
+  }
+  
+  a.bg-primary {
+	&:hover, &:focus {
+	  background-color: #0040ff !important;
+	}
+  }
+  
+  button.bg-primary {
+	&:hover, &:focus {
+	  background-color: #0040ff !important;
+	}
+  }
+  
+  .bg-secondary {
+	background-color: #8587a7 !important;
+  }
+  
+  a.bg-secondary {
+	&:hover, &:focus {
+	  background-color: #5f6d88 !important;
+	}
+  }
+  
+  button.bg-secondary {
+	&:hover, &:focus {
+	  background-color: #5f6d88 !important;
+	}
+  }
+  
+  .bg-success {
+	background-color: $success !important;
+  }
+  
+  a.bg-success {
+	&:hover, &:focus {
+	  background-color: #2a7d01 !important;
+	}
+  }
+  
+  button.bg-success {
+	&:hover, &:focus {
+	  background-color: #2a7d01 !important;
+	}
+  }
+  
+  .bg-info {
+	background-color: $info !important;
+  }
+  
+  a.bg-info {
+	&:hover, &:focus {
+	  background-color: #117a8b !important;
+	}
+  }
+  
+  button.bg-info {
+	&:hover, &:focus {
+	  background-color: #117a8b !important;
+	}
+  }
+  
+  .bg-warning {
+	background-color: $warning !important;
+  }
+  
+  a.bg-warning {
+	&:hover, &:focus {
+	  background-color: #d39e00 !important;
+	}
+  }
+  
+  button.bg-warning {
+	&:hover, &:focus {
+	  background-color: #d39e00 !important;
+	}
+  }
+  
+  .bg-danger {
+	background-color: $danger !important;
+  }
+  
+  a.bg-danger {
+	&:hover, &:focus {
+	  background-color: #bd2130 !important;
+	}
+  }
+  
+  button.bg-danger {
+	&:hover, &:focus {
+	  background-color: #bd2130 !important;
+	}
+  }
+  
+  .bg-purple {
+	background-color: #673ab7 !important;
+  }
+  
+  a.bg-purple {
+	&:hover, &:focus {
+	  background-color: #5930a2 !important;
+	}
+  }
+  
+  button.bg-purple {
+	&:hover, &:focus {
+	  background-color: #5930a2 !important;
+	}
+  }
+  
+  .bg-light {
+	background-color: #efeff5  !important;
+  }
+  
+  a.bg-light {
+	&:hover, &:focus {
+	  background-color: #e7e7f1 !important;
+	}
+  }
+  
+  button.bg-light {
+	&:hover, &:focus {
+	  background-color: #e7e7f1 !important;
+	}
+  }
+  
+  .bg-dark {
+	background-color: $dark !important;
+  }
+  
+  a.bg-dark {
+	&:hover, &:focus {
+	  background-color: #283143 !important;
+	}
+  }
+  
+  button.bg-dark {
+	&:hover, &:focus {
+	  background-color: #283143 !important;
+	}
+  }
+  
+  .bg-white {
+	background-color: $white !important;
+  }
+  
+  .bg-transparent {
+	background-color: transparent !important;
+  }

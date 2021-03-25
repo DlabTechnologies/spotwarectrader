@@ -1,0 +1,59 @@
+/*!
+ * jQuery Conveyor Ticker (jConveyorTicker)
+ * Description: jQuery plugin to create simple horizontal conveyor belt animated tickers.
+ *
+ * Copyright (c) 2017 Luis Luz - UXD Lda
+ *
+ * Licensed under the MIT license:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *
+ * Project home:
+ *   https://github.com/lluz/jquery-conveyor-ticker
+ *
+ * Version:  1.0.2
+ *
+ */
+ 
+.jctkr-wrapper,
+.jctkr-wrapper *{
+  box-sizing: border-box;
+}
+.jctkr-wrapper{
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 90px;
+  vertical-align: top;
+  overflow: hidden;
+}
+.jctkr-wrapper ul{
+  position: absolute;
+  left: 0;
+  font-size: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  overflow: visible;
+}
+.jctkr-wrapper.jctkr-initialized ul{
+  opacity: 100;
+  height: 90px;
+  overflow: hidden;
+}
+.jctkr-wrapper ul li .crypto-card{
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 16px;
+  margin: 0 0.3rem;
+  padding: 13px 30px;
+  background: #fff;
+  line-height: 1.4;
+  box-shadow: 5px 7px 12px -5px #9f9fbb;
+  border-radius: 3px;
+   display: inline;
+  float: left;
+  white-space: nowrap;
+}
+
+.jctkr-label{
+  display: inline-block;
+}

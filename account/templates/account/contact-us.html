@@ -1,0 +1,1342 @@
+
+{% load static %}
+{% load widget_tweaks %}
+{% load humanize %}
+
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Contact Us | Spotware Systems Ltd</title>
+    <link rel="icon" type="image/png" href="{% static 'spotwarectrader/user/themes/spotware/images/favicon.png' %}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   
+    <meta name="generator" content="Spotware" />
+    <meta name="description" content="Contact trading solutions provider to send your request or get a demo of our products." />
+    <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" property="twitter:title" content="Contact Us" />
+    <meta name="twitter:description" property="twitter:description" content="Contact trading solutions provider to send your request or get a demo of our products." />
+    <meta name="twitter:image" property="twitter:image" content="{% static 'spotwarectrader/user/pages/05.company/03.contacts/01.contact-us/_main/bank.png' %}" />
+    <meta name="twitter:site" property="twitter:site" content="@cTrader" />
+    <meta property="og:title" content="Contact Us" />
+    <meta property="og:description" content="Contact trading solutions provider to send your request or get a demo of our products." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_EN" />
+    <meta property="og:url" content="{% url 'contact_page' %}" />
+    <meta property="og:image" content="{% static 'spotwarectrader/user/pages/05.company/03.contacts/01.contact-us/_main/bank.png' %}" />
+    <script defer type="text/javascript" src="{% static 'spotwarectrader/user/themes/spotware/cookies/config.min.js' %}"></script>
+<script defer type="text/javascript" src="{% static 'spotwarectrader/user/themes/spotware/cookies/consent.js' %}" data-config="consentConfig" data-stylePrefix="klaro"></script>    
+                                                                        
+
+                                                                                        
+
+            <link href="{% static 'spotwarectrader/assets/af8a01011fda50c04e3816017ce57390ab85.css' %}" type="text/css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com/">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+        {{ form.media.css }}
+</head>
+
+<body id="top" class="modular header-lite fullwidth">
+    <div id="wrapper">
+                    
+
+      <header id="mobile-site-header" class="mobile-header">
+        <div id="mobile-site-logo">
+            <a href="{% url 'home_page' %}">
+                <img class="" src="{% static 'spotwarectrader/user/themes/spotware/images/logo-10years-white.png' %}" alt="Spotware 10 Years">
+            </a>
+        </div>
+    
+        <div id="mobile-header-sidebar" class="clearfix">
+            <div id="text-30" class="widget widget_text">
+                <div class="textwidget"></div>
+            </div>
+        </div>
+        <a href="#mobile-site-navigation" class="toggle-mobile-menu"><i class="fa fa-bars"></i></a>
+    </header>
+    
+    <header id="site-header" class="header-style-default">
+        <div id="header-wrapper" class="">
+            <div id="header-container" class="header-container container clearfix">
+    
+                <div id="" class="site-navigation menu-float-right">
+                    <div class="site-logo">
+                        <a href="{% url 'home_page' %}">
+                        <img class="" src="{% static 'spotwarectrader/user/themes/spotware/images/svg/logo-10years.svg' %}" alt="Spotware 10 Years" width="300px">
+                        </a>
+                    </div>
+    
+                    <div class="site-links menu-float-right secondary-navigation-container">
+                        <nav id="secondary-navigation" class="menu-container-2 menu-float-right">
+                            <ul id="menu-secondary-menu" class="menu">
+                              {%  if request.user.is_admin %}
+                              <li class="menu-startup menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.spotwarectrader.com/dlabtech_admin"> Admin Panel</a></li>
+                              <li class="menu-ctrader menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'logout' %}"> Logout</a></li>
+                             {% else %}
+                              <li class="menu-startup menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'login' %}"> Login</a></li>
+                              <li class="menu-ctrader menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'register' %}"> Register</a></li>
+                             {% endif %}</ul>
+                        </nav>
+                    </div>
+                </div>
+    
+                <div id="" class="site-navigation menu-float-right">
+                    <div class="site-links menu-float-right primary-navigation-container">
+                        <nav id="primary-navigation" class="menu-container">
+                            <ul id="menu-main-menu" class="menu">
+                                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                        <a href="{% url 'crypto_exchange_page' %}" class="">cXchange</a>
+                    </li>
+                                                                <li class="megamenu columns-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children "><a class="">cTrader Suite</a>
+                        <ul class="sub-menu">
+                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Trading platforms and features</p>
+                                    <ul class="sub-menu">
+                                                                                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_overview_page' %}" class="">cTrader Overview</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_trading_page' %}" class="">cTrader Trading</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_charting_page' %}" class="">cTrader Charting</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_copy_page' %}" class="">cTrader Copy</a></li>
+                                                                                                                </ul>
+                                </li>
+                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Back-office features and add-ons</p>
+                                    <ul class="sub-menu">
+                                                                                         <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_risk_management_page' %}" class="">cTrader Risk Management</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_symbol_management_page' %}" class="">cTrader Symbol Management</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_reporting_page' %}" class="">cTrader Reporting</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_white_label_page' %}" class="">cTrader White Labels</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_partner_program_page' %}" class="">cTrader Partner Programs</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_fifo_netting_page' %}" class="">cTrader FIFO Netting</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_spread_betting_page' %}" class="">cTrader Spread Betting</a></li>
+                                                                                                                </ul>
+                                </li>
+                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Server-side components and services</p>
+                                    <ul class="sub-menu">
+                                                                                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_server_page' %}" class="">cTrader Server</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_proxy_cloud_page' %}" class="">cTrader Proxy Cloud</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_extensibility_page' %}" class="">cTrader Extensibility</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_service_assurance_page' %}" class="">cTrader Service Assurance</a></li>
+                                                                                  
+                                                                                                                </ul>
+                                </li>
+                                                </ul>
+                    </li>
+                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                        <a href="{% url 'custom_development_page' %}" class="">Development</a>
+                    </li>
+                                                                <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                        <a href="{% url 'integration_page' %}" class="">Integrations</a>
+                    </li>
+                                                                <li class="megamenu columns-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children "><a class="">About Us</a>
+                        <ul class="sub-menu">
+                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">About</p>
+                                    <ul class="sub-menu">
+                                                                                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'about_spotware_page' %}" class="">About Spotware</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'testimonials_page' %}" class="">Testimonials</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'leader_ship_page' %}" class="">Leadership Team</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'awards_page' %}" class="">cTrader Awards</a></li>
+                                                                                                                </ul>
+                                </li>
+                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Careers</p>
+                                    <ul class="sub-menu">
+                                                                                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'why_spotware_page' %}" class="">Why Spotware</a></li>
+                                                                                     
+                                                                                                                </ul>
+                                </li>
+                                                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Contacts</p>
+                                    <ul class="sub-menu">
+                                                                                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'contact_page' %}" class="">Contact Us</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'contact_page' %}" class="">Subscribe to Product Updates</a></li>
+                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'contact_page' %}" class="">Request a Demo</a></li>
+                                                                                                                </ul>
+                                </li>
+                                                </ul>
+                    </li>
+                            
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="site-links menu-float-right">
+                    </div>
+                </div><!-- #site-navigation -->
+    
+            
+    
+            </div><!-- #header-container -->
+        </div><!-- #header-wrapper -->
+    </header>
+    
+                <div class="right-sticky-block">
+        <a href="{% url 'contact_page' %}" class="">
+            <img alt="Get Demo" data-src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/get-demo.png' %}" class=" lazyloaded" src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/get-demo.png' %}" loading="lazy"><noscript><img src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/get-demo.png' %}" alt="Get Demo"></noscript>
+            <span>Get Demo</span>
+        </a>
+        <a href="{% url 'integration_page' %}" class="">
+            <img alt="Get Demo" data-src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/brokers.png' %}" class=" lazyloaded" src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/brokers.png' %}" loading="lazy"><noscript><img src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/brokers.png' %}" alt="Get Demo"></noscript>
+            <span>Brokers</span>
+        </a>
+        <a href="{% url 'contact_page' %}"> <!-- class="fancybox"-->
+            <img alt="Subscribe" data-src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/subscribe.png' %}" class=" lazyloaded" src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/subscribe.png' %}" loading="lazy"><noscript><img src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/subscribe.png' %}" alt="Subscribe"></noscript>
+            <span>Subscribe</span>
+        </a>
+    
+
+        <a class='' href='https://api.whatsapp.com/send?phone=32460220607&text=Hi%20Spotware%20System Ltd.' title='Show Chat'>
+          <img alt="Contact" data-src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/contact.png' %}" class=" lazyloaded" src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/contact.png' %}" loading="lazy"><noscript><img src="{% static 'spotwarectrader/user/themes/spotware/images/sticky-buttons/contact.png' %}" alt="Contact"></noscript>
+          <span>Live Chart</span>
+        </a>
+	
+       
+    
+    </div>     
+        
+                <section id="body" class=" clearfix">
+                        <div class="page-header bg-bottom bg-norepeat bg-waves">
+	
+	<div class="container">
+				<h1>Contact Us</h1>
+							<p class="font-weight-bold">Discover how we help brokers and exchanges to increase their revenues, and investors to improve their trading experience.</p>
+			</div>
+</div>
+            
+<div id=""
+     class="bg-white my-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-8" style="">
+                        
+                            <div class="" style="height: 32px"></div>            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-3-4" style="">
+                        
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1" style="">
+                        
+              
+<!--messages-->
+<div class="messages" style="text-align: center;">
+  {% if messages %}
+  {% for message in messages %}
+  <p class="alert alert-{{ message.tags }}" style="color:green"><b>
+    {{message}}</b>
+  </p>
+  {% endfor %}
+  {% endif %}
+  </div>
+<!--end messages-->
+
+
+                            <h6 class="text-center mb-2" id="" style="">
+        Tell us who you are, so your message or demo request gets sent to the right team!    </h6>
+                            <div class="" style="height: 32px"></div>                            <h4 class="text-center mb-2" id="" style="">
+        I am a    </h4>
+                            <div class="" style="height: 32px"></div>                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-3" style="">
+            <div class="mx-3" style="
+                                                
+                ">            
+                            <a href="#"
+   target="_top"
+   class="contact-form-selector"
+   id="contact-selector-bank"
+ data-target=".contact-form-bank" data-hash="bank" data-persona="Bank">
+<div class="card card-dotted" style="">
+                <div class="card-body ">
+                            <img src="{% static 'spotwarectrader/user/pages/05.company/03.contacts/01.contact-us/_main/bank.png' %}"
+                                    class=""
+            alt="">
+                            <h4 class="text-center mb-2" id="" style="">
+        Bank    </h4>
+                    </div>
+        </div>
+</a>            
+                        </div>        </div>
+            <div class="pure-u-1-3" style="">
+            <div class="mx-3" style="
+                                                
+                ">            
+                            <a href="#"
+   target="_top"
+   class="contact-form-selector"
+   id="contact-selector-broker"
+ data-target=".contact-form-broker" data-hash="broker" data-persona="Broker">
+<div class="card card-dotted" style="">
+                <div class="card-body ">
+                            <img src="{% static 'spotwarectrader/user/pages/05.company/03.contacts/01.contact-us/_main/broker.png' %}"
+                                    class=""
+            alt="">
+                            <h4 class="text-center mb-2" id="" style="">
+        Broker    </h4>
+                    </div>
+        </div>
+</a>            
+                        </div>        </div>
+            <div class="pure-u-1-3" style="">
+            <div class="mx-3" style="
+                                                
+                ">            
+                            <a href="#"
+   target="_top"
+   class="contact-form-selector"
+   id="contact-selector-cxchange"
+ data-target=".contact-form-cxchange" data-hash="cxchange" data-persona="Exchange">
+<div class="card card-dotted" style="">
+                <div class="card-body ">
+                            <img src="{% static 'spotwarectrader/user/pages/05.company/03.contacts/01.contact-us/_main/crypto.png' %}"
+                                    class=""
+            alt="">
+                            <h4 class="text-center mb-2" id="" style="">
+        Crypto Exchange    </h4>
+                    </div>
+        </div>
+</a>            
+                        </div>        </div>
+    </div>                            <div class="" style="height: 32px"></div>            
+                                </div>
+            <div class="pure-u-1-1 contact-form contact-form-bank" style="">
+                        
+                            <h6 class="text-center mb-2" id="" style="">
+        You’re a  Bank!    </h6>
+                            <p class="text-center" id="" style="">
+        cTrader helps banks to convert, retain and increase the lifetime value of their traders and partners. Contact us and we’ll explain it all!    </p>
+                                
+
+
+
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+<form
+        name="contact-bank-form"
+    action=""
+    method="POST"
+    id="contact-bank-form"              class=" ">
+    {% csrf_token %}
+                      
+                                  
+
+<input
+                data-grav-field="hidden"
+        data-grav-disabled="false"
+        type="hidden"
+        class="input contact-form-persona_field "
+        name="data[persona]"
+        value="Broker" />
+                                      
+                                  <div class="form-columns pure-g ">
+        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="bank-form-name">Name              <span class="required">*</span></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="text"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.request_type name="request_type" type="hidden" class="form-input form-control form-control-lg rounded-0" id="bank-form-name" value="Bank request"  autocomplete="off"  %}
+                           
+                          {% render_field form.name name="name" type="text" class="form-input form-control form-control-lg rounded-0" id="bank-form-name"  autocomplete="off" required="required" %}
+                                      </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="bank-form-email">Email              <span class="required">*</span></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="email"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.email name="email" value="" type="email" class="form-input form-control form-control-lg rounded-0" id="bank-form-email"  required="required" %}
+                                  </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="bank-form-company">Company Name</label>
+      </div>
+        <div class="form-data"
+          data-grav-field="text"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.company_name name="company_name" value="" type="text" class="form-input form-control form-control-lg rounded-0" id="bank-form-company"  autocomplete="off" %}
+                                      </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="bank-form-your-phone">Phone</label>
+      </div>
+        <div class="form-data"
+          data-grav-field="text"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.phone name="phone" value="" type="text" class="form-input form-control form-control-lg rounded-0" id="bank-form-your-phone" autocomplete="off" %}
+                                      </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-1 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="bank-form-message">Your Message (Optional)</label>
+      </div>
+        <div class="form-data"
+          data-grav-field="textarea"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                  <div class="form-textarea-wrapper long mx-3 mb-4">
+                    {% render_field form.message name="bank_message" class="form-input form-control form-control-lg rounded-0  long" id="bank-form-message"   %}
+                            </div>
+                </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-1 form-group">
+            <div class="form-label-wrapper"><label class="form-label" for="bank-form-getdemo"></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="checkbox"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                      <div class="form-input-wrapper  mx-3 mb-4">
+        <input
+                        name="data[get_demo]"
+            value="1"
+            type="checkbox"
+            
+                                        id="bank-form-getdemo"
+                class=""                 style="vertical-align: middle;"                                                                                                         />
+        <label style="display:inline;" class="inline " for="bank-form-getdemo">
+                            Get a demo of cTrader to discover how the platform and it&#039;s features help brokers to increase their revenues and investors to improve their trading experience.
+                        
+        </label>
+    </div>
+                </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-1 form-group">
+            <div class="form-label-wrapper"><label class="form-label" for="bank-form-sendinblue_opt"></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="checkbox"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                      <div class="form-input-wrapper  mx-3 mb-4">
+        <input
+                        name="data[sendinblue_opt]"
+            value="1"
+            type="checkbox"
+            
+                                        id="bank-form-sendinblue-opt"
+                class=""                 style="vertical-align: middle;"                                                                                                         />
+        <label style="display:inline;" class="inline " for="bank-form-sendinblue-opt">
+                            Get a demo of cTrader to discover how the platform and it&#039;s features help brokers to increase their revenues and investors to improve their trading experience.
+                        
+        </label>
+    </div>
+                </div>
+  </div>
+                    </div>
+                                      
+                                  <div class="form-columns pure-g ">
+        
+                                    <div class="form-column pure-u-1-1 pure-u-md-1-1 d-flex ">
+                <div class="mx-auto my-auto">
+        
+        
+  <button
+                                                                                                        type="submit"
+                                                    class="btn btn btn-green font-weight-bold btn-lg btn-round px-5 text-center"
+                                                                    style=""
+                            >Send Message</button>
+
+        </div>    </div>
+                    </div>
+                                      
+                              
+                                      
+                                  
+
+                                      
+                                  
+                        
+                                  
+         
+
+            <div class="button-wrapper pure-u-1-1">
+  
+
+    
+        </div>
+  
+  </form>
+
+            
+                                </div>
+            <div class="pure-u-1-1 contact-form contact-form-broker" style="">
+                        
+                            <h6 class="text-center mb-2" id="" style="">
+        You’re a Broker!    </h6>
+                            <p class="text-center" id="" style="">
+        cTrader helps brokers to convert, retain and increase the lifetime value of their traders. Contact us and we’ll explain it all!    </p>
+                                
+
+
+
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+<form
+        name="contact-broker-form"
+    action=""
+    method="POST"
+    id="contact-broker-form"              class=" ">
+    {% csrf_token %}
+                      
+                                  
+
+<input
+                data-grav-field="hidden"
+        data-grav-disabled="false"
+        type="hidden"
+        class="input contact-form-persona_field "
+        name="data[persona]"
+        value="Broker" />
+                                      
+                                  <div class="form-columns pure-g ">
+        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="broker-form-name">Name              <span class="required">*</span></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="text"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.request_type name="request_type"  type="hidden" class="form-input form-control form-control-lg rounded-0" value="Broker Request" id="broker-form-name" autocomplete="off"  %}
+                          
+                          {% render_field form.name name="name" value="" type="text" class="form-input form-control form-control-lg rounded-0" id="broker-form-name" autocomplete="off" required="required" %}
+                                      </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="broker-form-email">Email              <span class="required">*</span></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="email"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.email name="email" value="" type="email" class="form-input form-control form-control-lg rounded-0" id="broker-form-email" required="required" %}
+                                  </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="broker-form-your-company">Company Name</label>
+      </div>
+        <div class="form-data"
+          data-grav-field="text"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.company_name name="company_name" value="" type="text" class="form-input form-control form-control-lg rounded-0" id="broker-form-your-company" autocomplete="off" %}
+                                      </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="broker-form-your-phone">Phone</label>
+      </div>
+        <div class="form-data"
+          data-grav-field="text"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.phone name="phone" value="" type="text" class="form-input form-control form-control-lg rounded-0" id="broker-form-your-phone" autocomplete="off"  %}
+                                      </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-1 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="broker-form-message">Your Message (Optional)</label>
+      </div>
+        <div class="form-data"
+          data-grav-field="textarea"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                  <div class="form-textarea-wrapper long mx-3 mb-4">
+                    {% render_field form.message name="message" class="form-input form-control form-control-lg rounded-0  long" id="broker-form-message"      %}
+                            </div>
+                </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-1 form-group">
+            <div class="form-label-wrapper"><label class="form-label" for="broker-form-getdemo"></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="checkbox"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                      <div class="form-input-wrapper  mx-3 mb-4">
+        <input
+                        name="data[get_demo]"
+            value="1"
+            type="checkbox"
+            
+                                        id="broker-form-getdemo"
+                class=""                 style="vertical-align: middle;"                                                                                                         />
+        <label style="display:inline;" class="inline " for="broker-form-getdemo">
+                            Get a demo of cTrader to discover how the platform and it&#039;s features help brokers to increase their revenues and investors to improve their trading experience.
+                        
+        </label>
+    </div>
+                </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-1 form-group">
+            <div class="form-label-wrapper"><label class="form-label" for="broker-form-sendinblue_opt"></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="checkbox"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                      <div class="form-input-wrapper  mx-3 mb-4">
+        <input
+                        name="data[sendinblue_opt]"
+            value="1"
+            type="checkbox"
+            
+                                        id="broker-form-sendinblue-opt"
+                class=""                 style="vertical-align: middle;"                                                                                                         />
+        <label style="display:inline;" class="inline " for="broker-form-sendinblue-opt">
+                            Get a demo of cTrader to discover how the platform and it&#039;s features help brokers to increase their revenues and investors to improve their trading experience.
+                        
+        </label>
+    </div>
+                </div>
+  </div>
+                    </div>
+                                      
+                                  <div class="form-columns pure-g ">
+        
+                                    <div class="form-column pure-u-1-1 pure-u-md-1-1 d-flex ">
+                <div class="mx-auto my-auto">
+        
+        
+  <button
+                                                                                                        type="submit"
+                                                    class="btn btn btn-green font-weight-bold btn-lg btn-round px-5 text-center"
+                                                                    style=""
+                            >Send Message</button>
+
+        </div>    </div>
+                    </div>
+                                      
+                                  <input aria-hidden="true"
+       type="text"
+              style="visibility:hidden;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);"
+              class="form-honeybear"
+       name="data[honeypot]"
+       value="" />
+                                      
+                                  
+
+<input
+        id="ctrader-sendinblue-list-id"         data-grav-field="hidden"
+        data-grav-disabled="false"
+        type="hidden"
+        class="input "
+        name="data[sendinblue_id]"
+        value="10" />
+                                      
+                                  
+
+<input
+                data-grav-field="hidden"
+        data-grav-disabled="false"
+        type="hidden"
+        class="input "
+        name="data[sendinblue_name]"
+        value="Subscriber&#x20;spotware.com" />
+                                      
+                                  
+
+<input
+                data-grav-field="hidden"
+        data-grav-disabled="false"
+        type="hidden"
+        class="input contact-form-referer_page "
+        name="data[referer_page]"
+        value="Unknown" />
+                            
+
+    <input type="hidden" name="__form-name__" value="contact-broker-form" />
+            <input type="hidden" name="__unique_form_id__" value="m7trv8zqnlhtsd0ejdal" />
+    <input type="hidden" name="form-nonce" value="103deba30f251345ddf315d7411684ff" />
+
+      
+            <div class="button-wrapper pure-u-1-1">
+  
+
+    
+        </div>
+  
+  </form>
+
+            
+                                </div>
+            <div class="pure-u-1-1 contact-form contact-form-cxchange" style="">
+                        
+                            <h6 class="text-center mb-2" id="" style="">
+        You’re a Cryptocurrency Exchange!    </h6>
+                            <p class="text-center" id="" style="">
+        cXchange is a cryptocurrency exchange solution that will equip you with an advanced instrument to launch your own cryptocurrency exchange. Contact us to learn more!    </p>
+                                
+
+
+
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+<form
+        name="contact-exchange-form"
+    action=""
+    method="POST"
+    id="contact-exchange-form"              class=" ">
+    {% csrf_token %}
+                      
+                                  
+
+<input
+        id="exchange-form-persona"         data-grav-field="hidden"
+        data-grav-disabled="false"
+        type="hidden"
+        class="input contact-form-persona_field "
+        name="data[persona]"
+        value="Exchange" />
+                                      
+                                  <div class="form-columns pure-g ">
+        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="exchange-form-name">Name              <span class="required">*</span></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="text"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.request_type name="request_type" value="Cryptocurrency Exchange Request" type="hidden" class="form-input form-control form-control-lg rounded-0" id="exchange-form-name"  autocomplete="off" %}
+                          
+                          {% render_field form.name name="name" value="" type="text" class="form-input form-control form-control-lg rounded-0" id="exchange-form-name"  autocomplete="off"  required="required" %}
+                                      </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="exchange-form-email">Email              <span class="required">*</span></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="email"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.email name="email" value="" type="email" class="form-input form-control form-control-lg rounded-0" id="exchange-form-email"  required="required" %}
+                                  </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="exchange-form-company">Company Name</label>
+      </div>
+        <div class="form-data"
+          data-grav-field="text"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.company_name name="company_name" value="" type="text" class="form-input form-control form-control-lg rounded-0" id="exchange-form-company"  autocomplete="off" %}
+                                      </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-2 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="exchange-form-phone">Phone</label>
+      </div>
+        <div class="form-data"
+          data-grav-field="text"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper mx-3 mb-4 ">
+                          {% render_field form.phone name="phone" value="" type="text" class="form-input form-control form-control-lg rounded-0" id="exchange-form-phone" autocomplete="off" %}
+                                      </div>
+                        </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-1 form-group">
+            <div class="form-label-wrapper mx-3"><label class="form-label" for="exchange-form-message">Your Message (Optional)</label>
+      </div>
+        <div class="form-data"
+          data-grav-field="textarea"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                  <div class="form-textarea-wrapper long mx-3 mb-4">
+                    {% render_field form.message name="message" class="form-input form-control form-control-lg rounded-0  long" id="exchange-form-message"  %}
+                            </div>
+                </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-1 form-group">
+            <div class="form-label-wrapper"><label class="form-label" for="exchange-form-getdemo"></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="checkbox"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                      <div class="form-input-wrapper  mx-3 mb-4">
+        <input
+                        name="data[get_demo]"
+            value="1"
+            type="checkbox"
+            
+                                        id="exchange-form-getdemo"
+                class=""                 style="vertical-align: middle;"                                                                                                         />
+        <label style="display:inline;" class="inline " for="exchange-form-getdemo">
+                            Get a demo of cXchange to discover how the platform and it&#039;s features can help you become a leading cryptocurrency exchange.
+                        
+        </label>
+    </div>
+                </div>
+  </div>
+                        
+                                    <div class="form-field pure-u-1-1 form-group">
+            <div class="form-label-wrapper"><label class="form-label" for="exchange-form-sendinblue_opt"></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="checkbox"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                      <div class="form-input-wrapper  mx-3 mb-4">
+        <input
+                        name="data[sendinblue_opt]"
+            value="1"
+            type="checkbox"
+            
+                                        id="exchange-form-sendinblue-opt"
+                class=""                 style="vertical-align: middle;"                                                                                                         />
+        <label style="display:inline;" class="inline " for="exchange-form-sendinblue-opt">
+                            I consent to receive exciting news and updates relating to the cXchange platform and other products of Spotware company, new features and important information.
+                        
+        </label>
+    </div>
+                </div>
+  </div>
+                    </div>
+                                      
+                                  <div class="form-columns pure-g ">
+        
+                                    <div class="form-column pure-u-1-1 pure-u-md-1-1 d-flex ">
+                <div class="mx-auto my-auto">
+        
+        
+  <button
+                                                                                                        type="submit"
+                                                    class="btn btn btn-green font-weight-bold btn-lg btn-round px-5 text-center"
+                                                                    style=""
+                            >Send Message</button>
+
+        </div>    </div>
+                    </div>
+                                      
+                                  <input aria-hidden="true"
+       type="text"
+              style="visibility:hidden;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);"
+              class="form-honeybear"
+       name="data[honeypot]"
+       value="" />
+                                      
+                                  
+
+<input
+        id="exchange-sendinblue-list-id"         data-grav-field="hidden"
+        data-grav-disabled="false"
+        type="hidden"
+        class="input "
+        name="data[sendinblue_id]"
+        value="10" />
+                                      
+                                  
+
+<input
+                data-grav-field="hidden"
+        data-grav-disabled="false"
+        type="hidden"
+        class="input "
+        name="data[sendinblue_name]"
+        value="Subscriber&#x20;spotware.com" />
+                                      
+                                  
+
+<input
+                data-grav-field="hidden"
+        data-grav-disabled="false"
+        type="hidden"
+        class="input contact-form-referer_page "
+        name="data[referer_page]"
+        value="Unknown" />
+                            
+
+    <input type="hidden" name="__form-name__" value="contact-exchange-form" />
+            <input type="hidden" name="__unique_form_id__" value="7aalfxvit8tmo64kdv5y" />
+    <input type="hidden" name="form-nonce" value="103deba30f251345ddf315d7411684ff" />
+
+      
+            <div class="button-wrapper pure-u-1-1">
+  
+
+    
+        </div>
+  
+  </form>
+
+            
+                                </div>
+    </div>            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-8" style="">
+                        
+                            <div class="" style="height: 32px"></div>            
+                                </div>
+    </div>            </div>
+</div>
+            
+<div id=""
+     class="bg-white mb-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g " style="
+        ">
+            
+            
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3" style="">
+                        
+                            <h6 class="head-dotter mb-2" id="" style="">
+        Business Partnerships    </h6>
+                            <p class="" id="" style="">
+        For all business or technology partnership inquiries<br> {% for info in info %} {{info.email}}<br> {{info.phone}} {% endfor %}    </p>
+            
+                                </div>
+            
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3" style="">
+                        
+                            <h6 class="head-dotter mb-2" id="" style="">
+        Technical Support    </h6>
+                            <p class="" id="" style="">
+        24/6 IT support for Brokers and Banks<br> {% for info in info %} {{info.email}}<br> {{info.phone}} {% endfor %}     </p>
+            
+                                </div>
+            
+    </div>                    <a id="subscribe"></a>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-2-3" style="">
+                        
+                            <h6 class="head-dotter mb-2" id="" style="">
+        Location    </h6>
+                            <p class="" id="" style="">
+        2300, Turnhout Belgium   </p>
+                            <div id="" class="mr-4" data-animation="">    
+                              <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=2300,%20turnout%20Belgium&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com"></a><br><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style><a href="https://www.embedgooglemap.net">embed google</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div></div>
+                            
+                            </div>                            <div class="" style="height: 50px"></div>            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3" style="">
+                        
+                            <h5 class="head-dotter mb-2" id="" style="">
+        Subscribe to Latest news and Updates    </h5>
+                            <div id="" class="my-5" data-animation="">    
+
+
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+<form
+        name="subscribe-form"
+    action=""
+    method="POST"
+    id="subscribe-form"              class=" ">
+    {% csrf_token %}
+                      
+                                  <div class="form-field mb-3 form-group">
+            <div class="form-label-wrapper"><label class="form-label" for="subscribe-email">Email Address              <span class="required">*</span></label>
+      </div>
+        <div class="form-data"
+          data-grav-field="email"
+  data-grav-disabled=""
+  data-grav-default="null"
+    >
+                        <div class="form-input-wrapper ">
+                          {% render_field form_news.email name="email" value="" type="email" class="form-input form-control form-control-lg rounded-0" id="subscribe-email"       placeholder="Enter your Email address"  autocomplete="off"  required="required"  %}
+                                  </div>
+                        </div>
+  </div>
+                                      
+                                  <div class="form-field mb-3 subscribe-sendinblue-list-cases form-group">
+          <div class="form-data"
+              data-grav-field="checkboxes"
+  data-grav-disabled=""
+  data-grav-default="&#x7B;&quot;11&quot;&#x3A;true,&quot;12&quot;&#x3A;true&#x7D;"
+
+    data-grav-keys="false"
+    data-grav-field-name="data[sendinblue-id]"
+    >
+                  
+                                        
+        <div class="checkboxes  ">
+            <input type="checkbox"
+                   id="sendinblue-id-11"
+                   value="11"
+                   name="data[sendinblue-id][sendinblue-id-11]"
+                   checked="checked"                   class=""                    
+            >
+            <label style="display: inline" for="sendinblue-id-11">
+                                    - Subscribe for cXchange updates
+                            </label>
+        </div>
+    
+                                        
+        <div class="checkboxes  ">
+            <input type="checkbox"
+                   id="sendinblue-id-12"
+                   value="12"
+                   name="data[sendinblue-id][sendinblue-id-12]"
+                   checked="checked"                   class=""                    
+            >
+            <label style="display: inline" for="sendinblue-id-12">
+                                    - Subscribe for cTrader updates
+                            </label>
+        </div>
+                    </div>
+  </div>
+                                      
+                                  
+
+<input
+        id="subscribe-sendinblue-list-id"         data-grav-field="hidden"
+        data-grav-disabled="false"
+        type="hidden"
+        class="input "
+        name="data[sendinblue-list-id]"
+        value="10" />
+                                      
+                                  
+
+<input
+                data-grav-field="hidden"
+        data-grav-disabled="false"
+        type="hidden"
+        class="input "
+        name="data[sendinblue-name]"
+        value="Subscriber&#x20;spotware.com" />
+                                      
+                                  <input aria-hidden="true"
+       type="text"
+              style="visibility:hidden;position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);"
+              class="form-honeybear"
+       name="data[honeypot]"
+       value="" />
+                            
+
+    <input type="hidden" name="__form-name__" value="subscribe-form" />
+            <input type="hidden" name="__unique_form_id__" value="yxrll9cthvqihfbs7bjs" />
+    <input type="hidden" name="form-nonce" value="103deba30f251345ddf315d7411684ff" />
+
+      
+            <div class="button-wrapper pure-u-1-1">
+  
+
+          
+      
+      
+  <button
+                                                                  type="submit"
+                                  class="btn btn btn-green font-weight-bold btn-lg btn-round px-5"
+                      >Subscribe</button>
+
+          
+        </div>
+  
+  </form>
+
+</div>                            <p class="text-small" id="" style="">
+        <small>By using this form you agree to be contacted by Spotware on the subject of your inquiry. Spotware does not share your personal details with any unauthorized personnel or third parties.</small>    </p>
+            
+                                </div>
+    </div>            </div>
+</div>
+                </section>
+        
+                <footer class="site-footer clearfix  font-weight-bold" id="site-footer">
+                  <div class="container px-2  px-md-2  px-lg-0 py-3 py-md-4 py-lg-5">
+                      <div class="pure-g">
+                          <div class="pure-u-1-1 pure-u-lg-1-4">
+                              <ul class=" mb-3 mb-lg-0">
+                                                          <li><a href="{% url 'contact_page' %}" rel="nofollow">cTrader Demo</a></li>
+                                                          <li><a href="{% url 'contact_page' %}">Contact Us</a></li>
+                                                          <li><a href="{% url 'contact_page' %}">Subscribe to Updates</a></li>
+                                                  </ul>
+                          </div>
+                          
+                          <div class="pure-u-1-1 pure-u-lg-1-4">
+                              <ul class=" mb-3 mb-lg-0">
+                                                          <li><a href="{% url 'eula_page' %}" rel="nofollow">EULA</a></li>
+                                                          <li><a href="{% url 'legal_notice_page' %}" rel="nofollow">Legal Notices</a></li>
+                                                          
+                                                  </ul>
+                          </div>
+                      </div>
+                      <div class="copyright-separator"></div>
+                      <div class="pure-g mb-5">
+                          <div class="pure-u-1-1 pure-u-sm-1-1 pure-u-md-2-3 pure-u-lg-2-3 mb-3 mb-md-0">
+                              <div class="copyright font-weight-bold">Copyright © {% now 'Y' %} Spotware Systems Ltd. cTrader®, cAlgo®, cBroker®, cMirror®, cXchange®. All rights reserved.</div>
+                              <div class="copyright font-weight-bold">Spotware Systems Ltd. is a software development company that provides software solutions (products) and development services to enterprises and corporate clients. The information on this website is not directed towards retail investors nor solicitation of retail investors.</div>
+                          </div>
+              
+                          <div class="pure-u-1-1 pure-u-sm-1-1 pure-u-md-1-3 pure-u-lg-1-3 text-center text-md-right">
+                              <div class="footer-logo mt-n2">
+                                  <a href="{% url 'home_page' %}"><img src="{% static 'spotwarectrader/user/themes/spotware/images/footer_logo.png' %}" alt="Spotware Systems Ltd" width="211px" \></a>
+                              </div>
+                              <div class="clearfix"></div>
+                              <div class="footer-logo">
+                                  <a href="{% url 'home_page' %}" target="_blank"><img src="{% static 'spotwarectrader/user/themes/spotware/images/ctrader_logo_traders_first.png' %}" alt="cTrader" \></a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </footer>                <div id="mobile-menu-bg"></div>
+                  </div>
+                  <!-- #wrapper -->
+                          
+              <nav id="mobile-site-navigation" class="">
+                  <span class="mobile-menu-header"><span class="mobile-menu-heading">Menu</span><i class="fa fa-times toggle-mobile-menu"></i></span>
+              
+                  <ul id="mobile-main-menu" class="menu">
+                                                                      <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                                  <a href="{% url 'crypto_exchange_page' %}">cXchange</a>
+                              </li>
+                                                                          <li class="megamenu columns-3 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  "><a>cTrader Suite</a><span></span>
+                                  <ul class="sub-menu">
+                                                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Trading platforms and features</a><span></span>
+                                              <ul class="sub-menu">
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_overview_page' %}" class="">cTrader Overview</a></li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_trading_page' %}" class="">cTrader Trading</a></li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_charting_page' %}" class="">cTrader Charting</a></li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_copy_page' %}" class="">cTrader Copy</a></li>
+                                                                           </ul>
+                                          </li>
+                                                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Back-office features and add-ons</a><span></span>
+                                              <ul class="sub-menu">
+                                                                                                                                     
+                                                                                           <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_risk_management_page' %}" class="">cTrader Risk Management</a></li>
+                                                                                           <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_symbol_management_page' %}" class="">cTrader Symbol Management</a></li>
+                                                                                           <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_reporting_page' %}" class="">cTrader Reporting</a></li>
+                                                                                           <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_white_label_page' %}" class="">cTrader White Labels</a></li>
+                                                                                           <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_partner_program_page' %}" class="">cTrader Partner Programs</a></li>
+                                                                                           <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_fifo_netting_page' %}" class="">cTrader FIFO Netting</a></li>
+                                                                                           <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_spread_betting_page' %}" class="">cTrader Spread Betting</a></li>
+                                                                                                                   </ul>
+                                          </li>
+                                                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Server-side components and services</a><span></span>
+                                              <ul class="sub-menu">
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_server_page' %}" class="">cTrader Server</a></li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_proxy_cloud_page' %}" class="">cTrader Proxy Cloud</a></li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_extensibility_page' %}" class="">cTrader Extensibility</a></li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'ctrader_service_assurance_page' %}" class="">cTrader Service Assurance</a></li>
+                                            
+                                                                         </ul>
+                                          </li>
+                                                          </ul>
+                              </li>  
+                              <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                                  <a href="{% url 'custom_development_page' %}" class="">Development</a>
+                              </li>
+                                                                          <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                                  <a href="{% url 'integration_page' %}" class="">Integrations</a>
+                              </li>
+                                                                          <li class="megamenu columns-3 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  "><a>About Us</a><span></span>
+                                  <ul class="sub-menu">
+                                                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">About</a><span></span>
+                                              <ul class="sub-menu">
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'about_spotware_page' %}" class="">About Spotware</a></li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'testimonials_page' %}" class="">Testimonials</a></li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'leader_ship_page' %}" class="">Leadership Team</a></li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'awards_page' %}" class="">cTrader Awards</a></li>
+                                                                          </ul>
+                                          </li>
+                                                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Careers</a><span></span>
+                                              <ul class="sub-menu">
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'why_spotware_page' %}" class="">Why Spotware</a></li>
+                                                                                       
+                                              </ul>
+                                          </li>
+                                                                  <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Contacts</a><span></span>
+                                              <ul class="sub-menu">
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'contact_page' %}" class="">Contact Us</a></li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'contact_page' %}" class="">Subscribe to Product Updates</a></li>
+                                                  <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="{% url 'contact_page' %}" class="">Request a Demo</a></li>
+                                                                           </ul>
+                                          </li>
+                                                          </ul>
+                              </li>
+                                      
+                  </ul>
+                  <hr>
+                  <ul id="mobile-secondary-menu" class="menu site-links">
+                      <li class="menu-startup menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" rel="noopener noreferrer" href="{% url 'login' %}"> Login</a></li>
+                      <li class="menu-ctrader menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'register' %}"> Register</a></li>
+                     
+                      </ul>
+              
+              </nav>
+
+    <style>
+    .scrollToTop {
+        width: 38px;
+        height: 38px;
+        line-height: 36px;
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        position: fixed;
+        z-index: 9999;
+        bottom: -45px;
+        left: 15px;
+        border-radius: 38px;
+        overflow: hidden;
+        transition: bottom .4s cubic-bezier(.55,0,.1,1);
+        background-color: #009247;
+    }
+    .scrollToTop.scrollactive {
+        bottom: 15px;
+    }
+</style>
+
+
+<!--whatsapp widget-->
+<style>
+
+
+  a.blantershow-chat {
+    /*   background: #009688; */
+    background: #fff;
+    color: #404040;
+    position: fixed;
+    display: flex;
+    font-weight: 400;
+    justify-content: space-between;
+    z-index: 98;
+    bottom: 8px;
+    right: 30px;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+  }
+  
+  a.blantershow-chat svg {
+    transform: scale(1.2);
+    margin: 0 10px 0 0;
+  }
+  </style>
+  
+      
+
+	
+	
+	<!--Tidio chart script here-->
+	
+	<script src="//code.tidio.co/v38zlqh2caqobdnmjjozwlukhrycjcwu.js" async></script>
+	
+		
+<a href="#top" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
+    <script src="{% static 'spotwarectrader/assets/8e56892e7e8fc75b52f04c2723e0aba0ab85.js' %}"></script>
+    {{ form.media.js }}
+
+
+    
+    </body>
+
+</html>
+
+
+

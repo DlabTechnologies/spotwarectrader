@@ -1,0 +1,946 @@
+
+
+{% extends 'account/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% load humanize %}
+
+
+{% block content %}
+
+
+        
+                <section id="body" class=" clearfix">
+                        <div id="carouselMain" class="carousel slide bg-grid bg-bottom bg-norepeat" data-ride="carousel">
+    <ol class="carousel-indicators">
+                <li data-target="#carouselMain" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselMain" data-slide-to="1" class=""></li>
+                <li data-target="#carouselMain" data-slide-to="2" class=""></li>
+                <li data-target="#carouselMain" data-slide-to="3" class=""></li>
+                <li data-target="#carouselMain" data-slide-to="4" class=""></li>
+            </ol>
+    <div class="carousel-inner">
+                    <div class="carousel-item bg-bottom bg-norepeat bg-waves active first-slide">
+                <div class="container">
+                    <div class="pure-g my-4">
+                        <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-5-12">
+                            <div class="content middle">
+                                <div class="carousel-caption">
+                                    <h1>cTrader Suite for Startup Brokers</h1>
+                                    <p>cTrader offers a complete solution allowing startup brokers to save their time and costs, and easily enter one of the most attractive markets with premium technology.</p>
+                                    <p class=" mt-5"><a href="{% url 'contact_page'%}" class="btn btn-lg btn-green font-weight-bold btn-round px-5">Learn More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pure-u-5-12 pure-u-md-1-2 pure-u-lg-7-12 d-none d-md-block d-lg-block">
+                            <div class="content">
+                                                                    <img src="{% static 'spotwarectrader/user/pages/home/_showcase/01_screens_start_up-min.html' %}" class="d-block w-100" alt="...">
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+                    <div class="carousel-item bg-bottom bg-norepeat bg-waves  ">
+                <div class="container">
+                    <div class="pure-g my-4">
+                        <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-5-12">
+                            <div class="content middle">
+                                <div class="carousel-caption">
+                                    <h1>cTrader Recognised as the Best FX Trading Platform 2018</h1>
+                                    <p>The leading platform committed to fair and transparent trading brings in the most advanced and high-tech tools raising the standards of the online trading industry.</p>
+                                    <p class=" mt-5"><a href="{% url 'awards_page' %}" class="btn btn-lg btn-green font-weight-bold btn-round px-5">Learn More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pure-u-5-12 pure-u-md-1-2 pure-u-lg-7-12 d-none d-md-block d-lg-block">
+                            <div class="content">
+                                                                    <img src="{% static 'spotwarectrader/user/pages/home/_showcase/02_awards_carousel_6_cut-min.html' %}" class="d-block w-100" alt="...">
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+                    <div class="carousel-item bg-bottom bg-norepeat bg-waves  ">
+                <div class="container">
+                    <div class="pure-g my-4">
+                        <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-5-12">
+                            <div class="content middle">
+                                <div class="carousel-caption">
+                                    <h1>Trading Platforms that Convert, Retain and Increase LTV of Traders and Partners</h1>
+                                    <p>A complete solution for brokers which is fast to deploy, easy to integrate, ultra scalable, ensures high performance and low latency.</p>
+                                    <p class=" mt-5"><a href="{% url 'contact_page' %}" class="btn btn-lg btn-green font-weight-bold btn-round px-5">Become a cTrader Broker</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pure-u-5-12 pure-u-md-1-2 pure-u-lg-7-12 d-none d-md-block d-lg-block">
+                            <div class="content">
+                                                                    <img src="{% static 'spotwarectrader/user/pages/home/_showcase/03_new_main-min.html' %}" class="d-block w-100" alt="...">
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+                    <div class="carousel-item bg-bottom bg-norepeat bg-waves  ">
+                <div class="container">
+                    <div class="pure-g my-4">
+                        <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-5-12">
+                            <div class="content middle">
+                                <div class="carousel-caption">
+                                    <h1>Award-Winning STP/ECN Trading Platform</h1>
+                                    <p>A transparent, all-inclusive solution, suited for both ECN and STP brokers, the cTrader platform is rooted in its Traders FirstTM motto, putting traders' needs first and benefiting all market participants.</p>
+                                    <p class=" mt-5"><a href="{% url 'ctrader_overview_page' %}" class="btn btn-lg btn-green font-weight-bold btn-round px-5">Learn More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pure-u-5-12 pure-u-md-1-2 pure-u-lg-7-12 d-none d-md-block d-lg-block">
+                            <div class="content">
+                                                                    <img src="{% static 'spotwarectrader/user/pages/home/_showcase/04_award_stp_ecn.html' %}" class="d-block w-100" alt="...">
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+                    <div class="carousel-item bg-bottom bg-norepeat bg-waves  ">
+                <div class="container">
+                    <div class="pure-g my-4">
+                        <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-5-12">
+                            <div class="content middle">
+                                <div class="carousel-caption">
+                                    <h1>Flexible Investment Platform for Easy & Transparent Copy Trading</h1>
+                                    <p>cTrader Copy uses effective technology for copy trading and analytics, and provides traders with more transparency and flexibility.</p>
+                                    <p class=" mt-5"><a href="{% url 'ctrader_copy_page' %}" class="btn btn-lg btn-green font-weight-bold btn-round px-5">Learn More</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pure-u-5-12 pure-u-md-1-2 pure-u-lg-7-12 d-none d-md-block d-lg-block">
+                            <div class="content">
+                                                                    <img src="{% static 'spotwarectrader/user/pages/home/_showcase/05_ccopy_carousel_cut-min.html' %}" class="d-block w-100" alt="...">
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            </div>
+    <a class="carousel-control-prev" href="#carouselMain" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselMain" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+</div>
+<style>
+
+
+    #carouselMain .carousel-item {
+        min-height: 580px;
+    }
+    #carouselMain .carousel-indicators li {
+        background: #ffffff;
+        border-width: 2px;
+        border-style: solid;
+        border-color: #ffffff;
+        border-color: RGBA(255,255,255,1);
+        border-radius: 50px;
+        margin: 4px;
+    }
+    #carouselMain {
+        /*height: 500px;*/
+    }
+    #carouselMain .carousel-caption {
+        margin-top: 50px;
+    }
+
+    #carouselMain .first-slide .carousel-caption  h1, #carouselMain .first-slide .carousel-caption p {
+        color: white;
+    }
+    #carouselMain .first-slide {
+        background-color: #0b3b5b;
+    }
+
+
+</style>
+
+            <div class="bg-light py-4">
+    <div class="container">
+        <div class="pure-g">
+                        <div class="pure-u-1-4 ">
+                                     <img src="{% static 'spotwarectrader/user/pages/home/_brokers/fondex.png' %}" class="d-block w-100" alt="Fondex">
+                                                    
+                            </div>
+                        <div class="pure-u-1-4 ">
+                                     <img src="{% static 'spotwarectrader/user/pages/home/_brokers/fxpro.png' %}" class="d-block w-100" alt="FXPRO">
+                                                    
+                            </div>
+                        <div class="pure-u-1-4 ">
+                                      <img src="{% static 'spotwarectrader/user/pages/home/_brokers/icmarkets.png' %}" class="d-block w-100" alt="ICMarkets">
+                                                    
+                            </div>
+                        <div class="pure-u-1-4 ">
+                                     <img src="{% static 'spotwarectrader/user/pages/home/_brokers/pepperstone.png' %}" class="d-block w-100" alt="Peperstone">
+                                                    
+                            </div>
+                    </div>
+                <div class="pure-g">
+            <div class="pure-u-1-1 py-4" style="text-align: center;">
+
+                <a class="btn btn-green font-weight-bold btn-round btn-lg px-5" href="{% url 'featured_ctrader_broker_page' %}" target="_top">
+                    See more featured brokers
+                </a>
+            </div>
+        </div>
+            </div>
+</div>
+            
+<div id=""
+     class="bg-white bg-cover-center py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g row-class" style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-1 text-center" style="">
+                        
+                            <div class="" style="height: 64px"></div>                            <h2 class="" id="" style="">
+        About Spotware    </h2>
+                            <p class="" id="" style="">
+        Spotware is an international technology provider, successfully delivering complex Fintech industry solutions for over <b>10 years</b>. Comprising <b>100+ employees</b> from <b>8 different countries</b>, and boasting a sophisticated network of brokers, traders and partners, we consider the Spotware family our greatest asset of all, rewarding initiative and cherishing cooperation.    </p>
+            
+                                </div>
+    </div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-4 pb-5 text-center" style="">
+                        
+                            <span class="d-inline-block home-ic_10years" id="" style="">
+            </span>
+                            <h2 class="mb-2" id="" style="">
+        10+    </h2>
+                            <p class="mb-0" id="" style="">
+        years of Fintech innovation    </p>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-4 pb-5 text-center" style="">
+                        
+                            <span class="d-inline-block home-ic_18" id="" style="">
+            </span>
+                            <h2 class="mb-2" id="" style="">
+        18    </h2>
+                            <p class="mb-0" id="" style="">
+        world-renowned broker clients    </p>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-4 pb-5 text-center" style="">
+                        
+                            <span class="d-inline-block home-ic_50" id="" style="">
+            </span>
+                            <h2 class="mb-2" id="" style="">
+        50+    </h2>
+                            <p class="mb-0" id="" style="">
+        brokers    </p>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-4 pb-5 text-center" style="">
+                        
+                            <span class="d-inline-block home-ic_over" id="" style="">
+            </span>
+                            <h2 class="mb-2" id="" style="">
+        Over 1.5M    </h2>
+                            <p class="mb-0" id="" style="">
+        traders worldwide    </p>
+            
+                                </div>
+    </div>            </div>
+</div>
+            
+<div id=""
+     class="bg-white bg-cover-center py-5"
+     style="     min-height:600px;               ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g row-class" style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-1 text-center" style="">
+                        
+                            <div class="" style="height: 64px"></div>                            <h2 class="" id="" style="">
+        Complete Solution for Brokers    </h2>
+                            <p class="" id="" style="">
+        cTrader Suite is a complete turnkey solution for brokers, large or small. All the technology needed to offer premium Forex, CFD and Spread Betting services is now available from one vendor.    </p>
+            
+                                </div>
+    </div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pb-5" style="">
+                        
+                            <img src="{% static 'spotwarectrader/user/pages/home/_solutions/devices-min.png' %}"
+                                    class=""
+            alt="Complete Solution for Brokers">
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pb-5" style="">
+                        
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_charting" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    Charting    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_web-trading" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    Web <br>Platform    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_fixapi_trading" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    FIX API    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_manual-trading" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    Manual <br>Trading    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_mobile_trading" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    Mobile <br>Apps    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_openapi_trading" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    Open API    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_copy_trading" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    Copy<br> Trading    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_spread_betting" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    Spread Betting    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_admin_panel" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    Admin <br>Panel    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_algorithmic_trading" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    Algorithmic Trading    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_ib_program" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    IB Program    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-2 pure-u-md-1-3 mb-4" style="">
+                        
+                            <div class="card h-100 mx-1 shadow border-0 card-solution" style="">
+                <div class="card-body ">
+                            <div  class="pure-g " style="
+        ">
+            <div class="pure-u-2-5" style="">
+                        
+                            <span class="d-inline-block home-icon_server_hosting" id="" style="">
+            </span>
+            
+                                </div>
+            <div class="pure-u-3-5 d-flex" style="">
+                        
+                            <div id="" class="pl-1 align-self-cente my-auto" data-animation=""><p class="my-auto" id="" style="">
+    <a href="" target="_top" rel="" class="" style="">    Server Hosting    </a></p>
+</div>            
+                                </div>
+    </div>                    </div>
+        </div>
+            
+                                </div>
+    </div>            
+                                </div>
+    </div>            </div>
+</div>
+            <div class="bg-orange text-white">
+    <div class="container">
+        <div class="pure-g py-3">
+            <div class="pure-u-1-1 pure-u-md-2-3 d-flex">
+                <div class="my-auto">
+                                            <h6 class="text-white my-auto">Attract <b>any type of trader</b> with a premium platform that offers <b>all-in-one experience</b>.</h6>
+                                                                            </div>
+            </div>
+
+            <div class="pure-u-1-1 d-block d-md-none d-lg-none">&nbsp;</div>
+
+            <div class="pure-u-1-1 pure-u-md-1-3 d-flex">
+                <div class="my-auto mx-auto">
+                    <a href="{% url 'contact_page' %}" class="btn btn-green font-weight-bold btn-lg btn-round px-5" target="_top">Become a cTrader Broker</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+<div id=""
+     class="bg-dark text-white py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g row-class" style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-1 text-center mb-3" style="">
+                        
+                            <h2 class="" id="" style="color: white !important;">
+        Reach Millions of Traders    </h2>
+                            <p class="color-white" id="" style="">
+        cTrader is trusted by millions of traders worldwide, and supported by a <br> large community of partners. Together, we help brokers grow.    </p>
+                            <div class="" style="height: 64px"></div>            
+                                </div>
+    </div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-4 text-center mb-3" style="">
+            <div class="px-3 h-100 border-right border-white" style="
+                                                
+                ">            
+                            <h5 class="" id="" style="">
+    <a href="" target="_blank" rel="" class="" style="color: white !important;">    <span class="icon-ic_introducing_brokers icon-80"></span> Introducing Brokers    </a></h5>
+                            <p class="" id="" style="">
+        cTrader offers a versatile IB Program with unlimited multi-level revenue sharing.    </p>
+            
+                        </div>        </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-4 text-center mb-3" style="">
+            <div class="px-3 h-100 border-right border-white" style="
+                                                
+                ">            
+                            <h5 class="" id="" style="">
+    <a href="" target="_blank" rel="" class="" style="color: white !important;">    <span class="icon-ic_strategy_providers icon-80"></span> Strategy Providers    </a></h5>
+                            <p class="" id="" style="">
+        Thousands of strategy providers, who pro-actively hunt for new traders to invest in their strategy.    </p>
+            
+                        </div>        </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-4 text-center mb-3" style="">
+            <div class="px-3 h-100 border-right border-white" style="
+                                                
+                ">            
+                            <h5 class="" id="" style="color: white !important;">
+    <a href="" target="_blank" rel="" class="" style="color: white !important;">    <span class="icon-ic_algo_developers icon-80"></span> Algo Developers    </a></h5>
+                            <p class="" id="" style="">
+        Tens of thousands of developers, who specialize in robots, indicators and tools for cTrader.    </p>
+            
+                        </div>        </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-4 text-center" style="">
+            <div class="px-3 h-100" style="
+                                                
+                ">            
+                            <h5 class="" id="" style="">
+    <a href="" target="_blank" rel="" class="" style="color: white !important;">    <span class="icon-ic_community icon-80"></span> Community    </a></h5>
+                            <p class="" id="" style="">
+        A strong community of advocates, who back cTrader with 10,000+ engaged members.    </p>
+            
+                        </div>        </div>
+    </div>            </div>
+</div>
+            
+<div id=""
+     class="bg-white bg-cover-center py-5"
+     style="     min-height:600px;      background-image: url({% static 'spotwarectrader/user/pages/home/_superior_tech/ill_technology_focused-min.html' %});          ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g row-class" style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-1 text-center" style="">
+                        
+                            <div class="" style="height: 64px"></div>                            <h2 class="" id="" style="">
+        Superior Technology    </h2>
+                            <p class="" id="" style="">
+        Full proprietary technology stack, custom communication protocols, enterprise-grade IBM hardware, global points of presence, ultra-low latency networking, native application layer, and cross-connects with liquidity providers. All these allow us to deliver quotes to clients faster than anyone in the industry, as well as to execute in sub-milliseconds, with a 100% uptime over the years.    </p>
+            
+                                </div>
+    </div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3 pb-5" style="">
+                        
+                            <div class="card text-center h-100 py-0 rounded-0 border-0 ml-0 mr-0 mr-md-2 mr-lg-4" style="background-color: #eef9fe !important;">
+                <div class="card-body py-4">
+                            <h2 class="mb-2" id="" style="">
+        $40m+    </h2>
+                            <p class="mb-0" id="" style="">
+        Invested in Infrastructure    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3 pb-5" style="">
+                        
+                            <div class="card text-center h-100 py-0 rounded-0 border-0 ml-0 mr-0 ml-md-2 mx-lg-2" style="background-color: #eef9fe !important;">
+                <div class="card-body py-4">
+                            <h2 class="mb-2" id="" style="">
+        100%    </h2>
+                            <p class="mb-0" id="" style="">
+        Uptime Over 7 Years    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3 pb-5" style="">
+                        
+                            <div class="card text-center h-100 py-0 rounded-0 border-0 ml-0 mr-0 ml-md-0 mr-md-2 ml-lg-4 mr-lg-0" style="background-color: #eef9fe !important;">
+                <div class="card-body py-4">
+                            <h2 class="mb-2" id="" style="">
+        150,000+    </h2>
+                            <p class="mb-0" id="" style="">
+        Concurrent Online Users Supported    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3 pb-5" style="">
+                        
+                            <div class="card text-center h-100 py-0 rounded-0 border-0 ml-0 mr-0 ml-md-2 mr-md-0 mr-lg-4" style="background-color: #eef9fe !important;">
+                <div class="card-body py-4">
+                            <h2 class="mb-2" id="" style="">
+        14,000+    </h2>
+                            <p class="mb-0" id="" style="">
+        Transactions Processed per Minute    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3 pb-5" style="">
+                        
+                            <div class="card text-center h-100 py-0 rounded-0 border-0 ml-0 mr-0 ml-md-0 mr-md-2 mx-lg-2" style="background-color: #eef9fe !important;">
+                <div class="card-body py-4">
+                            <h2 class="mb-2" id="" style="">
+        1,000,000+    </h2>
+                            <p class="mb-0" id="" style="">
+        Price Updates Received per Minute    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3 pb-5" style="">
+                        
+                            <div class="card text-center h-100 py-0 rounded-0 border-0 ml-0 mr-0 mr-md-0 ml-md-2 ml-lg-4 mr-lg-0" style="background-color: #eef9fe !important;">
+                <div class="card-body py-4">
+                            <h2 class="mb-2" id="" style="">
+        3ms    </h2>
+                            <p class="mb-0" id="" style="">
+        Internal Processing Time    </p>
+                    </div>
+        </div>
+            
+                                </div>
+    </div>            </div>
+</div>
+            <div class="bg-orange text-white">
+    <div class="container">
+        <div class="pure-g py-3">
+            <div class="pure-u-1-1 pure-u-md-2-3 d-flex">
+                <div class="my-auto">
+                                            <h6 class="text-white my-auto"><b>Start your brokerage</b> with a fully-supported, high-quality trading platform that <b>saves you both – time and costs</b>.</h6>
+                                                                            </div>
+            </div>
+
+            <div class="pure-u-1-1 d-block d-md-none d-lg-none">&nbsp;</div>
+
+            <div class="pure-u-1-1 pure-u-md-1-3 d-flex">
+                <div class="my-auto mx-auto">
+                    <a href="{% url 'contact_page' %}" class="btn btn-green font-weight-bold btn-lg btn-round px-5" target="_top">Become a cTrader Broker</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+<div id=""
+     class="bg-light py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g row-class" style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-4  d-flex" style="">
+            <div class="align-self-cente mb-auto mt-auto" style="
+                                                
+                ">            
+                            <h2 class="" id="" style="">
+        Integrated with Leading Providers    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Work with a mature product, backed by a solid ecosystem of integrated products and services. Quick and simple to deploy, it allows you to not only connect with your existing partners, but to also find opportunities with new ones.    </p>
+                            <p class="" id="" style="">
+    <a href="{% url 'integration_page' %}" target="_top" rel="" class="font-weight-bold" style="">    View integrations    </a></p>
+            
+                        </div>        </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-3-4 d-flex align-items-end" style="">
+                        
+                            <img src="{% static 'spotwarectrader/user/pages/home/_integrated_providers/integrations.html' %}"
+                                    class="img-fluid"
+            alt="Integrated with Leading Providers">
+            
+                                </div>
+    </div>            </div>
+</div>
+            
+<div id=""
+     class="bg-dark text-white py-0"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div id="test-row-block-id" class="pure-g row-class" style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-2-3 d-flex align-items-end" style="">
+                        
+                            <img src="{% static 'spotwarectrader/user/pages/home/_brand_value/brand_value.html' %}"
+                                    class="img-fluid"
+            alt="cTrader - Best FX Trading Platform">
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3  d-flex" style="">
+            <div class="align-self-cente mb-auto mt-auto" style="
+                                                
+                ">            
+                            <h2 class="" id="" style="color: white !important;">
+        Brand Value    </h2>
+                            <p class="color-white font-weight-bold" id="" style="">
+        cTrader offers brokers global market recognition, and helps gain their share among traders with a premium trading platform. By sharing our Traders First™ approach, brokers can boost their credibility and show commitment to their clients. They also align themselves with dozens of leading brokers, who already offer cTrader. This added value attracts traders, and serves the long terms goals of brokers, hence benefiting all market participants.    </p>
+            
+                        </div>        </div>
+    </div>            </div>
+</div>
+            <div class="bg-orange text-white">
+    <div class="container">
+        <div class="pure-g py-3">
+            <div class="pure-u-1-1 pure-u-md-2-3 d-flex">
+                <div class="my-auto mx-auto">
+                                            <h6 class="text-white my-auto">Acquire <b>global market recognition</b> of a credible and trustworthy brand, and earn <b>trust of traders worldwide</b>.</h6>
+                                                                            </div>
+            </div>
+
+            <div class="pure-u-1-1 d-block d-md-none d-lg-none">&nbsp;</div>
+
+            <div class="pure-u-1-1 pure-u-md-1-3 d-flex">
+                <div class="my-auto mx-auto">
+                    <a href="{% url 'contact_page' %}" class="btn btn-green font-weight-bold btn-lg btn-round px-5" target="_top">Become a cTrader Broker</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+<div id=""
+     class="bg-white py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g row-class" style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-2" style="">
+            <div class="pr-lg-5" style="
+                                                
+                ">            
+                            <h2 class="" id="" style="">
+        About Spotware    </h2>
+                            <p class="" id="" style="">
+        Spotware is a team of over 100 experts in financial technology, with more than 100 years of collective experience. The company has been raising the standards of the online trading industry since 2010, by delivering meaningful solutions that solve real problems for banks, brokers and their clients.    </p>
+                            <p class="" id="" style="">
+    <a href="{% url 'about_spotware_page' %}" target="_top" rel="" class="font-weight-bold" style="">    Learn more about Spotware    </a></p>
+            
+                        </div>        </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-2" style="">
+            <div class="pl-lg-5 pr-lg-5" style="
+                                                
+                ">            
+                            <h2 class="" id="" style="">
+        Careers at Spotware    </h2>
+                            <p class="" id="" style="">
+        As a large and scalable software development company, which specializes in financial technology and online trading, Spotware always has some open vacancies. There are many compelling and well-justified reasons, why you would want to work at Spotware.    </p>
+                            <p class="" id="" style="">
+    </p>
+            
+                        </div>        </div>
+    </div>            </div>
+</div>
+            
+
+
+<div class="bg-light py-5" style=" ">
+    <div class="container">
+                <div class="pure-g">
+            <div class="text-center pure-u-1-1">
+                <div class="mr-4">
+                                        <h2>Client Testimonials</h2>
+                                        
+                </div>
+            </div>
+        </div>
+                            <div class="pure-g">
+                            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-1">
+                                                                                    <div class="pure-g">
+                                                            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-5">
+                                    
+<div class="card h-100 mr-0 mr-lg-4 border-0 shadow">
+    <div class="card-body">
+        
+            
+                            <img src="{% static 'spotwarectrader/user/pages/home/_tesimonials/66.png' %}" class="mb-4">
+            
+            
+            
+                                                        <h5 class="mb-3">Yiannos Xenophontos</h5>
+                                    
+                                    <p><h6>Chief Dealer, <br>FxPro Financial Services Ltd.</h6><p>As the first broker to offer cTrader, we have witnessed countless updates over the years. All of these have helped us scale with cTrader – the platform of choice for many of our customers today. Thankfully, cTrader…</p><p><a href="{% url 'testimonials_page' %}">Read more</a></p></p>
+                
+            
+            
+                
+            
+            </div>
+</div>                                                                    </div>
+                                                            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-5">
+                                    
+<div class="card h-100 mx-0 mx-lg-4 border-0 shadow">
+    <div class="card-body">
+        
+            
+                            <img src="{% static 'spotwarectrader/user/pages/home/_tesimonials/66.png' %}" class="mb-4">
+            
+            
+            
+                                                        <h5 class="mb-3">Ilan Azbel</h5>
+                                    
+                                    <p><h6>CEO,<br>Autochartist</h6><p>Having an active and stable integration with cTrader has been a great advantage for us. It’s a popular platform, in which broker interest is growing by the day. It supports our wide range of languages and regular updates of research…</p><p><a href="{% url 'testimonials_page' %}">Read more</a></p></p>
+                
+            
+            
+                
+            
+            </div>
+</div>                                                                    </div>
+                                                            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-5">
+                                    
+<div class="card h-100 ml-0 ml-lg-4 border-0 shadow">
+    <div class="card-body">
+        
+            
+                            <img src="{% static 'spotwarectrader/user/pages/home/_tesimonials/66.png' %}" class="mb-4">
+            
+            
+            
+                                                        <h5 class="mb-3">Michael Turck</h5>
+                                    
+                                    <p><h6>Global Head of Liquidity and Sales, Tradeview Markets</h6><p>Tradeview Markets cTrader Suite was delivered in 6 days. It was an effortless process for us to set up and configure. Over the past 12 months, we have been impressed with the level of support and speed of troubleshooting…</p><p><a href="{% url 'testimonials_page' %}">Read more</a></p></p>
+                
+            
+            
+                
+            
+            </div>
+</div>                                                                    </div>
+                                                    </div>
+                                                                            </div>
+                        </div>
+        
+
+    </div>
+</div>
+                </section>
+        
+                  
+                
+        {% endblock %}

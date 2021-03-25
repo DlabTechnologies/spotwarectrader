@@ -1,0 +1,1 @@
+web: gunicorn cryptocurrencyinvestorsllc.wsgi —-log-file -

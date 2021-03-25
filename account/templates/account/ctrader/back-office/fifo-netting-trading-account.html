@@ -1,0 +1,107 @@
+{% extends 'account/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% load humanize %}
+
+
+{% block content %}      
+        
+                <section id="body" class=" clearfix">
+                        <div class="page-header bg-bottom bg-norepeat bg-waves">
+	
+	<div class="container">
+				<h1>cTrader FIFO Netting</h1>
+							<p class="font-weight-bold">cTrader supports FIFO Netting accounts. Designed in compliance with NFA regulations, they allow the platform to be offered by registered Retail Foreign Exchange Dealers to retail investors in the United States.</p>
+			</div>
+</div>
+            
+<div id=""
+     class="bg-white py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-7-12 d-flex" style="">
+            <div class="align-self-cente mb-auto mt-auto" style="
+                                                
+                ">            
+                            <h2 class="" id="" style="">
+        FIFO Netting Regulatory Requirements    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        cTrader offers netting accounts that follow the First-In-First-Out (FIFO) rule. The implementation of this feature is in accordance with CFTC and NFA regulations, which means NFA-registered Retail Foreign Exchange Dealers, who have to adhere to very strict rules and regulations, can provide the cTrader platform to their US clients.    </p>
+                            <h2 class="" id="" style="">
+        Simple Account Administration    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Netting Accounts are simply an account attribute, which can be set up upon account creation. For brokers who offer both Hedging and Netting account types – both operate seamlessly within a single environment, and share the exact same settings and broker reporting tools. The trading interface and the impeccable user experience are also shared.    </p>
+                            <h2 class="" id="" style="">
+        Netting and FIFO Logic    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        With cTrader netting accounts, traders hold only one open position per symbol at a time. Subsequent orders are being aggregated into the already existent position, hence increasing or decreasing its volume. Orders leading to exposure reduction due to reduction of volume create closing deals, which offset opening deals using the FIFO (First In First Out) method. This offsetting rule means that the oldest deals are closed first.    </p>
+            
+                        </div>        </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-5-12 text-center" style="">
+                        
+                            <img src="{% static 'spotwarectrader/user/pages/02.ctrader/02.back-office/07.fifo-netting-trading-account/_a-fifo_netting/topimage.png' %}"
+                                    class=""
+            alt="">
+            
+                                </div>
+    </div>            </div>
+</div>
+            
+<div id=""
+     class="bg-white py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div class="pure-g">
+        <div class="pure-u-1-2">
+        <div class="orange-title-left mb-5">
+            <h2>Benefits of cTrader  Netting Accounts</h2>
+        </div>
+    </div>
+</div>                    <div id="" class="text-center" data-animation=""><p class="" id="" style="">
+        Netting accounts are not just for NFA-registered retail brokers operating in the United States. The feature is often used by international brokers too.    </p>
+</div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3" style="">
+                        
+                            <div class="card h-100 mx-3  card-dotted border border-orange rounded-0 shadow" style="">
+                <div class="card-body px-5">
+                            <h5 class="" id="" style="">
+        Access Different Types of Traders    </h5>
+                            <p class="" id="" style="">
+        This account type is preferred by some traders, especially high-net-worth with institutional experience, who want to incorporate netting into their trading strategy.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3" style="">
+                        
+                            <div class="card h-100 mx-3  card-dotted border border-orange rounded-0 shadow" style="">
+                <div class="card-body px-5">
+                            <h5 class="" id="" style="">
+        A Single Platform for all Markets    </h5>
+                            <p class="" id="" style="">
+        You are able to offer both – hedging and netting accounts, through the same platform that enables you to manage your whole business, hence reducing operational costs.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3" style="">
+                        
+                            <div class="card h-100 mx-3  card-dotted border border-orange rounded-0 shadow" style="">
+                <div class="card-body px-5">
+                            <h5 class="" id="" style="">
+        One Environment    </h5>
+                            <p class="" id="" style="">
+        Traders can too manage both hedging and netting accounts from one single environment. They can also switch between the two account types in a matter of a click, with no unnecessary platform shifts or restarts.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+    </div>            </div>
+</div>
+                </section>
+        {% endblock %}

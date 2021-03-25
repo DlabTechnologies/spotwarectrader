@@ -1,0 +1,186 @@
+{% load static %}
+{% load widget_tweaks %}
+{% load humanize %}
+
+<!DOCTYPE html>
+<html lang="en">
+	
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+
+		<meta charset="UTF-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="generator" content="Spotware" />
+    <meta name="description" content="Trading platforms that convert, retain &amp; increase LTV of traders &amp; partners. cTrader is a complete white label solution for brokers trusted globally." />
+    <meta name="keywords" content="ctrader platform,trading platforms,professional trading platforms,trading platform for beginners,spotware,web trading platform,mobile trading platform,white label trading platform,spread betting platform" />
+    <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" property="twitter:title" content="Forex CFD Trading and Spread Betting Platforms" />
+    <meta name="twitter:description" property="twitter:description" content="Trading platforms that convert, retain &amp; increase LTV of traders &amp; partners. cTrader is a complete white label solution for brokers trusted globally." />
+    <meta name="twitter:image" property="twitter:image" content="" />
+    <meta name="twitter:site" property="twitter:site" content="@cTrader" />
+    <meta property="og:title" content="Forex CFD Trading and Spread Betting Platforms" />
+    <meta property="og:description" content="Trading platforms that convert, retain &amp; increase LTV of traders &amp; partners. cTrader is a complete white label solution for brokers trusted globally." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_EN" />
+    <meta property="og:url" content="https://www.spotwarectrader.com/" />
+    <meta property="og:image" content="" />
+		<title> Forex CFD Trading and Spread Betting Platforms | Spotware Systems Ltd </title>
+
+		<!-- Favicon -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		{{ form.media.css }}
+		<link rel="icon" href="{% static 'spotwarectrader/new/assets/img/brand/favicon.png" type="image/x-icon"/>
+
+		<!-- Icons css -->
+		<link href="{% static 'spotwarectrader/new/assets/css/icons.css' %}" rel="stylesheet">
+
+		<!--  Right-sidemenu css -->
+		<link href="{% static 'spotwarectrader/new/assets/plugins/sidebar/sidebar.css' %}" rel="stylesheet">
+
+		<!--  Custom Scroll bar-->
+		<link href="{% static 'spotwarectrader/new/assets/plugins/mscrollbar/jquery.mCustomScrollbar.css' %}" rel="stylesheet"/>
+
+		<!--  Left-Sidebar css -->
+		<link href="{% static 'spotwarectrader/new/assets/css/sidemenu.css' %}" rel="stylesheet">
+
+		<!-- style css-->
+		<link href="{% static 'spotwarectrader/new/assets/css/style.css' %}" rel="stylesheet">
+
+		<!-- skin css-->
+		<link href="{% static 'spotwarectrader/new/assets/css/skin-modes.css' %}" rel="stylesheet">
+
+		<!-- dark-theme css-->
+		<link href="{% static 'spotwarectrader/new/assets/css/style-dark.css' %}" rel="stylesheet">
+
+		<!--- Animations css-->
+		<link href="{% static 'spotwarectrader/new/assets/css/animate.css' %}" rel="stylesheet">
+    
+    <link href="{% static 'account/static/account/assets/css/style.css' %}" rel="stylesheet">
+   
+<!--Start of Tawk.to Script-->
+<!--End of Tawk.to Script-->
+	</head>
+	
+	<body class="main-body dark-theme bg_img">
+
+		<!-- Loader -->
+		<div id="global-loader" class="dark-loader">
+			<img src="{% static 'spotwarectrader/new/assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
+		</div>
+		<!-- /Loader -->
+
+		<!-- main-signin-wrapper -->
+		
+		<div class="my-auto page page-h">
+			<div class="main-signin-wrapper">
+				<div class="main-card-signin d-md-flex wd-100p">
+				
+				<div class="p-5 ">
+					<div class="main-signin-header">
+						<h4>Identification Documents Required</h4>
+						<h6><b>Notice: </b>Upload a valid means of identification </h6>
+            
+        <p>Upload any of the following documents, the uploaded document will be used for your account verification</p>
+          <ul><li>National ID (<span style="color:red;">Required</span>)</li>
+          <li>Driver License</li>
+          <li>International passport</li>
+           </ul>
+
+
+						         <form action="" method="POST" enctype="multipart/form-data">
+									{% csrf_token %}
+        <div class="form-group">
+       
+            <div class="input-group">
+              {% render_field form.email  type="hidden" value=request.user.email name="email" %}
+              
+           </div>
+        </div>
+
+        
+
+
+
+         
+
+
+           <div class="form-group">
+             
+          <div class="custom-file">
+           <label class="label">Upload ID Card Front Image</label>
+           <div class="input-group">
+            {% render_field form.id_front_image  type="file" class="custom-file-input" id="customFile" name="id_front_image" accept="image/*" required="required" placeholder="Upload a photo"  onchange="readURL(this)" %}
+            <span style="color: red; list-style:none;  ">{{form.id_front_image.errors}}</span>
+            <label class="custom-file-label" for="customFile">Choose file</label>
+
+             </div>
+         </div> 
+                    </div>
+        
+                    <div class="form-group">
+                      <div class="custom-file">
+                      <label class="label">Upload ID Card Back Image</label>
+                      <div class="input-group">
+                        {% render_field form.id_back_image  type="file" class="custom-file-input" id="customFile" name="id_back_image" accept="image/*" required="required" placeholder="Upload a photo"  onchange="readURL(this)" %}
+                        <span style="color: red; list-style:none;  ">{{form.id_back_image.errors}}</span>
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+
+                        </div>
+                    </div> 
+                               </div>
+                   
+      
+        
+      <div class="form-group">
+        <button type="submit" class="btn btn-success submit-btn btn-block" name="login">Upload</a>
+    </div>
+<br />
+<br />
+<p>Note: if after 72 hours of document upload, and you are not redirected to your dashboard, then it may be that your uploaded documents are invalid.
+  If you are still having dificulties on verification process, please contact our support team.<br><br>
+  You can also re-upload your document by following the instructions above.</p>
+		
+
+        
+      
+        </form>
+        						
+						
+					</div>
+					
+				</div>
+			</div>
+			</div>
+		</div>
+		<!-- /main-signin-wrapper -->
+
+        <center>Copyright © {% now 'Y' %} Spotware Systems Ltd. cTrader®, cAlgo®, cBroker®, cMirror®, cXchange®. All rights reserved.</center>
+		<!-- JQuery min js -->
+		<script src="{% static 'spotwarectrader/new/assets/plugins/jquery/jquery.min.js' %}"></script>
+
+		<!-- Bootstrap Bundle js -->
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' %}" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		
+{{ form.media.js }}
+		<script src="{% static 'spotwarectrader/new/assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+		<!-- Ionicons js -->
+		<script src="{% static 'spotwarectrader/new/assets/plugins/ionicons/ionicons.js' %}"></script>
+
+		<!-- Moment js -->
+		<script src="{% static 'spotwarectrader/new/assets/plugins/moment/moment.js' %}"></script>
+
+		<!-- eva-icons js -->
+		<script src="{% static 'spotwarectrader/new/assets/js/eva-icons.min.js' %}"></script>
+
+		<!-- Rating js-->
+		<script src="{% static 'spotwarectrader/new/assets/plugins/rating/jquery.rating-stars.js' %}"></script>
+		<script src="{% static 'spotwarectrader/new/assets/plugins/rating/jquery.barrating.js' %}"></script>
+
+		<!-- Custom js -->
+		<script src="{% static 'spotwarectrader/new/assets/js/custom.js' %}"></script>
+
+	</body>
+
+</html>

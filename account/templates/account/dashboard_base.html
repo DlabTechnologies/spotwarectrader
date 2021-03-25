@@ -1,0 +1,520 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="generator" content="Spotware" />
+    <meta name="description" content="Trading platforms that convert, retain &amp; increase LTV of traders &amp; partners. cTrader is a complete white label solution for brokers trusted globally." />
+    <meta name="keywords" content="ctrader platform,trading platforms,professional trading platforms,trading platform for beginners,spotware,web trading platform,mobile trading platform,white label trading platform,spread betting platform" />
+    <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" property="twitter:title" content="Forex CFD Trading and Spread Betting Platforms" />
+    <meta name="twitter:description" property="twitter:description" content="Trading platforms that convert, retain &amp; increase LTV of traders &amp; partners. cTrader is a complete white label solution for brokers trusted globally." />
+    <meta name="twitter:image" property="twitter:image" content="" />
+    <meta name="twitter:site" property="twitter:site" content="@cTrader" />
+    <meta property="og:title" content="Forex CFD Trading and Spread Betting Platforms" />
+    <meta property="og:description" content="Trading platforms that convert, retain &amp; increase LTV of traders &amp; partners. cTrader is a complete white label solution for brokers trusted globally." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_EN" />
+    <meta property="og:url" content="https://www.spotwarectrader.com/" />
+    <meta property="og:image" content="" />
+		<!-- Title -->
+		<title> Forex CFD Trading and Spread Betting Platforms | Spotware Systems Ltd</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		
+        <link href="{% static 'account/assets/plugins/datatable/css/dataTables.bootstrap4.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'account/assets/plugins/datatable/css/buttons.bootstrap4.min.css' %}" rel="stylesheet">
+        <link href="{% static 'account/assets/plugins/datatable/css/responsive.bootstrap4.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'account/assets/plugins/datatable/css/jquery.dataTables.min.css' %}" rel="stylesheet">
+        <link href="{% static 'account/assets/plugins/datatable/css/responsive.dataTables.min.css' %}" rel="stylesheet">
+        <link href="{% static 'account/assets/plugins/select2/css/select2.min.css' %}" rel="stylesheet">
+
+		<!-- Favicon -->
+		<link rel="icon" href="{% static 'account/assets/img/brand/favicon.png' %}" type="image/x-icon"/>
+
+		
+		<!-- Icons css -->
+		<link href="{% static 'account/assets/plugins/themify-icons/themify-icons.css' %}" rel="stylesheet">
+		<link href="{% static 'account/assets/fontawesome-free/css/all.css' %}" rel="stylesheet">
+		<script src="{% static 'account/https://kit.fontawesome.com/a076d05399.js' %}" crossorigin='anonymous'></script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js" rel="stylesheet">
+
+		<link href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.14.0/js/all.js" rel="stylesheet">
+
+		<link href="{% static 'account/assets/css/icons.css' %}" rel="stylesheet">
+
+		<!-- Internal Chart-Morris css-->
+		<link href="{% static 'account/assets/plugins/morris.js/morris.css' %}" rel="stylesheet">
+
+		<!--  Left-Sidebar css -->
+		<link href="{% static 'account/assets/css/sidemenu.css' %}" rel="stylesheet">
+
+		<!--  Right-sidemenu css -->
+		<link href="{% static 'account/assets/plugins/sidebar/sidebar.css' %}" rel="stylesheet">
+
+		<!-- Internal Nice-select css  -->
+		<link href="{% static 'account/assets/plugins/jquery-nice-select/css/nice-select.css' %}" rel="stylesheet"/>
+
+		<!-- Internal News-Ticker css-->
+		<link href="{% static 'account/assets/plugins/flag-icon-css/css/flag-icon.min.css' %}" rel="stylesheet">
+
+		<!-- Jquery-countdown css-->
+		<link href="{% static 'account/assets/plugins/jquery-countdown/countdown.css' %}" rel="stylesheet">
+
+		<!-- Internal News-Ticker css-->
+		<link href="{% static 'account/assets/plugins/newsticker/jquery.jConveyorTicker.css' %}" rel="stylesheet" />
+
+		<!-- style css-->
+		<link href="{% static 'account/assets/css/style.css' %}" rel="stylesheet">
+
+		<!-- skin css-->
+		<link href="{% static 'account/assets/css/skin-modes.css' %}" rel="stylesheet">
+
+		<!-- dark-theme css-->
+		<link href="{% static 'account/assets/css/style-dark.css' %}" rel="stylesheet">
+
+		<!--- Animations css-->
+		<link href="{% static 'account/assets/css/animate.css' %}" rel="stylesheet">
+
+
+	</head>
+
+
+
+	<body class="main-body app sidebar-mini dark-theme">
+
+		
+		
+
+
+		<!-- Loader -->
+		<div id="global-loader" class="dark-loader">
+			<img src="{% static 'account/assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
+		</div>
+		<!-- /Loader -->
+
+		<!-- main-sidebar opened -->
+            		<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+		<aside class="app-sidebar sidebar-scroll ">
+			<div class="main-sidebar-header">
+				<a class=" desktop-logo logo-light" href="{% url 'user_dashboard' %}"><img src="{% static 'spotwarectrader/user/themes/spotware/images/footer_logo.png' %}" class="main-logo" alt="logo"></a>
+				<a class=" desktop-logo logo-dark" href="{% url 'user_dashboard' %}"><img src="{% static 'spotwarectrader/user/themes/spotware/images/footer_logo.png' %}" class="main-logo dark-theme" alt="logo"></a>
+				<a class="logo-icon mobile-logo icon-light" href="{% url 'user_dashboard' %}"><img src="{% static 'account/assets/img/brand/favicon.png' %}" class="logo-icon" alt="logo"></a>
+				<a class="logo-icon mobile-logo icon-dark" href="{% url 'user_dashboard' %}"><img src="{% static 'account/assets/img/brand/favicon.png' %}" class="logo-icon dark-theme" alt="logo"></a>
+			</div>
+			<div class="main-sidebar-body circle-animation ">
+
+				<ul class="side-menu circle">
+				
+					<li><h3 class="">
+                    <center>
+                    
+<script>
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s + " GMT +2";
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+<br> 
+                                          Your account is - <i class="fa fa-check-square" style="color:white"></i> Active
+                     <br>
+                     Joined -<span style='text-transform: capitalize;'>{{request.user.date_joined|naturaltime }}</span><br>
+                     </center>
+                     </h3>
+					
+					</li>
+								        <li class="slide">
+						<a class="side-menu__item" href="{% url 'user_dashboard' %}"><i class="side-menu__icon ti-stats-up"></i><span class="side-menu__label">Dashboard</span></a>
+					</li>
+					<li class="slide">
+						<a class="side-menu__item" href="{% url 'user_profile' %}">
+						<i class="side-menu__icon ti-desktop"></i>
+						<span class="side-menu__label">
+						My Account</span>
+						</a>
+					</li>
+					
+					<li class="slide">
+						<a class="side-menu__item" href="{% url 'withdraw' %}"><i class="side-menu__icon ti-money"></i><span class="side-menu__label">Withdrawal</span></a>
+					</li>
+					<li class="slide">
+						<a class="side-menu__item" href="{% url 'deposit' %}"><i class="side-menu__icon ti-wallet"></i><span class="side-menu__label">Deposit</span></a>
+					</li>
+					<li class="slide">
+						<a class="side-menu__item" data-toggle="slide" href="#"><i class="side-menu__icon ti-server menu-icon"></i><span class="side-menu__label">Transactions</span><i class="angle fa fa-chevron-down"></i></a>
+						<ul class="slide-menu">
+							
+							<li><a class="slide-item" href="{% url 'deposit_history' %}">Deposit History</a></li>
+							<li><a class="slide-item" href="{% url 'withdraw_history' %}">Withdrawal History</a></li>
+						</ul>
+					</li>
+                    
+                     
+                    <li class="slide">
+                            <a class="side-menu__item" href="{% url 'account_types' %}"><i class="side-menu__icon ti-cup"></i><span class="side-menu__label">Upgrade Plan</span></a>
+                        </li>
+                    
+					<li class="slide">
+						<a class="side-menu__item" data-toggle="slide" href="{% url 'user_profile' %}">
+						<i class="side-menu__icon ti-panel menu-icon"></i>
+						<span class="side-menu__label">Account Settings</span><i class="angle fa fa-chevron-down"></i></a>
+						<ul class="slide-menu">
+							<li><a class="slide-item" href="{% url 'user_profile' %}">Profile</a></li>
+							<li><a class="slide-item" href="{% url 'update_profile' %}">Update Profile</a></li>
+							<li><a class="slide-item" href="{% url 'password_change' %}">Change Password</a></li>
+						</ul>
+					</li>
+					
+					<li class="slide">
+				<a class="side-menu__item" href="{% url 'logout' %}">
+				<i class="side-menu__icon fa fa-power-off"></i>
+				<span class="side-menu__label">Sign Out</span></a>
+					</li>	
+				</ul>
+			</div>
+		</aside>		<!-- main-sidebar -->
+
+		<!-- main-content -->
+		<div class="main-content app-content">
+
+			<!-- Page main-header -->
+			<div class="main-header sticky side-header nav nav-item">
+				<div class="container-fluid">
+					<div class="main-header-left ">
+						<div class="app-sidebar__toggle mobile-toggle" data-toggle="sidebar">
+							<a class="open-toggle"   href="#"><i style="font-size: 18px; color: white;" class="fa fa-reorder" data-eva="menu-outline"></i></a>
+							<a class="close-toggle" href="#"><i style="font-size: 18px; color: white;" class="fa fa-reorder" data-eva="close-outline"></i></a>
+						</div>
+						
+					</div>
+					<div class="main-header-center">
+						<div class="responsive-logo">
+							<a href=""><img src="{% static 'spotwarectrader/user/themes/spotware/images/footer_logo.png' %}" class="mobile-logo" alt="logo"></a>
+						</div>
+					</div>
+					<div class="main-header-right">
+						<div class="nav nav-item  navbar-nav-right ml-auto">
+							
+							
+							<button class="navbar-toggler navresponsive-toggler d-sm-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+								aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon fa fa-ellipsis-v "></span>
+							</button>
+							
+							<div class="dropdown main-profile-menu nav nav-item nav-link">
+								{% if request.user.profile_image %}
+								<a class="profile-user" href=""><img alt="" src="{{request.user.profile_image.url}}"></a>
+								{% else %}
+								<a class="profile-user" href=""><img alt="" src="{% static 'account/assets/img/faces/3.png' %}"></a>
+								{% endif %}
+								<div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
+									<div class="main-header-profile header-img">
+										{% if request.user.profile_image %}
+										<div class="main-img-user"><img alt="" src="{{request.user.profile_image.url}}"></div>
+										{% else %}
+										<div class="main-img-user"><img alt="" src="{% static 'account/assets/img/faces/3.png' %}"></div>
+										{% endif %}
+										<h6>{{request.user.first_name}} {{request.user.last_name}}</h6><span>
+										{{request.user.account_level}} </span>
+									</div>
+									<a class="dropdown-item" href="{% url 'user_profile' %}"><i class="far fa-user"></i> My Profile</a>
+									<a class="dropdown-item" href="{% url 'update_profile' %}"><i class="far fa-edit"></i> Edit Profile</a>
+									<a class="dropdown-item" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+								</div>
+							</div>
+							<div class="dropdown main-header-message right-toggle">
+								<a class="nav-link " data-toggle="sidebar-right" data-target=".sidebar-right">
+									<i class="ti-menu tx-20 bg-transparent"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+					<!-- /main-header -->
+
+			<!-- Page mobile-header -->
+			<div class="responsive main-header">
+				<div class="mb-1 navbar navbar-expand-lg  nav nav-item  navbar-nav-right responsive-navbar navbar-dark d-sm-none ">
+					<div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+						<div class="d-flex order-lg-2 ml-auto">
+							
+							<div class="d-md-flex">
+								<div class="nav-item full-screen fullscreen-button">
+									<a class="new nav-link full-screen-link" href="#"><i class="ti-fullscreen"></i></span></a>
+								</div>
+							</div>
+							
+							
+							<div class="dropdown main-profile-menu nav nav-item nav-link">
+								<a class="profile-user" href="{% url 'user_profile' %}">
+									{% if request.user.profile_image %}
+                                    <img alt="" src="{{request.user.profile_image.url}}">
+{% else %}
+									<img alt="" src="{% static 'account/assets/img/faces/3.png' %}">
+									{% endif %}
+								</a>
+								<div class="dropdown-menu dropdown-menu-arrow animated fadeInUp">
+									<div class="main-header-profile header-img">
+										<div class="main-img-user">
+											{% if request.user.profile_image %}
+											<img alt="" src="{{request.user.profile_image.url}}">
+											{% else %}
+											<img alt="" src="{% static 'account/assets/img/faces/3.png' %}">
+											{% endif %}
+										</div>
+										<h6>{{request.user.first_name}} {{request.user.last_name}}</h6><span>{{request.user.account_type}} </span>
+									</div>
+									<a class="dropdown-item" href="{% url 'user_profile' %}"><i class="far fa-user"></i> My Profile</a>
+									<a class="dropdown-item" href="{% url 'update_profile' %}"><i class="far fa-edit"></i> Edit Profile</a>
+									<a class="dropdown-item" href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+								</div>
+							</div>
+							<div class="dropdown main-header-message right-toggle">
+								<a class="nav-link " data-toggle="sidebar-right" data-target=".sidebar-right">
+									<i class="ti-menu tx-20 bg-transparent"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			<!-- mobile-header -->
+
+    {% block content %}
+
+
+
+
+
+ {% endblock %}
+
+		<!-- Right-sidebar-->
+		<div class="sidebar sidebar-right sidebar-animate">
+			<div class="p-3">
+				<a href="#" class="text-right float-right" data-toggle="sidebar-right" data-target=".sidebar-right"><i class="fa fa-close"></i></a>
+			</div>
+			<div class="tab-menu-heading border-0 card-header">
+				
+				<div class="card-options ml-auto">
+					<a href="#" class="sidebar-remove"><i class="fa fa-close"></i></a>
+				</div>
+			</div>
+			
+			<div class="panel-body tabs-menu-body side-tab-body p-0 border-0 ">
+				<div class="tab-content">
+					<div class="tab-pane active" id="tab">
+						<div class="card-body p-0">
+							<div class="header-user text-center mt-4">
+								<span class="avatar avatar-xxl brround mx-auto">
+									{% if request.user.profile_image %}
+									<img src="{{request.user.profile_image.url}}" alt="Profile-img" class="avatar avatar-xxl brround">
+								{% else %}
+
+								<img src="{% static 'account/assets/img/faces/3.png' %}" alt="Profile-img" class="avatar avatar-xxl brround">
+								{% endif %}
+							</span>
+								<div class=" text-center font-weight-semibold user mt-3 h6 mb-0">{{request.user.first_name}} {{request.user.last_name}}</div>
+								<span class="text-muted">
+								 {{request.user.account_level}}
+								
+                    <br> 
+                    Joined -<span style='text-transform: capitalize;'>{{request.user.date_joined|naturaltime}}</span><br>
+                                          Your account is - <i class="fa fa-check-square"></i> Active
+                     <br><br>
+                     
+                    
+								
+								</span>
+								
+							</div>
+							<a class="dropdown-item  border-top" href="{% url 'user_profile' %}">
+								<i class="dropdown-icon fa fa-home mr-2"></i> Account Information
+							</a>
+							
+							<a class="dropdown-item  border-top" href="{% url 'update_profile' %}">
+								<i class="dropdown-icon fa fa-edit mr-2"></i> Edit Profile
+							</a>
+							
+							
+							
+						
+							<div class="card-body border-top border-bottom">
+								<div class="row">
+									
+									
+									<div class="col-4 text-center">
+										<a class="" href="{% url 'logout' %}" style="text-decoration: none; color:white;">
+										<i class="dropdown-icon fa fa-sign-out-alt fs-20 m-0 leading-tight"></i>
+										<div>Sign out</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+
+					
+					
+				</div>
+			</div>
+		</div>		<!-- Right-sidebar-closed -->
+
+
+		<!-- Footer opened -->
+		<div class="main-footer ht-40">
+			<div class="container-fluid pd-t-0-f ht-100p">
+				<span><a href="#">Copyright © {% now 'Y' %} Spotware Systems Ltd. cTrader®, cAlgo®, cBroker®, cMirror®, cXchange®. All rights reserved.</a></span>
+			</div>
+		</div>
+		<!-- Footer closed -->
+
+		<!-- Back-to-top -->
+		<a href="#top" id="back-to-top"><i class="la la-chevron-up"></i></a>
+
+		<!-- JQuery min js -->
+		<script src="{% static 'account/assets/plugins/jquery/jquery.min.js' %}"></script>
+
+		<!-- Datepicker js -->
+		<script src="{% static 'account/assets/plugins/jquery-ui/ui/widgets/datepicker.js' %}"></script>
+
+		<!-- Bootstrap Bundle js -->
+		<script src="{% static 'account/assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+		<!-- Ionicons js -->
+		
+		
+		<!-- Moment js -->
+		<script src="{% static 'account/assets/plugins/moment/moment.js' %}"></script>
+
+		<!--Chart bundle min js -->
+		<script src="{% static 'account/assets/plugins/chart.js/Chart.bundle.min.js' %}"></script>
+		<script src="{% static 'account/assets/plugins/raphael/raphael.min.js' %}"></script>
+		<script src="{% static 'account/assets/plugins/peity/jquery.peity.min.js' %}"></script>
+
+		<!-- JQuery sparkline js -->
+		<script src="{% static 'account/assets/plugins/jquery-sparkline/jquery.sparkline.min.js' %}"></script>
+
+	
+		<!-- Sampledata js -->
+		<script src="{% static 'account/assets/js/chart.flot.sampledata.js' %}"></script>
+
+		<!-- Perfect-scrollbar js -->
+		<script src="{% static 'account/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+		<script src="{% static 'account/assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
+
+		<!-- Internal  Flot js-->
+		<script src="{% static 'account/assets/plugins/jquery.flot/jquery.flot.js' %}"></script>
+		<script src="{% static 'account/assets/plugins/jquery.flot/jquery.flot.pie.js' %}"></script>
+		<script src="{% static 'account/assets/plugins/jquery.flot/jquery.flot.resize.js' %}"></script>
+		<script src="{% static 'account/assets/plugins/jquery.flot/jquery.flot.categories.js' %}"></script>
+		<script src="{% static 'account/assets/js/dashboard.sampledata.js' %}"></script>
+		<script src="{% static 'account/assets/js/chart.flot.sampledata.js' %}"></script>
+
+		<!-- Internal Newsticker js-->
+		<script src="{% static 'account/assets/plugins/newsticker/jquery.jConveyorTicker.js' %}"></script>
+		<script src="{% static 'account/assets/js/newsticker.js' %}"></script>
+
+		
+		<!-- Sidebar js -->
+		<script src="{% static 'account/assets/plugins/side-menu/sidemenu.js' %}"></script>
+
+		<!-- right-sidebar js -->
+		<script src="{% static 'account/assets/plugins/sidebar/sidebar.js' %}"></script>
+		<script src="{% static 'account/assets/plugins/sidebar/sidebar-custom.js' %}"></script>
+
+		<!-- Rating js-->
+		<script src="{% static 'account/assets/plugins/rating/jquery.rating-stars.js' %}"></script>
+		<script src="{% static 'account/assets/plugins/rating/jquery.barrating.js' %}"></script>
+
+		<!-- P-scroll js -->
+		<script src="{% static 'account/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js' %}"></script>
+		<script src="{% static 'account/assets/plugins/perfect-scrollbar/p-scroll.js' %}"></script>
+
+		<!-- Internal Nice-select js-->
+		<script src="{% static 'account/assets/plugins/jquery-nice-select/js/jquery.nice-select.js' %}"></script>
+		<script src="{% static 'account/assets/plugins/jquery-nice-select/js/nice-select.js' %}"></script>
+
+		<!-- Sticky js -->
+		<script src="{% static 'account/assets/js/sticky.js' %}"></script>
+
+		<!-- index js -->
+		<script src="{% static 'account/assets/js/dashboard.js' %}"></script>
+		<!-- Internal Modal js-->
+		<script src="{% static 'account/assets/js/modal.js' %}"></script>
+
+		<!-- custom js -->
+		<script src="{% static 'account/assets/js/custom.js' %}"></script>
+
+		
+
+<!--whatsapp widget-->
+<style>
+
+
+	a.blantershow-chat {
+	  /*   background: #009688; */
+	  background: #fff;
+	  color: #404040;
+	  position: fixed;
+	  display: flex;
+	  font-weight: 400;
+	  justify-content: space-between;
+	  z-index: 98;
+	  bottom: 8px;
+	  right: 30px;
+	  font-size: 15px;
+	  padding: 10px 20px;
+	  border-radius: 30px;
+	  box-shadow: 0 1px 15px rgba(32, 33, 36, 0.28);
+	}
+	
+	a.blantershow-chat svg {
+	  transform: scale(1.2);
+	  margin: 0 10px 0 0;
+	}
+	</style>
+	
+		
+	<a class='blantershow-chat' href='https://api.whatsapp.com/send?phone=32460220607&text=Hi%20Spotware%20System Ltd.' title='Show Chat'><svg width="20" viewBox="0 0 24 24"><defs/><path fill="#eceff1" d="M20.5 3.4A12.1 12.1 0 0012 0 12 12 0 001.7 17.8L0 24l6.3-1.7c2.8 1.5 5 1.4 5.8 1.5a12 12 0 008.4-20.3z"/><path fill="#4caf50" d="M12 21.8c-3.1 0-5.2-1.6-5.4-1.6l-3.7 1 1-3.7-.3-.4A9.9 9.9 0 012.1 12a10 10 0 0117-7 9.9 9.9 0 01-7 16.9z"/><path fill="#fafafa" d="M17.5 14.3c-.3 0-1.8-.8-2-.9-.7-.2-.5 0-1.7 1.3-.1.2-.3.2-.6.1s-1.3-.5-2.4-1.5a9 9 0 01-1.7-2c-.3-.6.4-.6 1-1.7l-.1-.5-1-2.2c-.2-.6-.4-.5-.6-.5-.6 0-1 0-1.4.3-1.6 1.8-1.2 3.6.2 5.6 2.7 3.5 4.2 4.2 6.8 5 .7.3 1.4.3 1.9.2.6 0 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4z"/></svg> Chat with Us</a>
+	
+	
+	
+	<!--Tidio chart script here-->
+	
+	<script src="//code.tidio.co/v38zlqh2caqobdnmjjozwlukhrycjcwu.js" async></script>
+	
+
+		<script type="text/javascript">
+			
+
+			$(function(){
+			  setTimeout(function(){
+				$('.alert').slideUp(86400000);
+			  }, 86400000);
+			});
+		  </script>
+		
+
+	</body>
+</html>

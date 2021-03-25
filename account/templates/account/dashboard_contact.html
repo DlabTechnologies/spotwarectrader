@@ -1,0 +1,153 @@
+{% extends 'account/dashboard_base.html' %}
+{% load static %}
+
+{{% load widget_tweaks %}
+{% load humanize %}
+{% block content %}
+
+			<!-- container -->
+			<div class="container-fluid">
+
+				<!-- Page Header 2 -->
+				<div class="breadcrumb-header justify-content-between">
+					<div class="left-content">
+						<h3 class="content-title mb-2">
+							You are logged in as: {{request.user.first_name}} {{request.user.last_name}}<span style="font-size: 12px; font-style: italic;">
+								{% if request.user.deposit_amount == '0' %}
+								(No transaction yet? <a href="{% url 'deposit' %}">click here</a><br> to start trading now) </span>
+							
+							{% endif %}
+						</h3>
+						<div class="d-flex">
+							<i class="fa fa-home"></i>
+							<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</p>
+							<p class="text-primary mb-0 hover-cursor" style="color: #ffc108 !important;">                                    																																																																																																																																											
+																		Contact Support																																					
+    								</p>
+						</div>
+					</div>
+				
+					
+					
+					
+					<div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+						<a data-toggle="sidebar-right" data-target=".sidebar-right">
+						<button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-id-card "></i>
+                            </button></a>
+						<a href="{% url 'dashboard_contact' %}"
+						<button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-headset"></i>
+                            </button></a>
+						<a href="{% url 'logout' %}">
+						<button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-power-off"></i>
+                            </button></a>
+                        
+					</div>
+				</div>				<!-- /breadcrumb -->
+          
+
+
+					
+{% if messages %}
+{% for message in messages %}
+<div class="alert-hold alert alert-success alert-dismissible fade show" alert-{{ message.tags }}" role="alert">
+<strong>{{message}}</strong> 
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button>
+</div>
+{% endfor %}
+{% endif %}
+
+
+			<div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
+						<!--div-->
+						<div class="card">
+							<div class="card-body">
+							 
+								<div class="main-content-label mg-b-5">
+									GET IN TOUCH WITH US
+								</div>
+								                                 								<div class="container">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-8">
+                            <div class="form-holder">
+								
+                    <form action="" method="POST">
+						{% csrf_token %}
+
+                        <div class="form-row">
+                            <div class="col-xs-12 col-sm-6">
+                                <label for="inputName1">Your Name</label>
+								{% render_field form.name id="inputName1" placeholder="Your Name" value=request.user.first_name type="text" name="name" class="form-control" required="required" readonly="readonly" %}
+                            </div>
+                            <div class="col-xs-12 col-sm-6">
+                                <label for="inputEmail1">Email</label>
+								{% render_field form.email id="inputEmail1" type="text" name="email" placeholder="Your Email" class="form-control" required="required" value=request.user.email readonly="readonly" %}
+                            </div>
+                        </div>
+                        
+                             
+                        <div class="form-row" style="margin-top:10px;margin-bottom:10px;">
+                            <div class="col-lg">
+                                                            <label for="inputEmail1">Phone</label>
+
+															{% render_field form.phone class="form-control" value=request.user.phone name="phone" placeholder="Phone" type="tel" required="required" readonly="readonly" %}
+									</div>
+                        </div> 
+
+                         <div class="form-row" style="margin-top:10px;margin-bottom:10px;">
+                            <div class="col-lg">
+                                                            <label for="inputEmail1">Subject</label>
+
+															{% render_field form.subject class="form-control" placeholder="Subject" name="subject" type="text" required="required" %}
+									</div>
+                        </div>  
+                        
+                        
+                        <div class="form-row" style="margin-bottom: 10px;">
+                            <div class="col-lg">
+                                        <label for="inputEmail1">Your Message</label>
+
+										{% render_field form.message class="form-control" name="message" placeholder="Enter your message here..." rows="3" required="required" %}
+									</div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-xs-12">
+                                <div class="submit-holder">
+                                    <button type="submit"  class="btn btn-main-primary pd-x-20">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4 bg-grey-500">
+                <div class="address-details"><br />
+                    <h6>Location.</h6>
+                    <p>2300, Turnhout Belgium
+
+ </p>
+ 
+ {% for info in info %}
+<p>
+Phone: {{info.phone}}
+
+</p>
+                    <p>E-mail: {{info.email}}</p>
+			{% endfor %}
+				</div>
+            </div>
+        </div>
+    </div>
+								
+							</div>
+						</div>
+					</div>                
+			</div>
+			<!-- /conatiner -->
+		</div>
+		<!-- /main-content -->
+		{% endblock %}

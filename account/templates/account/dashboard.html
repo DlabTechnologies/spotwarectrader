@@ -1,0 +1,441 @@
+{% extends 'account/dashboard_base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+			<!-- container -->
+			<div class="container-fluid">
+
+				<!-- Page Header 2 -->
+				<div class="breadcrumb-header justify-content-between">
+					<div class="left-content">
+						<h3 class="content-title mb-2">
+						You are logged in as: {{request.user.first_name}} {{request.user.last_name}}<span style="font-size: 12px; font-style: italic;">
+							{% if request.user.deposit_amount == '0' %}
+							(No transaction yet? <a href="{% url 'deposit' %}">click here</a><br> to start trading now) </span>
+						
+						{% endif %}
+					</h3>
+						<div class="d-flex">
+							<i class="fa fa-home"></i>
+							<p class="text-muted mb-0 hover-cursor"> &nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</p>
+							<p class="text-primary mb-0 hover-cursor " style="color: #ffc108 !important;">My Account</p>
+						</div>
+					</div>
+				
+					<div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+						<a data-toggle="sidebar-right" data-target=".sidebar-right">
+						<button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-id-card "></i>
+                            </button></a>
+						<a href="{% url 'dashboard_contact' %}"
+						<button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fas fa-headset"></i>
+                            </button></a>
+						<a href="{% url 'logout' %}">
+						<button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-power-off"></i>
+                            </button></a>
+                        
+					</div>
+
+					
+				</div>				<!-- /breadcrumb -->
+
+          
+
+
+				
+			            	<!-- row  -->
+				<div class="row">
+					<div class="col-xl-12 col-md-12 col-lg-12">
+						<div class=" overflow-hidden bg-transparent card-crypto-scroll shadow-none">
+							<div class="js-conveyor-example">
+								<ul class="news-crypto">
+									<li>
+										<div class="crypto-card">
+											<div class="row">
+												<div class="d-flex">
+													<div class="my-auto">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/Augur.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">REP / INR</p>
+														<div class="m-0 tx-13 text-warning">$0.0215<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+									   <div class="crypto-card">
+										   <div class="row">
+												<div class="d-flex">
+													<div class="">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/AquariusCoin.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">ARCO / INR</p>
+														<div class="m-0 tx-13 text-warning">$425.25<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>+12.85%</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+									   <div class="crypto-card">
+											<div class="row">
+												<div class="d-flex">
+													<div class="">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/BitShares.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">BTS / INR</p>
+														<div class="m-0 tx-13 text-warning">$2.786<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>-02.25%</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="crypto-card">
+										   <div class="row">
+												<div class="d-flex">
+													<div class="">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/Bytecoin.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">BCN / INR</p>
+														<div class="m-0 tx-13 text-warning">$15.425<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="crypto-card" >
+										   <div class="row">
+												<div class=" d-flex">
+													<div class="my-auto">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/Dash.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">Dash / INR</p>
+														<div class="m-0 tx-13 text-warning">$5.125<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>-11.85%%</span></div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="crypto-card">
+										   <div class="row">
+												<div class=" d-flex">
+													<div class="">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/EOS.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">EUR / INR</p>
+														<div class="m-0 tx-13 text-warning">$135.425<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="crypto-card">
+										   <div class="row">
+												<div class=" d-flex">
+													<div class="">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/Decred.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">ETH / USDT</p>
+														<div class="m-0 tx-13 text-warning">$34.625<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>-0.32%</span></div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="crypto-card">
+										   <div class="row">
+												<div class=" d-flex">
+													<div class="">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/IOTA.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">IOTA / USD</p>
+														<div class="m-0 tx-13 text-warning">$67.325<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="crypto-card">
+										   <div class="row">
+												<div class=" d-flex">
+													<div class="">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/Litecoin.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">LTC / USD</p>
+														<div class="m-0 tx-13 text-warning">$7.525<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>-1.42%</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="crypto-card">
+										   <div class="row">
+												<div class=" d-flex">
+													<div class="">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/Monero.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">XMR / EUR</p>
+														<div class="m-0 tx-13 text-warning">$4.325<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="crypto-card">
+										   <div class="row">
+												<div class=" d-flex">
+													<div class="">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/NEM.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">ETH / USDT</p>
+														<div class="m-0 tx-13 text-warning">$5.525<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>-1.32%</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="crypto-card">
+										   <div class="row">
+												<div class=" d-flex">
+													<div class="">
+														<img src="{% static 'account/assets/img/crypto-currencies/round-outline/Netko-coin.svg' %}" class="w-6 h-6 mt-0" alt="">
+													</div>
+													<div class="ml-3">
+														<p class="mb-1 tx-13">NEO / USD</p>
+														<div class="m-0 tx-13 text-warning">$6.025<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>               <!-- Page Stats -->
+
+
+				
+					<!--trade progress -->
+					<style>
+						/*
+ * Copyright (c) 2012-2013 Thibaut Courouble
+ * http://www.cssflow.com
+ * Licensed under the MIT License
+ *
+ * Sass/SCSS source: https://goo.gl/UhXKg
+ * PSD by Vin Thomas: https://goo.gl/n1M2e
+ */
+
+
+
+.container {
+  margin:  auto;
+  width: 100%;
+  text-align: center;
+}
+
+.container .progress {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.progress {
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  height: 16px;
+  border-radius: 4px;
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25), inset 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/*
+ * Note: using adjacent or general sibling selectors combined with
+ *       pseudo classes doesn't work in Safari 5.0 and Chrome 12.
+ *       See this article for more info and a potential fix:
+ *       https://css-tricks.com/webkit-sibling-bug/
+ */
+
+
+.progress > .progress-bar {
+  width: {{request.user.trade_progress}}%;
+  background-color: #86e01e;
+}
+
+.radio {
+  display: none;
+}
+
+
+
+
+					</style>
+					<div class="container">
+
+
+						<label for="onehundred" class="label">Trade progress {{request.user.trade_progress}}%</label>
+					  <br />
+						<div class="progress">
+						  <div class="progress-bar"></div>
+						</div>
+					  </div>
+					  <!--trade progress end-->
+					<br />
+					
+
+            <div class="row">
+					
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="card bg-primary">
+							<div class="card-body">
+								<div class="d-flex no-block align-items-center">
+									<div>
+										<h6 class="text-white">PACKAGE</h6>
+										<h2 class="text-white m-0 ">{{request.user.account_level}}</h2>
+									</div>
+									<div class="ml-auto">
+										<span class="text-white display-6"><i class="fa fa-star fa-2x"></i></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="card bg-info">
+							<div class="card-body">
+								<div class="d-flex no-block align-items-center">
+									<div>
+										<h6 class="text-white">CAPITAL</h6>
+										<h2 class="text-white m-0 ">$                     {{request.user.deposit_amount}}</h2>
+                     <span style="display: none;">
+                    0</span>
+									</div>
+									<div class="ml-auto">
+										<span class="text-white display-6"><i class="fas fa-money-bill fa-2x"></i></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="card bg-success">
+							<div class="card-body">
+								<div class="d-flex no-block align-items-center">
+									<div>
+										<h6 class="text-white">PROFIT</h6>
+										<h2 class="text-white m-0 ">$ {{request.user.trade_profit}}</h2>
+										<span style="display: none;">
+										<i class="fa fa-btc"></i> 0                                        </span>
+									</div>
+									<div class="ml-auto">
+										<span class="text-white display-6"><i class="fas fa-money-bill-alt fa-2x"></i></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12 col-md-6 col-lg-3">
+						<div class="card bg-danger">
+							<div class="card-body">
+								<div class="d-flex no-block align-items-center">
+									<div>
+										<h6 class="text-white">TOTAL BALANCE</h6>
+										<h2 class="text-white m-0 ">$ {{total}}</h2>
+									</div>
+									<div class="ml-auto">
+										<span class="text-white display-6"><i class="fas fa-piggy-bank fa-2x fa-2x"></i></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>				<!-- /row -->
+					
+				<!-- Market Stats -->
+            <div class="row row-sm">
+					<div class="col-xl-4 col-lg-6 col-md-12" style="margin-bottom: 20px;">
+						<div style="height:125px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:240px; padding:0px; margin:0px; width: 100%; "><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=1505" width="100%" height="636px" scrolling="none" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe></div></div>
+					</div>
+					<div class="col-xl-4 col-lg-6 col-md-12" style="margin-bottom: 20px;">
+						<div style="height:125px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:240px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=145&pref_coin_id=1505" width="100%" height="636px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe></div></div>
+					</div>
+					<div class="col-xl-4 col-lg-12 col-md-12" style="margin-bottom: 20px;">
+						<div style="height:125px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:240px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=359&pref_coin_id=1505" width="100%" height="636px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe></div></div>
+					</div>
+</div>				<!-- /row -->
+
+				<!-- Live Feed -->
+            <div class="row row-sm row-deck">
+					<div class="col-xl-4 col-lg-12">
+						<div class="card overflow-hidden ">
+							<div style="height:509px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38; padding: 0px; margin: 0px; width: 100%;"><div style="height:413px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=full_v2&theme=dark&cnt=6&pref_coin_id=1505&graph=yes" width="100%" height="509px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe></div></div>
+						</div>
+					</div>
+					<div class="col-xl-8 col-lg-12">
+						<div class="card card-bitcoin">
+							<div style="height:510px;">
+<div id="tradingview_b766a-wrapper" style="position: relative;box-sizing: content-box;width: 100%;height: 100%;margin: 0 auto !important;padding: 0 !important;font-family:Arial,sans-serif;"><div style="width: 100%;height: 100%;background: transparent;padding: 0 !important;"><iframe id="tradingview_b766a" src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_b766a&amp;symbol=FX%3AUSDJPY&amp;interval=1&amp;saveimage=1&amp;toolbarbg=4f4f4f&amp;studies=%5B%5D&amp;theme=Dark&amp;style=10&amp;timezone=Etc%2FUTC&amp;studies_overrides=%7B%7D&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en&amp;utm_source=google.com&amp;utm_medium=widget&amp;utm_campaign=chart&amp;utm_term=FX%3AUSDJPY" style="width: 100%; height: 100%; margin: 0 !important; padding: 0 !important;" frameborder="0" allowtransparency="true" scrolling="no" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe></div></div>
+    </div>						</div>
+					</div>
+				</div>				<!-- /row  -->
+
+				<!-- Quick Buy and Sell -->
+            				<!-- row -->
+
+				<!-- row -->
+            				<!-- /row -->                
+			</div>
+			<!-- /conatiner -->
+		</div>
+		<!-- /main-content -->
+
+		{% endblock %}

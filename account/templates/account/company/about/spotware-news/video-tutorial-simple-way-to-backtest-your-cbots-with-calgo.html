@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#" lang="en">
+
+<!-- Mirrored from www.spotware.com/company/about/spotware-news/video-tutorial-simple-way-to-backtest-your-cbots-with-calgo by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Mar 2021 20:59:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <title>Video Tutorial: Simple way to Backtest your cBots with cAlgo | Spotware Systems Ltd</title>
+    <link rel="icon" type="image/png" href="../../../user/themes/spotware/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Google Tag Manager: on -->
+    <script type="opt-in" data-type="application/javascript" data-name="analytic">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K75D2F7');</script>
+    <!-- End Google Tag Manager -->
+            <meta name="generator" content="GravCMS" />
+    <meta name="description" content="Video Tutorial: Simple way to Backtest your cBots with cAlgo See how your robots would have performed if they ran within a certain historical time frame...." />
+    <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" property="twitter:title" content="Video Tutorial: Simple way to Backtest your cBots with cAlgo" />
+    <meta name="twitter:description" property="twitter:description" content="Video Tutorial: Simple way to Backtest your cBots with cAlgo See how your robots would have performed if they ran within a certain historical time frame...." />
+    <meta name="twitter:site" property="twitter:site" content="@cTrader" />
+    <meta property="og:title" content="Video Tutorial: Simple way to Backtest your cBots with cAlgo" />
+    <meta property="og:description" content="Video Tutorial: Simple way to Backtest your cBots with cAlgo See how your robots would have performed if they ran within a certain historical time frame...." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_EN" />
+    <meta property="og:url" content="https://www.spotware.com/company/about/spotware-news/video-tutorial-simple-way-to-backtest-your-cbots-with-calgo" />
+    <script defer type="text/javascript" src="../../../user/themes/spotware/cookies/config.min.js"></script>
+<script defer type="text/javascript" src="../../../user/themes/spotware/cookies/consent.js" data-config="consentConfig" data-stylePrefix="klaro"></script>    
+                                                                
+                                                                
+            <link href="../../../assets/b623f3dde97c5035a820710666724304ab85.css?g-8558e39d" type="text/css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com/">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+</head>
+
+<body id="top" class="">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe data-name="analytic" data-src="https://www.googletagmanager.com/ns.html?id=GTM-K75D2F7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div id="wrapper">
+                    
+
+<header id="mobile-site-header" class="mobile-header">
+    <div id="mobile-site-logo">
+        <a href="../../../index.html">
+            <img class="" src="../../../user/themes/spotware/images/logo-10years-white.png" alt="Spotware 10 Years">
+        </a>
+    </div>
+
+    <div id="mobile-header-sidebar" class="clearfix">
+        <div id="text-30" class="widget widget_text">
+            <div class="textwidget"></div>
+        </div>
+    </div>
+    <a href="#mobile-site-navigation" class="toggle-mobile-menu"><i class="fa fa-bars"></i></a>
+</header>
+
+<header id="site-header" class="header-style-default">
+    <div id="header-wrapper" class="">
+        <div id="header-container" class="header-container container clearfix">
+
+            <div id="" class="site-navigation menu-float-right">
+                <div class="site-logo">
+                    <a href="../../../index.html">
+                    <img class="" src="../../../user/themes/spotware/images/svg/logo-10years.svg" alt="Spotware 10 Years" width="300px">
+                    </a>
+                </div>
+
+                <div class="site-links menu-float-right secondary-navigation-container">
+                    <nav id="secondary-navigation" class="menu-container-2 menu-float-right">
+                        <ul id="menu-secondary-menu" class="menu">
+                            <li class="menu-startup menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" rel="noopener noreferrer" href="https://startup.spotware.com/">Start Brokerage</a></li>
+                            <li class="menu-ctrader menu-item menu-item-type-custom menu-item-object-custom"><a href="../../../beta.html">Try cTrader</a></li>
+                            <li class="menu-community menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" rel="noopener noreferrer" href="https://ctrader.com/">cTrader Community</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div id="" class="site-navigation menu-float-right">
+                <div class="site-links menu-float-right primary-navigation-container">
+                    <nav id="primary-navigation" class="menu-container">
+                        <ul id="menu-main-menu" class="menu">
+                                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../../crypto-exchange.html" class="">cXchange</a>
+                </li>
+                                                            <li class="megamenu columns-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children "><a class="">cTrader Suite</a>
+                    <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Trading platforms and features</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-trading-platform-overview.html" class="">cTrader Overview</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-trading-platform.html" class="">cTrader Trading</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-charting.html" class="">cTrader Charting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-copy.html" class="">cTrader Copy</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-open-api-trading.html" class="">cTrader Open API</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-automated-trading-platform.html" class="">cTrader Automate</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-fix-api-trading.html" class="">cTrader FIX API</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-web-trading-platform.html" class="">cTrader Web</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-mobile-trading-platform.html" class="">cTrader Mobile</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Back-office features and add-ons</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/trading-account-management.html" class="">cTrader Account Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/ctrader-risk-management.html" class="">cTrader Risk Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/ctrader-symbol-management.html" class="">cTrader Symbol Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/ctrader-reporting.html" class="">cTrader Reporting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/white-labels.html" class="">cTrader White Labels</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/ctrader-partner-programs.html" class="">cTrader Partner Programs</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/fifo-netting-trading-account.html" class="">cTrader FIFO Netting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/ctrader-spread-betting.html" class="">cTrader Spread Betting</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Server-side components and services</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/server/server.html" class="">cTrader Server</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/server/proxy-cloud.html" class="">cTrader Proxy Cloud</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/server/ctrader-extensibility.html" class="">cTrader Extensibility</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/server/service-assurance.html" class="">cTrader Service Assurance</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/server/reporting-api.html" class="">Reporting API</a></li>
+                                                                                                            </ul>
+                            </li>
+                                            </ul>
+                </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../../custom-development.html" class="">Development</a>
+                </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../../integrations.html" class="">Integrations</a>
+                </li>
+                                                            <li class="megamenu columns-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children "><a class=" text-green">About Us</a>
+                    <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">About</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../spotware.html" class="">About Spotware</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../testimonials.html" class="">Testimonials</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../leadership-team.html" class="">Leadership Team</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../awards.html" class="">cTrader Awards</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../spotware-news.html" class=" text-green">Spotware News</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Careers</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../careers/why-spotware.html" class="">Why Spotware</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../careers/vacancies.html" class="">Vacancies</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Contacts</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../contact-us.html" class="">Contact Us</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../contact-us%23subscribe.html" class="">Subscribe to Product Updates</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../contact-us%23get-demo.html" class="">Request a Demo</a></li>
+                                                                                                            </ul>
+                            </li>
+                                            </ul>
+                </li>
+                        
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="site-links menu-float-right">
+                </div>
+            </div><!-- #site-navigation -->
+
+            <div class="header-search">
+                <div class="searchform-wrapper">
+                    <form method="get" class="searchform" action="https://www.spotware.com/">
+                        <input onfocus="this.value=''" onblur="this.value='Type and hit enter to search ...'" type="text" value="Search..." name="s" class="search-input">
+                    </form>
+                </div>
+                <div class="toggle-header-search">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+        </div><!-- #header-container -->
+    </div><!-- #header-wrapper -->
+</header>
+
+            <div class="right-sticky-block">
+    <a href="../../../beta.html" class="">
+        <img alt="Get Demo" data-src="/user/themes/spotware/images/sticky-buttons/get-demo.png" class=" lazyloaded" src="../../../user/themes/spotware/images/sticky-buttons/get-demo.png" loading="lazy"><noscript><img src="../../../user/themes/spotware/images/sticky-buttons/get-demo.png" alt="Get Demo"></noscript>
+        <span>Get Demo</span>
+    </a>
+    <a href="../../../featured-ctrader-brokers.html" class="">
+        <img alt="Get Demo" data-src="/user/themes/spotware/images/sticky-buttons/brokers.png" class=" lazyloaded" src="../../../user/themes/spotware/images/sticky-buttons/brokers.png" loading="lazy"><noscript><img src="../../../user/themes/spotware/images/sticky-buttons/brokers.png" alt="Get Demo"></noscript>
+        <span>Brokers</span>
+    </a>
+    <a href="../../../contact-us.html#subscribe"> <!-- class="fancybox"-->
+        <img alt="Subscribe" data-src="/user/themes/spotware/images/sticky-buttons/subscribe.png" class=" lazyloaded" src="../../../user/themes/spotware/images/sticky-buttons/subscribe.png" loading="lazy"><noscript><img src="../../../user/themes/spotware/images/sticky-buttons/subscribe.png" alt="Subscribe"></noscript>
+        <span>Subscribe</span>
+    </a>
+
+    <a href="../../../contact-us.html" class="">
+        <img alt="Contact" data-src="/user/themes/spotware/images/sticky-buttons/contact.png" class=" lazyloaded" src="../../../user/themes/spotware/images/sticky-buttons/contact.png" loading="lazy"><noscript><img src="../../../user/themes/spotware/images/sticky-buttons/contact.png" alt="Contact"></noscript>
+        <span>Contact</span>
+    </a>
+
+</div>        
+        
+                <section id="body" class=" clearfix">
+                    <div class="page-header bg-bottom bg-norepeat bg-waves">
+	
+	<div class="container">
+				<h1>Spotware News</h1>
+							<p class="font-weight-bold">Latest updates of our fintech products, awards, interviews, media &amp; top-tier industry publications.</p>
+			</div>
+</div>
+        <div class="news-wrapper py-5 bg-white">
+            <div class="container">
+
+                <div class="pure-g">
+                    <div class="pure-u-2-3">
+                        <div class="card mr-4 shadow">
+                            <div class="card-body">
+                                <h2>Video Tutorial: Simple way to Backtest your cBots with cAlgo</h2>
+                                <p class="text-muted"><small>Mar 11, 2015</small></p>
+                                
+
+                                <p>Video Tutorial: Simple way to Backtest your cBots with cAlgo See how your robots would have performed if they ran within a certain historical time frame. You'll see details of every position opened, closed and modified, as well as a summary of overall performance. </p>
+<p>See the full video below. </p>
+<p>
+        
+  <div class="mediaembed-responsive mediaembed-msod">
+    <p class="mediaembed-icon">&#9749;</p>
+    <p class="mediaembed-error-title"><b>Unable to process oEmbed media:</b><a href="https://www.youtube.com/embed/ncwni4pCl1o" alt="" title="">https://www.youtube.com/embed/ncwni4pCl1o</a></p>
+    <p class="mediaembed-error-message"><b>Error:</b>Response could not be parsed</p>
+  </div>
+
+</p>
+
+                                
+                            </div>
+                            <div class="card-footer">
+                                <div class="pure-g">
+                                    <div class="pure-u-1-1">
+                                                                                    <div class="my-4">
+                                                                                            <a href="tag_Articles.html" class="border border-green p-2"># Articles</a>
+                                                                                            <a href="tag_cTrader.html" class="border border-green p-2"># cTrader</a>
+                                                                                            <a href="tag_Interviews.html" class="border border-green p-2"># Interviews</a>
+                                                                                            <a href="tag_Tutorials.html" class="border border-green p-2"># Tutorials</a>
+                                                                                        </div>
+                                                                            </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="pure-u-1-3">
+                        <div class="mx-4 my-4">
+                            
+<div class="sidebar-content mb-4">
+    <h5 class="head-dotter mb-2">About Us</h5>
+    <p>Spotware Systems is a financial technology provider, developing and offering its own proprietary solutions, developed in-house at the headquarters in Limassol, Cyprus. Spotware’s product line is geared towards online trading providers in the eFX, Cryptocurrencies and multi-asset CFD space.</p>
+</div>
+<div class="sidebar-content mb-4">
+    <h5 class="head-dotter mb-2">Tags</h5>
+    <div class="tagcloud">
+        
+            <a href="tag_Articles.html" rel="noindex">Articles </a>
+            <a href="tag_cTrader.html" rel="noindex">cTrader </a>
+            <a href="tag_Interviews.html" rel="noindex">Interviews </a>
+            <a href="tag_cXchange.html" rel="noindex">cXchange </a>
+            <a href="tag_Updates.html" rel="noindex">Updates </a>
+            <a href="tag_Events.html" rel="noindex">Events </a>
+            <a href="tag_Mobile.html" rel="noindex">Mobile </a>
+            <a href="tag_Copy.html" rel="noindex">Copy </a>
+            <a href="tag_Desktop.html" rel="noindex">Desktop </a>
+            <a href="tag_Web.html" rel="noindex">Web </a>
+            <a href="tag_Awards.html" rel="noindex">Awards </a>
+            <a href="tag_Tutorials.html" rel="noindex">Tutorials </a>
+            <a href="tag_Company%20News.html" rel="noindex">Company News </a>
+        </div>
+</div>
+
+<div class="sidebar-content mb-4">
+    <h5 class="head-dotter mb-2">Archives</h5>
+	<div  class="archives">
+<ul>
+    <li>
+    	<a href="year_2021.html" rel="noindex">
+        <span class="archive_date">2021</span>
+        </a>
+                    <span>(2)</span>
+            </li>
+    <li>
+    	<a href="year_2020.html" rel="noindex">
+        <span class="archive_date">2020</span>
+        </a>
+                    <span>(41)</span>
+            </li>
+    <li>
+    	<a href="year_2019.html" rel="noindex">
+        <span class="archive_date">2019</span>
+        </a>
+                    <span>(52)</span>
+            </li>
+    <li>
+    	<a href="year_2018.html" rel="noindex">
+        <span class="archive_date">2018</span>
+        </a>
+                    <span>(35)</span>
+            </li>
+    <li>
+    	<a href="year_2017.html" rel="noindex">
+        <span class="archive_date">2017</span>
+        </a>
+                    <span>(6)</span>
+            </li>
+    <li>
+    	<a href="year_2016.html" rel="noindex">
+        <span class="archive_date">2016</span>
+        </a>
+                    <span>(19)</span>
+            </li>
+    <li>
+    	<a href="year_2015.html" rel="noindex">
+        <span class="archive_date">2015</span>
+        </a>
+                    <span>(19)</span>
+            </li>
+    <li>
+    	<a href="year_2014.html" rel="noindex">
+        <span class="archive_date">2014</span>
+        </a>
+                    <span>(13)</span>
+            </li>
+    <li>
+    	<a href="year_2013.html" rel="noindex">
+        <span class="archive_date">2013</span>
+        </a>
+                    <span>(13)</span>
+            </li>
+    <li>
+    	<a href="year_2012.html" rel="noindex">
+        <span class="archive_date">2012</span>
+        </a>
+                    <span>(9)</span>
+            </li>
+    <li>
+    	<a href="year_2011.html" rel="noindex">
+        <span class="archive_date">2011</span>
+        </a>
+                    <span>(5)</span>
+            </li>
+</ul>
+</div>
+</div>
+
+<div class="sidebar-content mb-4">
+    <h5 class="head-dotter mb-2">Media Contact</h5>
+    <p><a href="mailto:marketing@spotware.com" rel="noindex">marketing@spotware.com</a></p>
+</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+	        </section>
+        
+                    <section id="follow_us">
+	<div class="container px-sm-2  px-md-2  px-lg-0">
+		<div class="follow text-sm-left text-lg-center">
+		<div class="pure-g">
+			<div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3 mb-lg-0">
+				<span class="mr-3 font-weight-bold">Follow Spotware</span>
+				<a href="https://www.linkedin.com/company/2576819/" target="_blank" class="mr-3 text-muted">
+
+					<i class="fab fa-linkedin-in" aria-hidden="true"></i>
+				</a>
+				<a href="https://medium.com/@spotware" target="_blank" class=" text-muted">
+					<i class="fab fa-medium-m" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3 mb-lg-0">
+				<span class="mr-3 font-weight-bold">Follow cTrader</span>
+				<a href="https://t.me/cTrader_Official" target="_blank" class="mr-3 text-muted">
+					<i class="fab fa-telegram-plane" aria-hidden="true"></i>
+				</a>
+				<a href="https://www.facebook.com/spotware/" target="_blank" class="mr-3 text-muted">
+					<i class="fab fa-facebook-f" aria-hidden="true"></i>
+				</a>
+				<a href="https://twitter.com/cTrader" target="_blank" class="mr-3 text-muted">
+					<i class="fab fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="https://youtube.com/spotware" target="_blank" class=" text-muted">
+					<i class="fab fa-youtube" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3 mb-lg-0">
+				<span class="mr-3 font-weight-bold">Follow cXchange</span>
+				<a href="https://www.facebook.com/spotwarecxchange" target="_blank" class="mr-3 text-muted">
+					<i class="fab fa-facebook-f" aria-hidden="true"></i>
+				</a>
+				<a href="https://twitter.com/c_X_change" target="_blank" class="mr-3 text-muted">
+					<i class="fab fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="https://www.youtube.com/channel/UC0mG7T6-UIqj6EkLTW0gaBg" target="_blank" class=" text-muted">
+					<i class="fab fa-youtube" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+		</div>
+	</div>
+</section>
+            <footer class="site-footer clearfix  font-weight-bold" id="site-footer">
+    <div class="container px-2  px-md-2  px-lg-0 py-3 py-md-4 py-lg-5">
+        <div class="pure-g">
+            <div class="pure-u-1-1 pure-u-lg-1-4">
+                <ul class=" mb-3 mb-lg-0">
+                                            <li><a href="../../../beta.html" rel="nofollow">cTrader Demo</a></li>
+                                            <li><a href="https://ctrader.com/" rel="nofollow">cTrader Community Forum</a></li>
+                                            <li><a href="https://connect.spotware.com/" rel="nofollow">Spotware Open API</a></li>
+                                            <li><a href="https://help.ctrader.com/" rel="nofollow">User Guide</a></li>
+                                            <li><a href="../../../featured-ctrader-brokers.html" rel="nofollow">Featured Brokers</a></li>
+                                    </ul>
+            </div>
+            <div class="pure-u-1-1 pure-u-lg-1-4">
+                <ul class=" mb-3 mb-lg-0">
+                                            <li><a href="../../careers/vacancies.html">Vacancies</a></li>
+                                            <li><a href="../../../contact-us.html">Contact Us</a></li>
+                                            <li><a href="../../../contact-us/index.html#subscribe">Subscribe to Updates</a></li>
+                                    </ul>
+            </div>
+            <div class="pure-u-1-1 pure-u-lg-1-4">
+                <ul class=" mb-3 mb-lg-0">
+                                            <li><a href="../../../eula.html" rel="nofollow">EULA</a></li>
+                                            <li><a href="../../../legal-notices.html" rel="nofollow">Legal Notices</a></li>
+                                            <li><a href="../../../privacy-policy.html" rel="nofollow">Privacy Policy</a></li>
+                                            <li><a href="../../../datasheets-resources.html" rel="nofollow">Whitepapers</a></li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="copyright-separator"></div>
+        <div class="pure-g mb-5">
+            <div class="pure-u-1-1 pure-u-sm-1-1 pure-u-md-2-3 pure-u-lg-2-3 mb-3 mb-md-0">
+                <div class="copyright font-weight-bold">Copyright © 2020 Spotware Systems Ltd. cTrader®, cAlgo®, cBroker®, cMirror®, cXchange®. All rights reserved.</div>
+                <div class="copyright font-weight-bold">Spotware Systems Ltd. is a software development company that provides software solutions (products) and development services to enterprises and corporate clients. The information on this website is not directed towards retail investors nor solicitation of retail investors.</div>
+            </div>
+
+            <div class="pure-u-1-1 pure-u-sm-1-1 pure-u-md-1-3 pure-u-lg-1-3 text-center text-md-right">
+                <div class="footer-logo mt-n2">
+                    <a href="../../../index.html"><img src="../../../user/themes/spotware/images/footer_logo.png" alt="Spotware Systems Ltd" width="211px" \></a>
+                </div>
+                <div class="clearfix"></div>
+                <div class="footer-logo">
+                    <a href="https://ctrader.com/" target="_blank"><img src="../../../user/themes/spotware/images/ctrader_logo_traders_first.png" alt="cTrader" \></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>                <div id="mobile-menu-bg"></div>
+    </div>
+    <!-- #wrapper -->
+        
+<nav id="mobile-site-navigation" class="">
+    <span class="mobile-menu-header"><span class="mobile-menu-heading">Menu</span><i class="fa fa-times toggle-mobile-menu"></i></span>
+
+    <ul id="mobile-main-menu" class="menu">
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../../crypto-exchange.html">cXchange</a>
+                </li>
+                                                            <li class="megamenu columns-3 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  "><a>cTrader Suite</a><span></span>
+                    <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Trading platforms and features</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-trading-platform-overview.html">cTrader Overview</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-trading-platform.html">cTrader Trading</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-charting.html">cTrader Charting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-copy.html">cTrader Copy</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-open-api-trading.html">cTrader Open API</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-automated-trading-platform.html">cTrader Automate</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-fix-api-trading.html">cTrader FIX API</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-web-trading-platform.html">cTrader Web</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/trading/ctrader-mobile-trading-platform.html">cTrader Mobile</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Back-office features and add-ons</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/trading-account-management.html">cTrader Account Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/ctrader-risk-management.html">cTrader Risk Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/ctrader-symbol-management.html">cTrader Symbol Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/ctrader-reporting.html">cTrader Reporting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/white-labels.html">cTrader White Labels</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/ctrader-partner-programs.html">cTrader Partner Programs</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/fifo-netting-trading-account.html">cTrader FIFO Netting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/back-office/ctrader-spread-betting.html">cTrader Spread Betting</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Server-side components and services</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/server/server.html">cTrader Server</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/server/proxy-cloud.html">cTrader Proxy Cloud</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/server/ctrader-extensibility.html">cTrader Extensibility</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/server/service-assurance.html">cTrader Service Assurance</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../ctrader/server/reporting-api.html">Reporting API</a></li>
+                                                                                                            </ul>
+                            </li>
+                                            </ul>
+                </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../../custom-development.html">Development</a>
+                </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../../integrations.html">Integrations</a>
+                </li>
+                                                            <li class="megamenu columns-3 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  active"><a>About Us</a><span></span>
+                    <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">About</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../spotware.html">About Spotware</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../testimonials.html">Testimonials</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../leadership-team.html">Leadership Team</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../awards.html">cTrader Awards</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../spotware-news.html">Spotware News</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Careers</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../careers/why-spotware.html">Why Spotware</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../careers/vacancies.html">Vacancies</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Contacts</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../contact-us.html">Contact Us</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../contact-us%23subscribe.html">Subscribe to Product Updates</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../../contact-us%23get-demo.html">Request a Demo</a></li>
+                                                                                                            </ul>
+                            </li>
+                                            </ul>
+                </li>
+                        
+    </ul>
+    <hr>
+    <ul id="mobile-secondary-menu" class="menu site-links">
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-startup"><a target="_blank" rel="noopener noreferrer" href="https://startup.spotware.com/">Start Brokerage</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-ctrader"><a href="../../../beta.html">Try cTrader</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-community"><a target="_blank" rel="noopener noreferrer" href="https://ctrader.com/">cTrader Community</a></li>
+    </ul>
+
+</nav>
+
+    <style>
+    .scrollToTop {
+        width: 38px;
+        height: 38px;
+        line-height: 36px;
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        position: fixed;
+        z-index: 9999;
+        bottom: -45px;
+        left: 15px;
+        border-radius: 38px;
+        overflow: hidden;
+        transition: bottom .4s cubic-bezier(.55,0,.1,1);
+        background-color: #009247;
+    }
+    .scrollToTop.scrollactive {
+        bottom: 15px;
+    }
+</style>
+<a href="#top" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
+    <script src="../../../assets/083c8d3669c438a13fbb8c70c8cb28a5ab85.js?g-8558e39d"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.spotware.com#organization","name":"Spotware LTD","url":"https://www.spotware.com","sameAs":["https://www.facebook.com/spotware","https://www.linkedin.com/company/2576819","https://youtube.com/spotware"]},{"@type":"WebSite","@id":"https://www.spotware.com#website","url":"https://www.spotware.com","name":"Spotware Systems Ltd","publisher":{"@id":"https://www.spotware.com#organization"}},{"@type":"WebPage","@id":"https://www.spotware.com/company/about/spotware-news/video-tutorial-simple-way-to-backtest-your-cbots-with-calgo#webpage","url":"https://www.spotware.com/company/about/spotware-news/video-tutorial-simple-way-to-backtest-your-cbots-with-calgo","inLanguage":"en","name":"Video Tutorial: Simple way to Backtest your cBots with cAlgo | Spotware Systems Ltd","isPartOf":{"@id":"https://www.spotware.com#website"},"datePublished":"2015-03-11T07:00:28+00:00","dateModified":"2021-03-12T20:21:10+00:00"}]}
+</script>
+
+    
+    </body>
+
+<!-- Mirrored from www.spotware.com/company/about/spotware-news/video-tutorial-simple-way-to-backtest-your-cbots-with-calgo by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Mar 2021 20:59:49 GMT -->
+</html>

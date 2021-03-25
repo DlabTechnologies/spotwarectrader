@@ -1,0 +1,313 @@
+
+{% extends 'account/dashboard_base.html' %}
+{% load static %}
+
+{{% load widget_tweaks %}
+{% load humanize %}
+{% block content %}
+
+
+			<!-- container -->
+			<div class="container-fluid">
+
+				<!-- Page Header 2 -->
+				<div class="breadcrumb-header justify-content-between">
+					<div class="left-content">
+						<h3 class="content-title mb-2">
+							You are logged in as: {{request.user.first_name}} {{request.user.last_name}}<span style="font-size: 12px; font-style: italic;">
+								{% if request.user.deposit_amount == '0' %}
+								(No transaction yet? <a href="{% url 'deposit' %}">click here</a><br> to start trading now) </span>
+							
+							{% endif %}
+						</h3>
+						<div class="d-flex">
+							<i class="fa fa-home"></i>
+							<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</p>
+							<p class="text-primary mb-0 hover-cursor" style="color: #ffc108 !important;">                                    																																																						Deposit																																																																																					
+																																																							
+    								</p>
+						</div>
+					</div>
+				
+					
+					
+					
+					<div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+						<a data-toggle="sidebar-right" data-target=".sidebar-right">
+						<button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-id-card "></i>
+                            </button></a>
+						<a href="{% url 'dashboard_contact' %}"
+						<button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-headset"></i>
+                            </button></a>
+						<a href="{% url 'logout' %}">
+						<button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-power-off"></i>
+                            </button></a>
+                        
+					</div>
+				</div>				<!-- /breadcrumb -->
+          
+
+
+				
+			
+    <!-- Page Stats -->
+ 
+	<div class="row">
+					
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<div class="card bg-primary">
+				<div class="card-body">
+					<div class="d-flex no-block align-items-center">
+						<div>
+							<h6 class="text-white">PACKAGE</h6>
+							<h2 class="text-white m-0 ">{{request.user.account_level}}</h2>
+						</div>
+						<div class="ml-auto">
+							<span class="text-white display-6"><i class="fa fa-star fa-2x"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<div class="card bg-info">
+				<div class="card-body">
+					<div class="d-flex no-block align-items-center">
+						<div>
+							<h6 class="text-white">CAPITAL</h6>
+							<h2 class="text-white m-0 ">$                     {{request.user.deposit_amount}}</h2>
+		 <span style="display: none;">
+		0</span>
+						</div>
+						<div class="ml-auto">
+							<span class="text-white display-6"><i class="fas fa-money-bill fa-2x"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<div class="card bg-success">
+				<div class="card-body">
+					<div class="d-flex no-block align-items-center">
+						<div>
+							<h6 class="text-white">PROFIT</h6>
+							<h2 class="text-white m-0 ">$ {{request.user.trade_profit}}</h2>
+							<span style="display: none;">
+							<i class="fa fa-btc"></i> 0                                        </span>
+						</div>
+						<div class="ml-auto">
+							<span class="text-white display-6"><i class="fas fa-money-bill-alt fa-2x"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-12 col-md-6 col-lg-3">
+			<div class="card bg-danger">
+				<div class="card-body">
+					<div class="d-flex no-block align-items-center">
+						<div>
+							<h6 class="text-white">TOTAL BALANCE</h6>
+							<h2 class="text-white m-0 ">$ {{total}}</h2>
+						</div>
+						<div class="ml-auto">
+							<span class="text-white display-6"><i class="fas fa-piggy-bank fa-2x fa-2x"></i></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>				<!-- /row -->
+
+	
+{% if messages %}
+{% for message in messages %}
+<div class="alert-hold alert alert-success alert-dismissible fade show" alert-{{ message.tags }}" role="alert">
+<strong>{{message}}</strong> 
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button>
+</div>
+{% endfor %}
+{% endif %}
+
+<div class="card-body col-md-6">
+<div class="card-header pb-0">
+								<div class="d-flex justify-content-between">
+									
+									<h4 class="card-title mg-b-0">Notice: To fund your wallet, follow the instructions below.</h4>
+									<i class="fa fa-money text-gray"></i>
+								</div>
+
+						
+        <ul>
+        <li>Transfer the exact amount of coin to any of the wallet address listed below</li>
+        <li> Enter the amout that you have transfered in the amount box below</li>
+        <li>Upload proof of payment(screenshot of payment)</li>
+							</div>
+<br /><br />
+
+{% if btc %}
+<div class="form-group row">
+  <label for="example-text-input" class="col-md-8 col-form-label">transfer bitcoin to this wallet address</label>
+  <div class="col-sm-10">
+
+	<div class="input-group">
+
+
+<input type="text" class="form-control" id="sec" id="example-text-input" value={{btc}}  aria-label="wallet address" aria-describedby="basic-addon2" value="" readonly>
+<div class="input-group-prepend">
+  <button type="button" class="btn btn-danger" onclick="myFunction()">Copy</button>
+</div>
+</div>
+<script>
+  function myFunction() {
+	var copyText = document.getElementById("sec");
+	copyText.select();
+	copyText.setSelectionRange(0, 99999)
+	document.execCommand("copy");
+	alert("Copied Bitcoin wallet address: " + copyText.value);
+  }
+  </script>
+
+
+  </div>
+</div>	
+{% endif %}
+
+<!--Etherium wallet account-->
+
+{% if eth %}
+<div class="form-group row">
+  <label for="example-text-input" class="col-md-8 col-form-label">transfer ethereum to this wallet address</label>
+  <div class="col-sm-10">
+
+	<div class="input-group">
+
+
+<input type="text" class="form-control" id="sectwo" id="example-text-input" value={{eth}} aria-label="wallet address" aria-describedby="basic-addon2" value="" readonly>
+<div class="input-group-prepend">
+  <button type="button" class="btn btn-danger" onclick="myFunctionTwo()">Copy</button>
+</div>
+</div>
+<script>
+  function myFunctionTwo() {
+	var copyText = document.getElementById("sectwo");
+	copyText.select();
+	copyText.setSelectionRange(0, 99999)
+	document.execCommand("copy");
+	alert("Copied Etherum wallet address: " + copyText.value);
+  }
+  </script>
+
+  
+  </div>
+</div>				
+{% endif %}
+
+	
+
+	<br />
+				
+				<div class="tab-content">
+				<div class="tab-pane fade active show" id="nav-tab-paypal">
+				<div class="col-sm-12 col-md-6 col-lg-6">
+
+				
+					<form action="" method="POST" class="form-horizontal" enctype="multipart/form-data" >
+						{% csrf_token %}
+           
+
+
+                                            </div>                                                                                      
+                                          
+<div style="margin-top:10px;" >
+											
+                                               
+	
+                                                    	<strong>Amount In USD </strong><br>
+                                                    	 <div class="input-group c-square">
+															<div class="input-group-prepend">
+																<span class="input-group-text">USD</span>
+															</div>
+															{% render_field form.deposit_amount  type="text" id="example-number-input"  class="form-control  c-square c-theme" name="withdraw_amount" required="required" onkeypress="validate(event)" %}
+															<div class="input-group-append">
+																<span class="input-group-text">.00</span>
+														</div>
+															 {% render_field form.email  type="hidden" id="example-email-input" value=request.user.email class="form-control" name="email" autofocus="autofocus"  %}
+            
+
+                                                   
+				  <script type="text/javascript">
+					function validate(ev) {
+			  if (!ev) {
+				  ev = window.event;
+			  }
+		  
+			  if (!ev.ctrlKey && ev.key.length === 1 && (isNaN(+ev.key) || ev.key === " ")) {
+				  return ev.preventDefault();
+			  }
+		  }
+		  </script>
+		  
+                                                    
+                                                </div>
+                                            </div>
+
+
+											<div style="margin-top:10px;">
+												Upload proof of payment(screenshot of payment)<br>
+													<div class="input-group c-square">
+										  
+														
+														
+														
+												
+												{% render_field form.image  type="file" class="form-control " name="image" accept="image/*" required="required" placeholder="Upload a photo"  onchange="readURL(this)" %}
+									<span style="color: red; list-style:none;  ">{{form.image.errors}}</span>
+								
+												   
+												   
+												   
+													</div>
+												</div>           
+												
+												
+												
+									
+<div style="margin-top: 10px;">
+Investment Amount: ${{request.user.deposit_amount}}<br>
+Interest Accumulated: ${{request.user.trade_profit}}<br>
+Current balance: ${{total}}<br>
+
+</div>     
+
+			
+<button type="submit" class="btn btn-xs btn-primary mr-2" name="order_withdrawal" >
+	Make Deposit</button>
+	
+</form>
+
+                                         
+                                         
+                                         
+                                         
+                                          
+                </div>
+				</div>
+				
+                                    
+                                   
+                                </div>                
+			</div>
+			<!-- /conatiner -->
+		</div>
+		<!-- /main-content -->
+
+
+		
+		{% endblock %}

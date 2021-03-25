@@ -1,0 +1,301 @@
+{% extends 'account/dashboard_base.html' %}
+{% load static %}
+
+{{% load widget_tweaks %}
+{% load humanize %}
+{% block content %}
+
+			<!-- container -->
+			<div class="container-fluid">
+
+				<!-- Page Header 2 -->
+				<div class="breadcrumb-header justify-content-between">
+					<div class="left-content">
+						<h3 class="content-title mb-2">
+							You are logged in as: {{request.user.first_name}} {{request.user.last_name}}<span style="font-size: 12px; font-style: italic;">
+								{% if request.user.deposit_amount == '0' %}
+								(No transaction yet? <a href="{% url 'deposit' %}">click here</a><br> to start trading now) </span>
+							
+							{% endif %}
+						</h3>
+						<div class="d-flex">
+							<i class="fa fa-home"></i>
+							<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</p>
+							<p class="text-primary mb-0 hover-cursor" style="color: #ffc108 !important;">                                    																																																																																																																					Deposit History																						
+																																																							
+    								</p>
+						</div>
+					</div>
+				
+					
+					
+					
+					<div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+						<a data-toggle="sidebar-right" data-target=".sidebar-right">
+						<button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-id-card "></i>
+                            </button></a>
+						<a href="{% url 'dashboard_contact' %}"
+						<button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-headset"></i>
+                            </button></a>
+						<a href="{% url 'logout' %}">
+						<button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-power-off"></i>
+                            </button></a>
+                        
+					</div>
+				</div>				<!-- /breadcrumb -->
+          
+
+
+				
+			            	<!-- row  -->
+				<div class="row">
+					<div class="col-xl-12 col-md-12 col-lg-12">
+						<div class=" overflow-hidden bg-transparent card-crypto-scroll shadow-none">
+							<div class="js-conveyor-example">
+								<ul class="news-crypto">
+									<li>
+														  <div class="crypto-card">
+															  <div class="row">
+																  <div class="d-flex">
+																	  <div class="my-auto">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/Augur.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">REP / INR</p>
+																		  <div class="m-0 tx-13 text-warning">$0.0215<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+																	  </div>
+																  </div>
+															  </div>
+														  </div>
+													  </li>
+													  <li>
+														 <div class="crypto-card">
+															 <div class="row">
+																  <div class="d-flex">
+																	  <div class="">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/AquariusCoin.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">ARCO / INR</p>
+																		  <div class="m-0 tx-13 text-warning">$425.25<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>+12.85%</span></div>
+																	  </div>
+																  </div>
+															  </div>
+														  </div>
+													  </li>
+													  <li>
+														 <div class="crypto-card">
+															  <div class="row">
+																  <div class="d-flex">
+																	  <div class="">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/BitShares.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">BTS / INR</p>
+																		  <div class="m-0 tx-13 text-warning">$2.786<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>-02.25%</span></div>
+																	  </div>
+																  </div>
+															  </div>
+														  </div>
+													  </li>
+													  <li>
+														  <div class="crypto-card">
+															 <div class="row">
+																  <div class="d-flex">
+																	  <div class="">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/Bytecoin.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">BCN / INR</p>
+																		  <div class="m-0 tx-13 text-warning">$15.425<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+																	  </div>
+																  </div>
+				  
+															  </div>
+														  </div>
+													  </li>
+													  <li>
+														  <div class="crypto-card" >
+															 <div class="row">
+																  <div class=" d-flex">
+																	  <div class="my-auto">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/Dash.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">Dash / INR</p>
+																		  <div class="m-0 tx-13 text-warning">$5.125<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>-11.85%%</span></div>
+																	  </div>
+																  </div>
+				  
+															  </div>
+														  </div>
+													  </li>
+													  <li>
+														  <div class="crypto-card">
+															 <div class="row">
+																  <div class=" d-flex">
+																	  <div class="">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/EOS.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">EUR / INR</p>
+																		  <div class="m-0 tx-13 text-warning">$135.425<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+																	  </div>
+																  </div>
+				  
+															  </div>
+														  </div>
+													  </li>
+													  <li>
+														  <div class="crypto-card">
+															 <div class="row">
+																  <div class=" d-flex">
+																	  <div class="">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/Decred.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">ETH / USDT</p>
+																		  <div class="m-0 tx-13 text-warning">$34.625<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>-0.32%</span></div>
+																	  </div>
+																  </div>
+				  
+															  </div>
+														  </div>
+													  </li>
+													  <li>
+														  <div class="crypto-card">
+															 <div class="row">
+																  <div class=" d-flex">
+																	  <div class="">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/IOTA.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">IOTA / USD</p>
+																		  <div class="m-0 tx-13 text-warning">$67.325<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+																	  </div>
+																  </div>
+				  
+															  </div>
+														  </div>
+													  </li>
+													  <li>
+														  <div class="crypto-card">
+															 <div class="row">
+																  <div class=" d-flex">
+																	  <div class="">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/Litecoin.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">LTC / USD</p>
+																		  <div class="m-0 tx-13 text-warning">$7.525<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>-1.42%</span></div>
+																	  </div>
+																  </div>
+															  </div>
+														  </div>
+													  </li>
+													  <li>
+														  <div class="crypto-card">
+															 <div class="row">
+																  <div class=" d-flex">
+																	  <div class="">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/Monero.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">XMR / EUR</p>
+																		  <div class="m-0 tx-13 text-warning">$4.325<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+																	  </div>
+																  </div>
+															  </div>
+														  </div>
+													  </li>
+													  <li>
+														  <div class="crypto-card">
+															 <div class="row">
+																  <div class=" d-flex">
+																	  <div class="">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/NEM.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">ETH / USDT</p>
+																		  <div class="m-0 tx-13 text-warning">$5.525<span class="text-success ml-2"><i class="ion-arrow-up-c mr-1"></i>-1.32%</span></div>
+																	  </div>
+																  </div>
+															  </div>
+														  </div>
+													  </li>
+													  <li>
+														  <div class="crypto-card">
+															 <div class="row">
+																  <div class=" d-flex">
+																	  <div class="">
+																		  <img src="{% static 'account/assets/img/crypto-currencies/round-outline/Netko-coin.svg' %}" class="w-6 h-6 mt-0" alt="">
+																	  </div>
+																	  <div class="ml-3">
+																		  <p class="mb-1 tx-13">NEO / USD</p>
+																		  <div class="m-0 tx-13 text-warning">$6.025<span class="text-danger ml-2"><i class="ion-arrow-down-c mr-1"></i>-0.78%</span></div>
+																	  </div>
+																  </div>
+				  
+															  </div>
+														  </div>
+													  </li>
+												  </ul>
+							</div>
+						</div>
+					</div>
+				</div>                    <div class="col-xl-12">
+						<div class="card">
+							<div class="card-header pb-0">
+								<div class="d-flex justify-content-between">
+									<h4 class="card-title mg-b-0">DEPOSIT HISTORY</h4>
+									<i class="fa fa-money text-gray"></i>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table text-md-nowrap" id="example1">
+										<thead>
+											<tr>
+												
+												<th class="wd-15p border-bottom-0">Description</th>
+												<th class="wd-20p border-bottom-0">Date</th>
+												<th class="wd-15p border-bottom-0">Amount</th>
+												<th class="wd-15p border-bottom-0">Status</th>
+												
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												{% for user in user_deposit %}
+										  <td>Deposit</td>
+										  <td>
+											<time class="timeago" datetime="2018-02-01T13:38:01Z" title="2018-02-01 13:38 GMT">{{user.time|naturaltime}}</time>
+										  </td>
+										  <td>$ {{user.deposit_amount}}</td>
+										  <td>
+											  {% if user.confirmed %}
+											<span class="text-success">Confirmed</span> 
+											{% else %}
+											<span class="text-warning">Unconfirmed</span></td>
+										  {% endif %}
+										</tr>
+										{% empty %}
+
+																					<tr>
+												<td colspan="6"><center>No Record found!</center></td>
+											</tr>
+											{% endfor %}
+																					</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>                
+			</div>
+			<!-- /conatiner -->
+		</div>
+		<!-- /main-content -->
+		{% endblock %}

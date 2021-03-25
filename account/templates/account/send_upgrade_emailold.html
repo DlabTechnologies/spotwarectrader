@@ -1,0 +1,47 @@
+{% extends 'account/dashboard_base.html' %}
+{% load static %}
+
+
+{% block content %}
+	
+      <div class="error-page">
+
+        <div class="error-content">
+         	<div class="container" style="text-align:center;">
+         	
+        		<h2 class="headline "> <i class="fa fa-envelope text-dark"></i></h2>
+        		
+			  <h3 class="margin-top-0">ACCOUNT PLACED ON HOLD</h3>
+
+			  <p class="text-bold">
+				Hi {{request.user.first_name}}, an email has been sent to {{request.user.email}},  Check your mail box and proceed from there.
+              </p>
+        
+        <div class="row justify-content-center">
+       
+         
+          <div class="row">
+            
+            <!-- /.col -->
+            <div class=" text-center ml-4">
+              <a href="{% url 'user_dashboard' %}" type="submit" class="btn btn-success margin-top-10 mr-3">Return to dashboard</a>
+                          </div>
+            <!-- /.col -->
+            
+            <!-- /.col -->
+          </div>
+       
+    
+</div>
+
+          </div>
+        </div>
+        <!-- /.error-content -->
+        
+ 
+      </div>
+      <!-- /.error-page -->
+     
+  
+
+{% endblock %}

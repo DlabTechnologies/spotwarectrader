@@ -1,0 +1,267 @@
+/* ###### 6.3 Global  ###### */
+
+body {
+	font-family: "Roboto", sans-serif !important;
+  }
+  
+  .main-body, .main-dashboard {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	position: relative;
+  }
+  
+  .main-body::before {
+	content: 'main';
+	position: fixed;
+	top: 45%;
+	left: 70%;
+	transform: translate3d(-50%, -58%, 0);
+	font-size: 1300px;
+	font-weight: 600;
+	letter-spacing: -10px;
+	line-height: .5;
+	opacity: .02;
+	z-index: -1;
+	display: none;
+  }
+  
+  .main-table-reference {
+	margin-top: 40px;
+	background-color: $white;
+  
+	> {
+	  thead > tr > {
+		th, td {
+		  padding: 8px 10px;
+		  border: 1px solid #edecf7;
+		  font-size: 13px;
+		}
+	  }
+  
+	  tbody > tr > {
+		th, td {
+		  padding: 8px 10px;
+		  border: 1px solid #edecf7;
+		  font-size: 13px;
+		}
+	  }
+  
+	  thead > tr > {
+		th, td {
+		  background-color: $gray-100;
+		  color: #8587a7;
+		  font-size: 11px;
+		  font-weight: 500;
+		  text-transform: uppercase;
+		  letter-spacing: 1px;
+		  border-bottom: 0;
+		}
+	  }
+	}
+  }
+  
+  @media (max-width: 575px) {
+	.main-content-left-show {
+	  overflow: hidden;
+	}
+  }
+  
+  @media (max-width: 991.98px) {
+	.main-content-left-show .main-content-left {
+	  display: block;
+	  position: fixed;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  background-color: $white;
+	  z-index: 800;
+	  border-right: 1px solid #edecf7;
+	  box-shadow: 0 0 3px rgba(28, 39, 60, 0.1);
+	  overflow-y: auto;
+	}
+  }
+  
+  @media (max-width: 575px) {
+	.main-content-left-show .main-content-body {
+	  display: none;
+	}
+  }
+  
+  @media (max-width: 991.98px) {
+	.main-content-body-show {
+	  .main-header {
+		.main-header-menu-icon {
+		  display: none;
+		}
+  
+		.main-header-left .main-header-arrow {
+		  display: block;
+		}
+	  }
+  
+	  .main-content-left {
+		display: none;
+	  }
+  
+	  .main-content-body {
+		display: block;
+	  }
+	}
+  }
+  
+  .main-content {
+	.container, .container-fluid {
+	  padding-left: 20px;
+	  padding-right: 20px;
+	}
+  }
+  
+  @media (min-width: 992px) {
+	.main-content .container {
+	  padding: 0;
+	}
+  }
+  
+  @media (max-width: 991.98px) {
+	.main-content .container {
+	  max-width: none;
+	}
+  }
+  
+  .main-content-app {
+	padding-top: 20px;
+  
+	.container, .container-fluid {
+	  height: 100%;
+	  padding: 0;
+	}
+  }
+  
+  @media (min-width: 992px) {
+	.main-content-app {
+	  padding-top: 0;
+	}
+  }
+  
+  .main-content-left {
+	width: 100%;
+	position: relative;
+	flex-shrink: 0;
+  }
+  
+  @media (min-width: 992px) {
+	.main-content-left {
+	  display: block;
+	  padding: 0;
+	}
+  }
+  
+  .main-content-header {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+  
+	.main-logo {
+	  flex: 1;
+	  text-align: center;
+	}
+  }
+  
+  @media (min-width: 992px) {
+	.main-content-header {
+	  display: none;
+	}
+  }
+  
+  .main-content-body {
+	flex: 1;
+  }
+  
+  .main-content-right {
+	padding-left: 25px;
+	margin-left: 25px;
+	width: 200px;
+	display: none;
+  }
+  
+  @media (min-width: 992px) {
+	.main-content-right {
+	  display: block;
+	}
+  }
+  
+  .main-content-breadcrumb {
+	display: flex;
+	align-items: center;
+	font-size: 10px;
+	font-weight: 500;
+	font-family: "Roboto", sans-serif;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #97a3b9;
+	margin-bottom: 10px;
+  
+	span {
+	  position: relative;
+  
+	  + span::before {
+		content: '\f3d1';
+		font-family: 'Ionicons';
+		font-size: 12px;
+		font-weight: 300;
+		display: inline;
+		margin: 0 5px;
+		color: #b4bdce;
+		line-height: 0;
+		position: relative;
+		top: 1px;
+	  }
+  
+	  &:last-child {
+		color: #596882;
+	  }
+	}
+  }
+  
+  .main-content-title {
+	color: #1c273c;
+	font-weight: 500;
+	font-size: 32px;
+	text-indent: -1px;
+	line-height: 1;
+	position: relative;
+	margin-bottom: 20px;
+  }
+  
+  @media (min-width: 992px) {
+	.main-content-title {
+	  margin-bottom: 40px;
+	}
+  }
+  
+  .main-content-label, .card-table-two .card-title, .card-dashboard-eight .card-title {
+	color: #1c273c;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1;
+	margin-bottom: 10px;
+	letter-spacing: .2px;
+  }
+  
+  .main-content-label-sm {
+	font-size: 10px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #97a3b9;
+	letter-spacing: .5px;
+  }
+  
+  .main-content-text {
+	font-size: 12px;
+	line-height: 1.4;
+	display: block;
+	color: #8587a7;
+  }

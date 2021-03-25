@@ -1,0 +1,195 @@
+{% load static %}
+{% load widget_tweaks %}
+{% load humanize %}
+
+<!DOCTYPE html>
+<html lang="en">
+	
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+
+		<meta charset="UTF-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="Description" content="Crypto Currency Investorsllc Trade Investment Company">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="Fx Trading, Bitcoin Trading, Investment "/>
+
+		<!-- Title -->
+		<title> Forex CFD Trading and Spread Betting Platforms | Spotware Systems Ltd </title>
+
+		<!-- Favicon -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		{{ form.media.css }}
+		<link rel="icon" href="{% static 'spotwarectrader/new/images/favicon.png' %}" type="image/x-icon"/>
+
+		<!-- Icons css -->
+		<link href="{% static 'spotwarectrader/new/assets/css/icons.css' %}" rel="stylesheet">
+
+		<!--  Right-sidemenu css -->
+		<link href="{% static 'spotwarectrader/new/assets/plugins/sidebar/sidebar.css' %}" rel="stylesheet">
+
+		<!--  Custom Scroll bar-->
+		<link href="{% static 'spotwarectrader/new/assets/plugins/mscrollbar/jquery.mCustomScrollbar.css' %}" rel="stylesheet"/>
+
+		<!--  Left-Sidebar css -->
+		<link href="{% static 'spotwarectrader/new/assets/css/sidemenu.css' %}" rel="stylesheet">
+
+		<!-- style css-->
+		<link href="{% static 'spotwarectrader/new/assets/css/style.css' %}" rel="stylesheet">
+
+		<!-- skin css-->
+		<link href="{% static 'spotwarectrader/new/assets/css/skin-modes.css' %}" rel="stylesheet">
+
+		<!-- dark-theme css-->
+		<link href="{% static 'spotwarectrader/new/assets/css/style-dark.css' %}" rel="stylesheet">
+
+		<!--- Animations css-->
+		<link href="{% static 'spotwarectrader/new/assets/css/animate.css' %}" rel="stylesheet">
+
+<!--Start of Tawk.to Script-->
+<!--End of Tawk.to Script-->
+	</head>
+
+	<body class="main-body dark-theme bg_img">
+
+		<!-- Loader -->
+		<div id="global-loader" class="dark-loader">
+			<img src="{% static 'spotwarectrader/new/assets/img/loaders/loader.svg' %}" class="loader-img" alt="Loader">
+		</div>
+		<!-- /Loader -->
+
+		<!-- main-signin-wrapper -->
+		<div class="my-auto page page-h">
+			<div class="main-signin-wrapper">
+				<div class="main-card-signin d-md-flex wd-100p">
+				<div class="wd-md-50p login d-none d-md-block page-signin-style p-5 text-white" >
+					<div class="my-auto authentication-pages">
+						<div>
+							<img src="{% static 'spotwarectrader/new/images/luxurypips.png' %}" class=" m-0 mb-4" alt="logo">
+<hr>
+                        <p class="mb-5">
+							    
+		  <span class='mb-5'> Want To Start Trading But Don’t Know How? Our 3-steps Easy Will Set You on Your Way! We Offer 24/7 Support, Online Training From Experts & More.</span>
+							    
+							</p>
+							<a href="{% url 'contact_page' %}" class="btn btn-danger">Contact Support</a>
+						</div>
+					</div>
+				</div>
+				<div class="sign-up-body wd-md-50p">
+					<div class="main-signin-header">
+						<h2>Welcome back!</h2>
+						<h4>Please Register with CCILLC</h4>
+						<form action="" method="POST" >
+							{% csrf_token %}
+
+             <div class="form-group row">
+                 <div class="col-md-6">
+                <label>First Name</label>
+                {% render_field form.first_name type="text" value="" name="first_name" placeholder="First Name" class="form-control" required="required" %}
+                <span style="color: red; list-style:none;  ">{{form.first_name.errors}}</span> 
+        
+                                
+			 	                
+            </div>
+
+              <div class="col-md-6">
+                <label>Last Name</label>
+                {% render_field form.last_name type="text" value="" name="last_name" placeholder="Last Name" class="form-control" required="required" %}
+                <span style="color: red; list-style:none;  ">{{form.last_name.errors}}</span> 
+        
+                                        </div>   
+            </div>
+
+
+			<div class="form-group">
+                <label>Referred By (Optional)</label>
+                {% render_field form.referered_by type="text" value="" name="referered_by" placeholder="Enter referee name (Optional)" class="form-control" %}
+                <span style="color: red; list-style:none;  ">{{form.referered_by.errors}}</span> 
+        
+                                            
+            </div>
+
+            <div class="form-group">
+                <label>E-mail</label>
+                {% render_field form.email type="text" value="" name="email" placeholder="E-mail" class="form-control" required="required" %}
+                <span style="color: red; list-style:none;  ">{{form.email.errors}}</span> 
+        
+                                            
+            </div>
+            
+           <div class="form-group">
+				<label>Password</label>
+				{% render_field form.password1 type="password" name="password1" placeholder="Password" id="user_pass" class="form-control" value="" required="required" %}
+				<span style="color: red; list-style:none;  ">{{form.password1.errors}}</span> 
+        
+			</div>
+           <div class="form-group">
+                <label>Confirm Password</label>
+				{% render_field form.password2 type="password" name="password2" placeholder="Confirm Password" id="user_pass2" class="form-control" value="" required="required" %}
+				<span style="color: red; list-style:none;  ">{{form.password2.errors}}</span> 
+        			
+			</div>
+
+			<div class="form-group">
+                <label>Phone Number</label>
+				{% render_field form.phone type="tel" name="phone"  class="form-control" placeholder="+1-xxx-xxx-xxxx" value=""required="required" %}
+				<span style="color: red; list-style:none;  ">{{form.phone.errors}}</span> 
+        
+			</div>
+            
+          
+			
+            
+            <div class="form-group d-flex justify-content-center">
+                <div class="form-check form-check-flat mt-0">
+                <label class="form-check-label">
+                    <input type="checkbox" value="1" class="form-check-input" checked required>
+                    I agree to the terms and conditions
+                </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+            <button class="btn btn-primary submit-btn btn-block" name="submit">Sign Up</button>
+            
+            </div>
+        </form>
+					</div>
+					<div class="main-signup-footer mg-t-10">
+						<p>Already have an account? <a href="{% url 'login' %}">Sign In</a></p>
+					</div>
+					</div>
+				</div>
+			</div>
+			
+			<center>Copyright © {% now 'Y' %} Spotware Systems Ltd. cTrader®, cAlgo®, cBroker®, cMirror®, cXchange®. All rights reserved.</center>
+			<!-- JQuery min js -->
+			<script src="{% static 'spotwarectrader/new/assets/plugins/jquery/jquery.min.js' %}"></script>
+	
+			<!-- Bootstrap Bundle js -->
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js' %}" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+			
+	{{ form.media.js }}
+			<script src="{% static 'spotwarectrader/new/assets/plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+	
+			<!-- Ionicons js -->
+			<script src="{% static 'spotwarectrader/new/assets/plugins/ionicons/ionicons.js' %}"></script>
+	
+			<!-- Moment js -->
+			<script src="{% static 'spotwarectrader/new/assets/plugins/moment/moment.js' %}"></script>
+	
+			<!-- eva-icons js -->
+			<script src="{% static 'spotwarectrader/new/assets/js/eva-icons.min.js' %}"></script>
+	
+			<!-- Rating js-->
+			<script src="{% static 'spotwarectrader/new/assets/plugins/rating/jquery.rating-stars.js' %}"></script>
+			<script src="{% static 'spotwarectrader/new/assets/plugins/rating/jquery.barrating.js' %}"></script>
+	
+			<!-- Custom js -->
+			<script src="{% static 'spotwarectrader/new/assets/js/custom.js' %}"></script>
+	
+		</body>
+	
+	</html>

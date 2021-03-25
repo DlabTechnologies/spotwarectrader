@@ -1,0 +1,703 @@
+{% extends 'account/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% load humanize %}
+
+
+{% block content %}     
+        
+                <section id="body" class=" clearfix">
+            	<style>
+		.copy_available, .link-green {
+			font-size: 75%;
+			text-align: center;
+		}
+		.copy_available {
+			color: black;
+			font-weight: bold;
+		}
+		.copy_available b, .link-green {
+			color: #009933;
+		}
+	</style>
+	<div class="page-header bg-bottom bg-norepeat bg-waves">
+	
+	<div class="container">
+				<h1>cTrader Integrations</h1>
+							<p class="font-weight-bold">cTrader is an open and extensible online trading platform, integrated with hundreds of additional products and services.</p>
+			</div>
+</div>
+			<div class="page.header.wrapper_class bg-light py-5">
+    <div class="container">
+        <div class="pure-g">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3">
+                <div class="mr-4 align-self-cente mb-auto mt-auto">
+                    <h2>cTrader Ecosystem</h2>
+                    <p>cTrader is a mature product with a solid ecosystem of integrated third-party solutions, making it quick and simple to deploy and connect with any existing business. All below integrations leverage cTrader’s open architecture, using one of the few common API protocols. If there is a service you are interested in, but can’t find in the below list, Spotware’s dedicated integration team will take care of it.</p>
+                </div>
+            </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-2-3 ">
+                                    <img title="Inegrations" alt="" src="{% static 'spotwarectrader/user/pages/04.integrations/_content/integrations.png' %}" />
+                            </div>
+        </div>
+    </div>
+</div>
+	
+	<div class="brokers-wrapper py-5">
+		<div class="container" id="accordionInegrations">
+			<div class="pure-g">
+				<div class="pure-u-1-1 pure-u-md-1-3 pure-u-lg-1-4 mb-4 d-none d-md-block">
+					<div class="">
+											<button class="btn btn-block text-left border btn-light" type="button"
+								data-toggle="collapse"
+								data-target="#inegrations-tab-crms"
+								aria-expanded=" true  "
+								aria-controls="inegrations-tab-crms">
+							CRMs
+						</button>
+											<button class="btn btn-block text-left border btn-light" type="button"
+								data-toggle="collapse"
+								data-target="#inegrations-tab-liquidity_aggregators"
+								aria-expanded=" false  "
+								aria-controls="inegrations-tab-liquidity_aggregators">
+							Liquidity Aggregators
+						</button>
+											<button class="btn btn-block text-left border btn-light" type="button"
+								data-toggle="collapse"
+								data-target="#inegrations-tab-liquidity_providers"
+								aria-expanded=" false  "
+								aria-controls="inegrations-tab-liquidity_providers">
+							Liquidity Providers
+						</button>
+											<button class="btn btn-block text-left border btn-light" type="button"
+								data-toggle="collapse"
+								data-target="#inegrations-tab-data_providers"
+								aria-expanded=" false  "
+								aria-controls="inegrations-tab-data_providers">
+							Data Providers
+						</button>
+											<button class="btn btn-block text-left border btn-light" type="button"
+								data-toggle="collapse"
+								data-target="#inegrations-tab-analytics"
+								aria-expanded=" false  "
+								aria-controls="inegrations-tab-analytics">
+							User Engagement & Analytics
+						</button>
+											<button class="btn btn-block text-left border btn-light" type="button"
+								data-toggle="collapse"
+								data-target="#inegrations-tab-ctrader_connect_api"
+								aria-expanded=" false  "
+								aria-controls="inegrations-tab-ctrader_connect_api">
+							cTrader Connect API
+						</button>
+										</div>
+				</div>
+				<div class="pure-u-1-1 pure-u-md-2-3 pure-u-lg-3-4 mb-4">
+					<div class="card mx-3">
+												<div class="card-header  d-block d-md-none">
+								<button class="btn btn-link btn-block text-left " type="button"
+										data-toggle="collapse"
+										data-target="#inegrations-tab-crms"
+										aria-expanded=" true  "
+										aria-controls="inegrations-tab-crms">
+									CRMs
+								</button>
+							</div>
+							<div class="card-body collapse  show" id="inegrations-tab-crms" data-parent="#accordionInegrations">
+								<h2 class="my-0 mx-2"><a name="crms"></a> CRMs</h2>
+								<p class="mx-2">cTrader can be integrated with any CRM. This list contains some of the CRMs currently integrated with cTrader.</p>
+								<div class="pure-g">
+																																					<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>B2Broker</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/b2broker/icon.png' %}" class="" alt="B2Broker">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Broker Hub</h5>
+													<img src="{% static 'spotwarectrader/user/pages/04.integrations/broker-hub/icon.png' %}" class="" alt="Broker Hub">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>LeanWork BrokerWork</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/leanwork-brokerwork/icon.png' %}" class="" alt="LeanWork BrokerWork">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Match-Trade Technologies</h5>
+													<img src="{% static 'spotwarectrader/user/pages/04.integrations/match-trade-technologies/icon.png' %}" class="" alt="Match-Trade Technologies">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Microsoft Dynamics 365</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/microsoft-dynamics-365/icon.png' %}" class="" alt="Microsoft Dynamics 365">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>NybbleTech Forex CRM</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/nybbletech-forex-crm/icon.png' %}" class="" alt="NybbleTech Forex CRM">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>SalesForce</h5>
+													<img src="{% static 'spotwarectrader/user/pages/04.integrations/salesforce/icon.png' %}" class="" alt="SalesForce">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>SugarCRM</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/sugarcrm/icon.png' %}" class="" alt="SugarCRM">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>TradeCore</h5>
+													<img src="{% static 'spotwarectrader/user/pages/04.integrations/tradecore/icon.png' %}" class="" alt="TradeCore">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Zoho</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/zoho/icon.png' %}" class="" alt="Zoho">
+													
+													</div>
+											</div>
+										</div>
+																	</div>
+							</div>
+												<div class="card-header  d-block d-md-none">
+								<button class="btn btn-link btn-block text-left " type="button"
+										data-toggle="collapse"
+										data-target="#inegrations-tab-liquidity_aggregators"
+										aria-expanded=" false  "
+										aria-controls="inegrations-tab-liquidity_aggregators">
+									Liquidity Aggregators
+								</button>
+							</div>
+							<div class="card-body collapse " id="inegrations-tab-liquidity_aggregators" data-parent="#accordionInegrations">
+								<h2 class="my-0 mx-2"><a name="liquidity_aggregators"></a> Liquidity Aggregators</h2>
+								<p class="mx-2">cTrader uses the standard FIX Protocol, which allows the platform to be easily integrated with any aggregator and order management system available below. New integrations are performed upon request.</p>
+								<div class="pure-g">
+																																					<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Centroid Solutions</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/centroid-solutions/icon.png' %}" class="" alt="Centroid Solutions">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Currenex</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/currenex/icon.png' %}" class="" alt="Currenex">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>FlexTrade</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/flextrade/icon.png' %}" class="" alt="FlexTrade">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>FXCubic</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/fxcubic/icon.png' %}" class="" alt="FXCubic">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Gold-i</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/gold-i/icon.png' %}" class="" alt="Gold-i">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Integral</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/integral/icon.png' %}" class="" alt="Integral">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Match-Trade Technologies</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/match-trade-technologies/icon.png' %}" class="" alt="Match-Trade Technologies">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>oneZero</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/onezero/icon.png' %}" class="" alt="oneZero">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>PrimeXM</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/primexm/icon.png' %}" class="" alt="PrimeXM">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>smartTrade</h5>
+													<img src="{% static 'spotwarectrader/user/pages/04.integrations/smarttrade/icon.png' %}" class="" alt="smartTrade">
+													
+													</div>
+											</div>
+										</div>
+																	</div>
+							</div>
+												<div class="card-header  d-block d-md-none">
+								<button class="btn btn-link btn-block text-left " type="button"
+										data-toggle="collapse"
+										data-target="#inegrations-tab-liquidity_providers"
+										aria-expanded=" false  "
+										aria-controls="inegrations-tab-liquidity_providers">
+									Liquidity Providers
+								</button>
+							</div>
+							<div class="card-body collapse " id="inegrations-tab-liquidity_providers" data-parent="#accordionInegrations">
+								<h2 class="my-0 mx-2"><a name="liquidity_providers"></a> Liquidity Providers</h2>
+								<p class="mx-2">cTrader, the first out-of-the-box STP trading platform, is integrated with a wide range of industry-leading liquidity providers.</p>
+								<div class="pure-g">
+																																					<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Advanced Markets</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/advanced-markets/icon.png' %}" class="" alt="Advanced Markets">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>CharterPrime</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/charterprime/icon.png' %}" class="" alt="CharterPrime">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>FX-EDGE</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/fx-edge/icon.png' %}" class="" alt="FX-EDGE">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>FXOpenPrime</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/fxopenprime/icon.png' %}" class="" alt="FXOpenPrime">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>GAIN Capital</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/gain-capital/icon.png' %}" class="" alt="GAIN Capital">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Invast</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/invast/icon.png' %}" class="" alt="Invast">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>IS Prime</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/is-prime/icon.png' %}" class="" alt="IS Prime">
+												
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>LCG Institutional Liquidity</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/lcg-institutional-liquidity/icon.png' %}" class="" alt="LCG Institutional Liquidity">
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>LMAX</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/lmax/icon.png' %}" class="" alt="LMAX">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>PhillipCapital UK</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/phillipcapital-uk/icon.png' %}" class="" alt="PhillipCapital UK">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Saxo Capital Markets</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/saxo-capital-markets/icon.png' %}" class="" alt="Saxo Capital Markets">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Sucden Financial</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/sucden-financial/icon.png' %}" class="" alt="Sucden Financial">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Swissquote</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/swissquote/icon.png' %}" class="" alt="Swissquote">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>TopFX</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/topfx/icon.png' %}" class="" alt="TopFX">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>TradeTech Alpha</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/tradetech-alpha/icon.png' %}" class="" alt="TradeTech Alpha">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Tradeview Prime</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/tradeview-prime/icon.png' %}" class="" alt="Tradeview Prime">
+													
+													</div>
+											</div>
+										</div>
+																	</div>
+							</div>
+												<div class="card-header  d-block d-md-none">
+								<button class="btn btn-link btn-block text-left " type="button"
+										data-toggle="collapse"
+										data-target="#inegrations-tab-data_providers"
+										aria-expanded=" false  "
+										aria-controls="inegrations-tab-data_providers">
+									Data Providers
+								</button>
+							</div>
+							<div class="card-body collapse " id="inegrations-tab-data_providers" data-parent="#accordionInegrations">
+								<h2 class="my-0 mx-2"><a name="data_providers"></a> Data Providers</h2>
+								<p class="mx-2">cTrader is integrated with a variety of data providers, who can add value to cTrader users inside the trading platform. These include economic calendars, trading signals, charting services and newsfeed providers.</p>
+								<div class="pure-g">
+																																					<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Autochartist</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/autochartist/icon.png' %}" class="" alt="Autochartist">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>BBSP</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/bbsp/icon.png' %}" class="" alt="BBSP">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Digital Look</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/digital-look/icon.png' %}" class="" alt="Digital Look">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Dow Jones Newswires</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/dow-jones-newswires/icon.png' %}" class="" alt="Dow Jones Newswires">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>FXStreet</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/fxstreet/icon.png' %}" class="" alt="FXStreet">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>FxWire Pro</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/fxwire-pro/icon.png' %}" class="" alt="FxWire Pro">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Thomson Reuters Refinitiv</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/thomson-reuters-refinitiv/icon.png' %}" class="" alt="Thomson Reuters Refinitiv">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Trading Central</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/trading-central/icon.png' %}" class="" alt="Trading Central">
+													
+													</div>
+											</div>
+										</div>
+																	</div>
+							</div>
+												<div class="card-header  d-block d-md-none">
+								<button class="btn btn-link btn-block text-left " type="button"
+										data-toggle="collapse"
+										data-target="#inegrations-tab-analytics"
+										aria-expanded=" false  "
+										aria-controls="inegrations-tab-analytics">
+									User Engagement & Analytics
+								</button>
+							</div>
+							<div class="card-body collapse " id="inegrations-tab-analytics" data-parent="#accordionInegrations">
+								<h2 class="my-0 mx-2"><a name="analytics"></a> User Engagement & Analytics</h2>
+								<p class="mx-2">cTrader is integrated with a number of services, providing rich analytics on campaign performance, user acquisition, engagement and client on-boarding.</p>
+								<div class="pure-g">
+																																					<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>AppsFlyer</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/appsflyer/icon.png' %}" class="" alt="AppsFlyer">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Blinger.io</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/blinger/icon.png' %}" class="" alt="Blinger.io">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Bridgerpay</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/bridgerpay/icon.png' %}" class="" alt="Bridgerpay">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Google Analytics</h5>
+													<img src="{% static 'spotwarectrader/user/pages/04.integrations/google-analytics/icon.png' %}" class="" alt="Google Analytics">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>LivePerson</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/liveperson/icon.png' %}" class="" alt="LivePerson">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>TaPaas</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/tapaas/icon.png' %}" class="" alt="TaPaas">
+													
+													</div>
+											</div>
+										</div>
+																	</div>
+							</div>
+												<div class="card-header  d-block d-md-none">
+								<button class="btn btn-link btn-block text-left " type="button"
+										data-toggle="collapse"
+										data-target="#inegrations-tab-ctrader_connect_api"
+										aria-expanded=" false  "
+										aria-controls="inegrations-tab-ctrader_connect_api">
+									cTrader Connect API
+								</button>
+							</div>
+							<div class="card-body collapse " id="inegrations-tab-ctrader_connect_api" data-parent="#accordionInegrations">
+								<h2 class="my-0 mx-2"><a name="ctrader_connect_api"></a> cTrader Connect API</h2>
+								<p class="mx-2">cTrader’s Open API allows third party solution providers to integrate their services with cTrader and take advantage of the platform’s extended features.</p>
+								<div class="pure-g">
+																																					<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>BetterTrader</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/bettertrader/icon.png' %}" class="" alt="BetterTrader">
+												
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>FX Blue Live</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/fx-blue-live/icon.png' %}" class="" alt="FX Blue Live">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>MyFxBook</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/myfxbook/icon.png' %}" class="" alt="MyFxBook">
+													
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Quantower</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/quantower/icon.png' %}" class="" alt="Quantower">
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Signal Start</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/signal-start/icon.png' %}" class="" alt="Signal Start">
+												
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Tekton</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/tekton/icon.png' %}" class="" alt="Tekton">
+													</div>
+											</div>
+										</div>
+																			<div class="pure-u-1-2 pure-u-sm-1-2 pure-u-md-1-2 pure-u-lg-1-3 mb-4 ">
+											<div class="card card-dotted h-100 mx-2 rounded-0 shadow">
+												<div class="card-body" style="text-align: center;">
+													<h5>Trade Copier by Duplikium</h5>
+														<img src="{% static 'spotwarectrader/user/pages/04.integrations/trade-copier-by-duplikium/icon.png' %}" class="" alt="Trade Copier by Duplikium">
+													</div>
+											</div>
+										</div>
+																	</div>
+							</div>
+										</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        </section>
+        
+                    {% endblock %}

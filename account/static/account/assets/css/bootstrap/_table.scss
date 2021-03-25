@@ -1,0 +1,431 @@
+.table {
+	width: 100%;
+	margin-bottom: 1rem;
+	color: #031b4e;
+  
+	th, td {
+	  padding: 0.75rem;
+	  vertical-align: top;
+	  border-top: 1px solid #e8e7ef;
+	}
+  
+	thead th {
+	  vertical-align: bottom;
+	  border-bottom: 2px solid #e8e7ef;
+	}
+  
+	tbody + tbody {
+	  border-top: 2px solid #e8e7ef;
+	}
+  }
+  
+  .table-sm {
+	th, td {
+	  padding: 0.3rem;
+	}
+  }
+  
+  .table-bordered {
+	border: 1px solid #e8e7ef;
+  
+	th, td {
+	  border: 1px solid #e8e7ef;
+	}
+  
+	thead {
+	  th, td {
+		border-bottom-width: 2px;
+	  }
+	}
+  }
+  
+  .table-borderless {
+	th, td, thead th, tbody + tbody {
+	  border: 0;
+	}
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+	background-color: #f6f6ff;
+  }
+  
+  .table-hover tbody tr:hover {
+	color: #031b4e;
+	background-color: #f6f6ff;
+  }
+  
+  .table-primary {
+	background-color: #c6d4ff;
+  
+	> {
+	  th, td {
+		background-color: #c6d4ff;
+	  }
+	}
+  
+	th, td, thead th, tbody + tbody {
+	  border-color: #95afff;
+	}
+  }
+  
+  .table-hover .table-primary:hover {
+	background-color: #adc1ff;
+  
+	> {
+	  td, th {
+		background-color: #adc1ff;
+	  }
+	}
+  }
+  
+  .table-secondary {
+	background-color: #d9dde5;
+  
+	> {
+	  th, td {
+		background-color: #d9dde5;
+	  }
+	}
+  
+	th, td, thead th, tbody + tbody {
+	  border-color: #b9c1ce;
+	}
+  }
+  
+  .table-hover .table-secondary:hover {
+	background-color: #cacfdb;
+  
+	> {
+	  td, th {
+		background-color: #cacfdb;
+	  }
+	}
+  }
+  
+  .table-success {
+	background-color: #c8e9b8;
+  
+	> {
+	  th, td {
+		background-color: #c8e9b8;
+	  }
+	}
+  
+	th, td, thead th, tbody + tbody {
+	  border-color: #99d67b;
+	}
+  }
+  
+  .table-hover .table-success:hover {
+	background-color: #b9e3a5;
+  
+	> {
+	  td, th {
+		background-color: #b9e3a5;
+	  }
+	}
+  }
+  
+  .table-info {
+	background-color: #bee5eb;
+  
+	> {
+	  th, td {
+		background-color: #bee5eb;
+	  }
+	}
+  
+	th, td, thead th, tbody + tbody {
+	  border-color: #86cfda;
+	}
+  }
+  
+  .table-hover .table-info:hover {
+	background-color: #abdde5;
+  
+	> {
+	  td, th {
+		background-color: #abdde5;
+	  }
+	}
+  }
+  
+  .table-warning {
+	background-color: #ffeeba;
+  
+	> {
+	  th, td {
+		background-color: #ffeeba;
+	  }
+	}
+  
+	th, td, thead th, tbody + tbody {
+	  border-color: #ffdf7e;
+	}
+  }
+  
+  .table-hover .table-warning:hover {
+	background-color: #ffe8a1;
+  
+	> {
+	  td, th {
+		background-color: #ffe8a1;
+	  }
+	}
+  }
+  
+  .table-danger {
+	background-color: #f5c6cb;
+  
+	> {
+	  th, td {
+		background-color: #f5c6cb;
+	  }
+	}
+  
+	th, td, thead th, tbody + tbody {
+	  border-color: #ed969e;
+	}
+  }
+  
+  .table-hover .table-danger:hover {
+	background-color: #f1b0b7;
+  
+	> {
+	  td, th {
+		background-color: #f1b0b7;
+	  }
+	}
+  }
+  
+  .table-light {
+	background-color: #fcfcfd;
+  
+	> {
+	  th, td {
+		background-color: #fcfcfd;
+	  }
+	}
+  
+	th, td, thead th, tbody + tbody {
+	  border-color: #f9fafb;
+	}
+  }
+  
+  .table-hover .table-light:hover {
+	background-color: #ededf3;
+  
+	> {
+	  td, th {
+		background-color: #ededf3;
+	  }
+	}
+  }
+  
+  .table-dark {
+	background-color: #c8ccd3;
+  
+	> {
+	  th, td {
+		background-color: #c8ccd3;
+	  }
+	}
+  
+	th, td, thead th, tbody + tbody {
+	  border-color: #99a0ae;
+	}
+  }
+  
+  .table-hover .table-dark:hover {
+	background-color: #babfc8;
+  
+	> {
+	  td, th {
+		background-color: #babfc8;
+	  }
+	}
+  }
+  
+  .table-active {
+	background-color: rgba(0, 0, 0, 0.075);
+  
+	> {
+	  th, td {
+		background-color: rgba(0, 0, 0, 0.075);
+	  }
+	}
+  }
+  
+  .table-hover .table-active:hover {
+	background-color: rgba(0, 0, 0, 0.075);
+  
+	> {
+	  td, th {
+		background-color: rgba(0, 0, 0, 0.075);
+	  }
+	}
+  }
+  
+  .table {
+	.thead-dark th {
+	  color: $white;
+	  background-color: $dark;
+	  border-color: #49597b;
+	}
+  
+	.thead-light th {
+	  color: #596882;
+	  background-color: #e8e7ef;
+	  border-color: #e8e7ef;
+	}
+  }
+  
+  .table-dark {
+	color: $white;
+	background-color: $dark;
+  
+	th, td, thead th {
+	  border-color: #49597b;
+	}
+  
+	&.table-bordered {
+	  border: 0;
+	}
+  
+	&.table-striped tbody tr:nth-of-type(odd) {
+	  background-color: rgba(255, 255, 255, 0.05);
+	}
+  
+	&.table-hover tbody tr:hover {
+	  color: $white;
+	  background-color: rgba(255, 255, 255, 0.075);
+	}
+  }
+  
+  @media (max-width: 575.98px) {
+	.table-responsive-sm {
+	  display: block;
+	  width: 100%;
+	  overflow-x: auto;
+	  -webkit-overflow-scrolling: touch;
+  
+	  > .table-bordered {
+		border: 0;
+	  }
+	}
+  }
+  
+  @media (max-width: 767.98px) {
+	.table-responsive-md {
+	  display: block;
+	  width: 100%;
+	  overflow-x: auto;
+	  -webkit-overflow-scrolling: touch;
+  
+	  > .table-bordered {
+		border: 0;
+	  }
+	}
+  }
+  
+  @media (max-width: 991.98px) {
+	.table-responsive-lg {
+	  display: block;
+	  width: 100%;
+	  overflow-x: auto;
+	  -webkit-overflow-scrolling: touch;
+  
+	  > .table-bordered {
+		border: 0;
+	  }
+	}
+  
+	.main-content.horizontal-content {
+	  margin-top: 0 !important;
+	}
+  }
+  
+  @media (max-width: 1199.98px) {
+	.table-responsive-xl {
+	  display: block;
+	  width: 100%;
+	  overflow-x: auto;
+	  -webkit-overflow-scrolling: touch;
+  
+	  > .table-bordered {
+		border: 0;
+	  }
+	}
+  }
+  
+  .table-responsive {
+	display: block;
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+  
+	> .table-bordered {
+	  border: 0;
+	}
+  }
+  
+  /* ###### 3.14 Table ###### */
+  
+  .table {
+	color: $dark;
+  
+	thead {
+	  th, td {
+		color: #8587a7;
+		font-weight: 700;
+		font-size: 11px;
+		letter-spacing: .5px;
+		text-transform: uppercase;
+		border-bottom-width: 1px;
+		border-top-width: 0;
+		padding: 0 15px 5px;
+	  }
+	}
+  
+	tbody tr {
+	  background-color: $white-5;
+  
+	  th {
+		font-weight: 500;
+	  }
+	}
+  
+	th, td {
+	  padding: 9px 15px;
+	  line-height: 1.462;
+	}
+  }
+  
+  .table-striped tbody tr:nth-of-type(2n+1) {
+	background-color: #f6f6ff;
+  }
+  
+  .table-bordered thead {
+	th, td {
+	  border-top-width: 1px;
+	  padding-top: 7px;
+	  padding-bottom: 7px;
+	  background-color: $white-5;
+	}
+  }
+  
+  .toast {
+	background-color: rgba(255, 255, 255, 0.95);
+	border-color: rgba(28, 39, 60, 0.16);
+	box-shadow: 0 2px 3px rgba(28, 39, 60, 0.06);
+	border-radius: 3px;
+  }
+  
+  .toast-header {
+	border-bottom-color: rgba(205, 212, 224, 0.4);
+  
+	.close {
+	  font-weight: 300;
+	  color: #97a3b9;
+	}
+  }

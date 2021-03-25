@@ -1,0 +1,188 @@
+
+
+
+
+{% extends 'account/dashboard_base.html' %}
+{% load static %}
+
+{{% load widget_tweaks %}
+{% load humanize %}
+{% block content %}
+
+			<!-- container -->
+			<div class="container-fluid">
+
+				<!-- Page Header 2 -->
+				<div class="breadcrumb-header justify-content-between">
+					<div class="left-content">
+						<h3 class="content-title mb-2">
+							You are logged in as: {{request.user.first_name}} {{request.user.last_name}}<span style="font-size: 12px; font-style: italic;">
+								{% if request.user.deposit_amount == '0' %}
+								(No transaction yet? <a href='account.php?deposit'>click here</a><br> to start trading now) </span>
+							
+							{% endif %}
+						</h3>
+						<div class="d-flex">
+							<i class="fa fa-home"></i>
+							<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</p>
+							<p class="text-primary mb-0 hover-cursor" style="color: #ffc108 !important;">                                    																																													Personal Information																																																																																														
+																																																							
+    								</p>
+						</div>
+					</div>
+				
+					
+					
+					
+					<div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+						<a data-toggle="sidebar-right" data-target=".sidebar-right">
+						<button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-id-card "></i>
+                            </button></a>
+						<a href="account?contact"
+						<button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-headset"></i>
+                            </button></a>
+						<a href="process?signout">
+						<button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-power-off"></i>
+                            </button></a>
+                        
+					</div>
+				</div>				<!-- /breadcrumb -->
+          
+
+
+				
+			
+                <div class="row row-sm">
+					<div class="col-lg-4">
+						<div class="card mg-b-20">
+							<div class="card-body">
+								<div class="pl-0">
+									<div class="main-profile-overview">
+										<div class="main-img-user profile-user" style="margin-left: auto; margin-right: auto; display: block;">
+											<img alt="" src="{% static 'account/assets/img/faces/3.png' %}">
+											<a class="fas fa-camera profile-edit" href="account?profile&uploadcover"></a>
+										</div>
+										<div  style="text-align: center;">
+											<div>
+												<h5 class="main-profile-name">{{request.user.first_name}} {{request.user.last_name}}</h5>
+												<p class="main-profile-name-text">Membership - {{request.user.account_level}}</p>
+												<h6>Joined <span class="text-primary">{{request.user.date_joined|naturaltime}}</span></h6>
+                                                                                                  Your account is - <i class="fa fa-check-square"></i> Active
+                                                 <br>
+											</div>
+										</div>
+										
+										<!-- main-profile-work-list -->
+										
+									</div><!-- main-profile-overview -->
+								</div>
+							</div>
+						</div>
+						<div class="card mg-b-20">
+							<div class="card-body">
+								<div class="main-content-label tx-13 mg-b-25">
+									Contact
+								</div>
+								<div class="main-profile-contact-list">
+									<div class="media">
+										<div class="media-icon bg-primary-transparent text-primary">
+											<i class="icon ion-md-phone-portrait"></i>
+										</div>
+										<div class="media-body">
+											<span>Mobile</span>
+											<div>
+												{{request.user.phone}}											</div>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-icon bg-success-transparent text-success">
+											<i class="fa fa-at"></i>
+										</div>
+										<div class="media-body">
+											<span>Email</span>
+											<div>
+												{{request.user.email}}											</div>
+										</div>
+									</div>
+								
+								</div><!-- main-profile-contact-list -->
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="main-content-body main-content-body-profile">
+							<nav class="nav main-nav-line card mb-4">
+								<a class="nav-link "  href="account?profile">Profile</a> 
+								<a class="nav-link " href="account?profile&edit">Update Profile</a> 
+								<a class="nav-link  active show" href="account?profile&uploadcover">Upload Profile Image</a> 
+								<a class="nav-link " href="account?profile&changepassword">Change Password</a> 
+							</nav><!-- main-profile-body -->
+							<div class="main-profile-body p-0">
+								<div class="row row-sm">
+									<div class="col-12">
+                                        <div class="card mg-b-20">
+											<div class="card-body">
+												<div class="card-header">
+													<div class="media">
+														
+														<div class="media-body">
+															<h6 class="mb-0 mg-t-9">UPDATE PROFILE IMAGE</h6>
+														</div>
+													</div>
+												</div>
+												
+													<style>
+						label.control-label{ }
+						</style>
+					
+                                            
+												<div class="">
+                        															
+													<form action="" method="POST" enctype="multipart/form-data">
+														{% csrf_token %}
+
+                        <div style="padding-top:20px;">
+                            <!-- BEGIN: BILLING ADDRESS -->
+							
+							
+							<div class="form-group">
+								<div class="custom-file">
+								
+								<div class="input-group">
+								  {% render_field form.profile_image  type="file" class="custom-file-input"  name="profile_image" accept="image/*"  placeholder="Upload a photo"  %}
+								  <span style="color: red; list-style:none;  ">{{form.profile_image.errors}}</span>
+								  <label class="custom-file-label" for="customFile">Choose file</label>
+		  
+								  </div>
+							  </div> 
+										 </div>
+							 
+				
+				  
+				<div class="form-group">
+				  <button type="submit" class="btn btn-success submit-btn btn-block" name="login">Upload</a>
+			  </div>
+                        </div>
+                        <!-- END: ADDRESS FORM -->
+                    </form>
+                 	
+                                    </div>
+                                   
+                                </div>
+												
+											</div>
+																			</div>
+								</div>
+							</div><!-- main-profile-body -->
+						</div>
+					</div>
+				</div>                                    
+			</div>
+			<!-- /conatiner -->
+		</div>
+		<!-- /main-content -->
+
+		{% endblock %}

@@ -1,0 +1,224 @@
+
+
+
+{% extends 'account/dashboard_base.html' %}
+{% load static %}
+
+{{% load widget_tweaks %}
+{% load humanize %}
+{% block content %}
+
+			<!-- container -->
+			<div class="container-fluid">
+
+				<!-- Page Header 2 -->
+				<div class="breadcrumb-header justify-content-between">
+					<div class="left-content">
+						<h3 class="content-title mb-2">
+							You are logged in as: {{request.user.first_name}} {{request.user.last_name}}<span style="font-size: 12px; font-style: italic;">
+								{% if request.user.deposit_amount == '0' %}
+								(No transaction yet? <a href="{% url 'deposit' %}">click here</a><br> to start trading now) </span>
+							
+							{% endif %}
+						</h3>
+						<div class="d-flex">
+							<i class="fa fa-home"></i>
+							<p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</p>
+							<p class="text-primary mb-0 hover-cursor" style="color: #ffc108 !important;">                                    																																													Personal Information																																																																																														
+																																																							
+    								</p>
+						</div>
+					</div>
+				
+					
+					
+					
+					<div class="d-flex align-items-end flex-wrap my-auto right-content breadcrumb-right">
+						<a data-toggle="sidebar-right" data-target=".sidebar-right">
+						<button type="button" class="btn btn-warning btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-id-card "></i>
+                            </button></a>
+						<a href="{% url 'dashboard_contact' %}"
+						<button type="button" class="btn btn-danger  btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-headset"></i>
+                            </button></a>
+						<a href="{% url 'logout' %}">
+						<button type="button" class="btn btn-success btn-icon mr-3 mt-2 mt-xl-0">
+							<i class="fa fa-power-off"></i>
+                            </button></a>
+                        
+					</div>
+				</div>				<!-- /breadcrumb -->
+          
+
+
+				
+			
+                <div class="row row-sm">
+					<div class="col-lg-4">
+						<div class="card mg-b-20">
+							<div class="card-body">
+								<div class="pl-0">
+									<div class="main-profile-overview">
+										<div class="main-img-user profile-user" style="margin-left: auto; margin-right: auto; display: block;">
+											
+											{% if request.user.profile_image %}
+											<img alt="" src="{{request.user.profile_image.url}}">
+											{% else %}
+
+											<img alt="" src="{% static 'account/assets/img/faces/3.png' %}">
+											{% endif %}
+											<a class="fas fa-camera profile-edit" href="{% url 'update_profile' %}"></a>
+										</div>
+										<div  style="text-align: center;">
+											<div>
+												<h5 class="main-profile-name">{{request.user.first_name}} {{request.user.last_name}}</h5>
+												<p class="main-profile-name-text">Membership - {{request.user.account_level}}</p>
+												<h6>Joined <span class="text-primary">{{request.user.date_joined|naturaltime}}</span></h6>
+                                                                                                  Your account is - <i class="fa fa-check-square"></i> Active
+                                                 <br>
+											</div>
+										</div>
+										
+										<!-- main-profile-work-list -->
+										
+									</div><!-- main-profile-overview -->
+								</div>
+							</div>
+						</div>
+						<div class="card mg-b-20">
+							<div class="card-body">
+								<div class="main-content-label tx-13 mg-b-25">
+									Contact
+								</div>
+								<div class="main-profile-contact-list">
+									<div class="media">
+										<div class="media-icon bg-primary-transparent text-primary">
+											<i class="fa fa-phone"></i>
+										</div>
+										<div class="media-body">
+											<span>Mobile</span>
+											<div>
+												{{request.user.phone}}											</div>
+										</div>
+									</div>
+									<div class="media">
+										<div class="media-icon bg-success-transparent text-success">
+											<i class="fa fa-at"></i>
+										</div>
+										<div class="media-body">
+											<span>Email</span>
+											<div>
+												{{request.user.email}}										</div>
+										</div>
+									</div>
+								
+								</div><!-- main-profile-contact-list -->
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-8">
+						<div class="main-content-body main-content-body-profile">
+							<nav class="nav main-nav-line card mb-4">
+								<a class="nav-link "  href="{% url 'user_profile' %}">Profile</a> 
+								<a class="nav-link  active show" href="{% url 'update_profile' %}">Update Profile</a> 
+								<a class="nav-link " href="{% url 'password_change' %}">Change Password</a> 
+							</nav><!-- main-profile-body -->
+							<div class="main-profile-body p-0">
+								<div class="row row-sm">
+									<div class="col-12">
+                                        <div class="card mg-b-20">
+											<div class="card-body">
+												<div class="card-header">
+													<div class="media">
+														
+														<div class="media-body">
+															<h6 class="mb-0 mg-t-9">UPDATE PROFILE</h6>
+														</div>
+													</div>
+												</div>
+												
+													<style>
+						label.control-label{ }
+						</style>
+					
+                                            
+												<div class="">
+                        															
+						
+
+					<form method="POST" action="" enctype="multipart/form-data">
+						{% csrf_token %}
+                        <!-- BEGIN: ADDRESS FORM -->
+                        <div style="padding-top:20px;">
+                            <!-- BEGIN: BILLING ADDRESS -->
+							<div class="row">
+                                
+							
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <label class="control-label">First Name</label>
+                                            
+											{% render_field form.first_name type="text"  class="form-control c-square c-theme"  name="last_name"  %}
+											<span style="color: red; list-style:none;  ">{{form.first_name.errors}}</span> 
+										</div>
+                                        <div class="form-group col-md-6">
+                                            <label class="control-label">Last Name</label>
+											{% render_field form.last_name type="text" name="last_name" class="form-control c-square c-theme"   %} 
+											<span style="color: red; list-style:none;  ">{{form.last_name.errors}}</span>  </div>
+
+
+											<div class="form-group col-md-6">
+												<label class="control-label">Email</label>
+												{% render_field form.email type="email" name="email" class="form-control c-square c-theme"   %} 
+												<span style="color: red; list-style:none;  ">{{form.email.errors}}</span>  </div>
+										
+		
+										<div class="form-group col-md-6">
+											<label class="control-label">Phone</label>
+											{% render_field form.phone type="tel" name="phone" class="form-control c-square c-theme"   %} 
+											<span style="color: red; list-style:none;  ">{{form.phone.errors}}</span>  </div>
+									
+											
+										<div class="form-group col-md-6">
+											<label class="control-label">Profile Image</label>
+											{% render_field form.profile_image type="file" id="open" name="profile_image" class="form-control c-square c-theme" accept="image/*"   %} 
+											<span style="color: red; list-style:none;  ">{{form.profile_image.errors}}</span>  </div>
+									
+
+                                    </div>
+<button type="submit" class="btn btn-success">Save </button>
+									
+                                </div>
+                            </div>
+                           
+                            
+                            
+                           
+                                </div>
+                            </div>
+                            
+                           
+                        </div>
+                        <!-- END: ADDRESS FORM -->
+                    </form>
+                 	
+                                    </div>
+                                   
+                                </div>
+												
+											</div>
+																			</div>
+								</div>
+							</div><!-- main-profile-body -->
+						</div>
+					</div>
+				</div>                                    
+			</div>
+			<!-- /conatiner -->
+		</div>
+		<!-- /main-content -->
+
+		{% endblock %}

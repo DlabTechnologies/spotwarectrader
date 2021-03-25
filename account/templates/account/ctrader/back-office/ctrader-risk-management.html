@@ -1,0 +1,319 @@
+{% extends 'account/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% load humanize %}
+
+
+{% block content %}        
+        
+                <section id="body" class=" clearfix">
+                        <div class="page-header bg-bottom bg-norepeat bg-waves">
+	
+	<div class="container">
+				<h1>cTrader Risk Management</h1>
+							<p class="font-weight-bold">View realized and unrealized P&amp;L, A-Book exposure and B-Book risk in real-time. All details are visible for the whole environment, per group, per instrument, per asset and per client, to ensure effective risk management for any broker, offering online margin trading.</p>
+			</div>
+</div>
+            
+<div id=""
+     class="bg-white py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g row-class" style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-2 d-flex" style="">
+            <div class="align-self-cente mb-auto mt-auto" style="
+                                                
+                ">            
+                            <h2 class="" id="" style="">
+        Risk Management for Brokers    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Brokers offering the cTrader platform will be able to provide their dealing and RTO departments with a full-featured risk management solution, which is part of the all-inclusive cBroker platform. From cBroker, you can view exposure, open positions and pending orders in real-time. You can also change margin requirements, liquidity feeds and any other related settings on-the-fly.    </p>
+                            <p class="font-weight-bold" id="" style="">
+        Make use of a carefully-designed trading platform solution with a variety of practical risk management settings.    </p>
+            
+                        </div>        </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-2" style="">
+                        
+                            <img src="{% static 'spotwarectrader/user/pages/02.ctrader/02.back-office/02.ctrader-risk-management/_a-risk_management/top_image-1.png' %}"
+                                    class=""
+            alt="">
+            
+                                </div>
+    </div>            </div>
+</div>
+            <div class="bg-cover-center bg-lines">
+    <div class="container">
+        <div class="pure-g">
+            <div class="pure-u-1-1 py-5 grey-text">
+                <h4 class="p-0 m-0">Change all settings in real-time for taking immediate action.<br> No server restart, or waiting for the weekend’s end necessary.</h4>
+            </div>
+        </div>
+    </div>
+</div>
+            
+<div id=""
+     class="bg-white py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-2 d-flex" style="">
+            <div class="align-self-cente mb-auto mt-auto" style="
+                                                
+                ">            
+                            <h2 class="" id="" style="">
+        Dynamic Leverage    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        In cBroker, you can create unlimited dynamic leverage profiles, where multiple tiers of volume can be defined. When reached, a dynamic reduction of leverage takes place, which increases margin requirements for the range of exposure, which falls within a tier. Each Symbol, in each Group, can have its own Dynamic Leverage profile assigned for ultimate granularity. Two settings are available to decide what happens when exposure is decreased: the margin can either be released proportionally, or it can be recalculated for all open positions.    </p>
+            
+                        </div>        </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-2" style="">
+                        
+                            <img src="{% static 'spotwarectrader/user/pages/02.ctrader/02.back-office/02.ctrader-risk-management/_c-features/dynamic-leverage.png' %}"
+                                    class=""
+            alt="">
+            
+                                </div>
+    </div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-2" style="">
+                        
+                            <img src="{% static 'spotwarectrader/user/pages/02.ctrader/02.back-office/02.ctrader-risk-management/_c-features/Liquidity-feeds.png' %}"
+                                    class=""
+            alt="">
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-2 d-flex" style="">
+            <div class="align-self-cente mb-auto mt-auto" style="
+                                                
+                ">            
+                            <h2 class="" id="" style="">
+        Liquidity Feeds    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Integrate and manage multiple liquidity price feeds, which can be connected to your cServer, to simultaneously switch either Quote or Trade connection on-the-fly. Easily manage backup feeds for redundancy and risk management, or access separate sources for a different range of markets. Liquidity feeds can be selected on a per symbol basis.    </p>
+            
+                        </div>        </div>
+    </div>                    <div class="" style="height: 50px"></div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-2-3" style="">
+                        
+                            <h2 class="" id="" style="">
+        B-Book Execution Settings    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Choose how internalized orders are executed in your environment. Reduce the risk of arbitrage by setting an execution delay range on B-Book orders – a setting, which can be applied on a per group and per symbol basis. Decide on the method used to fill internal orders. Available options include:    </p>
+            
+                                </div>
+    </div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3 d-flex" style="">
+            <div class="align-self-cente mb-auto mt-auto" style="
+                                                
+                ">            
+                            <p class="icon-green-before font-weight-bolder mb-1" id="" style="">
+        Full Access    </p>
+                            <p class="" id="" style="">
+        The trader has no limitations on their trading account.    </p>
+                            <p class="icon-green-before font-weight-bolder mb-1" id="" style="">
+        Close Only    </p>
+                            <p class="" id="" style="">
+        The trader can close positions, but can’t create new ones, or increase existing positions.    </p>
+                            <p class="icon-green-before font-weight-bolder mb-1" id="" style="">
+        Trading Disabled    </p>
+                            <p class="" id="" style="">
+        The trader can sign into the platform in a view-only mode, implying that no trading actions can be performed.    </p>
+            
+                        </div>        </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-2-3" style="">
+                        
+                            <img src="{% static 'spotwarectrader/user/pages/02.ctrader/02.back-office/02.ctrader-risk-management/_c-features/b-book-execution-settings.png' %}"
+                                    class=""
+            alt="">
+            
+                                </div>
+    </div>            </div>
+</div>
+            <div class="bg-orange text-white">
+    <div class="container">
+        <div class="pure-g py-3">
+            <div class="pure-u-1-1 pure-u-md-2-3 d-flex">
+                <div class="my-auto ml-auto mr-3">
+                                            <h6 class="text-white text-right my-0">Real-time risk reporting enables you to view all exposures, open positions<br> and pending orders from a single, unified broker management platform.</h6>
+                                                                            </div>
+            </div>
+
+            <div class="pure-u-1-1 d-block d-md-none d-lg-none">&nbsp;</div>
+
+            <div class="pure-u-1-1 pure-u-md-1-3 d-flex">
+                <div class="my-auto ml-3">
+                    <a href="{% url 'contact_page' %}" class="btn btn-green font-weight-bold btn-lg btn-round px-5" target="_top">Become a cTrader Broker</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+<div id=""
+     class="bg-white py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div class="pure-g">
+        <div class="pure-u-1-2">
+        <div class="orange-title-left mb-5">
+            <h2>Price Filters</h2>
+        </div>
+    </div>
+</div>                    <div id="" class="text-center" data-animation=""><p class="font-weight-bold" id="" style="">
+        A combination of price filters exists to reduce order rejections, protect traders from false pending order triggers,<br> as well as to prevent off-market quotes and arbitrage situations on B-Book.    </p>
+</div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3" style="">
+                        
+                            <div class="card h-100 mx-3  card-dotted border-0 shadow text-center" style="">
+                <div class="card-body ">
+                            <h5 class="" id="" style="">
+        Negative Spread Filter    </h5>
+                            <p class="" id="" style="">
+        Filter out quotes that are out of sync with the rest of the market from your liquidity feed. Quotes that fall outside of the specified tolerance will be dropped.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3" style="">
+                        
+                            <div class="card h-100 mx-3  card-dotted border-0 shadow text-center" style="">
+                <div class="card-body ">
+                            <h5 class="" id="" style="">
+        Stale Quote Filter    </h5>
+                            <p class="" id="" style="">
+        Apply a timeout range, which will filter out old quotes, and prevent traders from trading on prices that are no longer valid.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3" style="">
+                        
+                            <div class="card h-100 mx-3  card-dotted border-0 shadow text-center" style="">
+                <div class="card-body ">
+                            <h5 class="" id="" style="">
+        Quote Throttling    </h5>
+                            <p class="" id="" style="">
+        Too many quotes can affect platform performance due to bandwidth congestion and application load. Prevent LPs from spamming your clients with quotes by throttling, using a predefined interval.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+    </div>            </div>
+</div>
+            
+<div id=""
+     class="bg-white py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div class="pure-g">
+            <div class="pure-u-1-2">
+            &nbsp;
+        </div>
+        <div class="pure-u-1-2">
+        <div class="orange-title-right mb-5">
+            <h2>Margin Calculation Types</h2>
+        </div>
+    </div>
+</div>                    <div id="" class="text-center" data-animation=""><p class="font-weight-bold" id="" style="">
+        There are three different margin calculation types, to calculate the required margin for traders’ long <br>  and short positions in the most convenient manner, for each symbol.    </p>
+</div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3" style="">
+                        
+                            <div class="card h-100 mx-3  card-dotted border-0 shadow text-center" style="">
+                <div class="card-body ">
+                            <h5 class="" id="" style="">
+        MAX    </h5>
+                            <p class="" id="" style="">
+        This calculation type will use margin according to the greatest value of required margin of the long and short positions for each symbol.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3" style="">
+                        
+                            <div class="card h-100 mx-3  card-dotted border-0 shadow text-center" style="">
+                <div class="card-body ">
+                            <h5 class="" id="" style="">
+        NET    </h5>
+                            <p class="" id="" style="">
+        This calculation type will net off the required margin of the long and short positions for each symbol.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3" style="">
+                        
+                            <div class="card h-100 mx-3  card-dotted border-0 shadow text-center" style="">
+                <div class="card-body ">
+                            <h5 class="" id="" style="">
+        SUM    </h5>
+                            <p class="" id="" style="">
+        This calculation type adds together the margin requirements of long and short positions for each symbol.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+    </div>            </div>
+</div>
+            
+<div id=""
+     class="bg-white py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-2" style="">
+                        
+                            <img src="{% static 'spotwarectrader/user/pages/02.ctrader/02.back-office/02.ctrader-risk-management/_g-features/custome-trading-settings.png' %}"
+                                    class=""
+            alt="">
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-2 d-flex" style="">
+            <div class="align-self-cente mb-auto mt-auto" style="
+                                                
+                ">            
+                            <h2 class="" id="" style="">
+        Custom Trading Sessions    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Trading sessions can be configured separately for each symbol. These settings can be modified to reflect your LP’s or data provider’s schedule, as well as your own risk and business management needs.    </p>
+                            <p class="font-weight-bold" id="" style="">
+        The settings are as simple, as adjusting the session start and end times for each day, and identifying a session break from a session close. Trading session information is delivered to users inside the cTrader platform.    </p>
+            
+                        </div>        </div>
+    </div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-2 d-flex" style="">
+            <div class="align-self-cente mb-auto mt-auto" style="
+                                                
+                ">            
+                            <h2 class="" id="" style="">
+        Trading Modes    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Different trading modes are available for each symbol. These include Full Access (which allows normal trading), Close Only, Disabled (with execution of pending orders), and Fully Disabled.    </p>
+                            <p class="font-weight-bold" id="" style="">
+        Modify your symbols’ trading modes instantly, based on your operational needs, which may require suspending trading, or phasing out specific symbols. It’s also possible to enable and disable short selling for any symbol you offer.    </p>
+            
+                        </div>        </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-2" style="">
+                        
+                            <img src="{% static 'spotwarectrader/user/pages/02.ctrader/02.back-office/02.ctrader-risk-management/_g-features/trading-modes.png' %}"
+                                    class=""
+            alt="">
+            
+                                </div>
+    </div>            </div>
+</div>
+                </section>
+        {% endblock %}

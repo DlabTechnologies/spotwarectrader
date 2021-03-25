@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#" lang="en">
+
+<!-- Mirrored from www.spotware.com/ctrader/trading/ctrader-open-api-trading by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Mar 2021 20:16:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <title>cTrader Open API | Build Your Own Applications | Spotware Systems Ltd</title>
+    <link rel="icon" type="image/png" href="../../user/themes/spotware/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Google Tag Manager: on -->
+    <script type="opt-in" data-type="application/javascript" data-name="analytic">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K75D2F7');</script>
+    <!-- End Google Tag Manager -->
+            <meta name="generator" content="Spotware" />
+    <meta name="description" content="Build your own applications using cTrader&#039;s Open API. It&#039;s a free and secure, publicly accessible API for anyone." />
+    <meta name="keywords" content="open api trading,what is an open api,open api,create trading applications,black box algo,copy trading system,trading robot" />
+    <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" property="twitter:title" content="cTrader Open API | Build Your Own Applications" />
+    <meta name="twitter:description" property="twitter:description" content="Build your own applications using cTrader&#039;s Open API. It&#039;s a free and secure, publicly accessible API for anyone." />
+    <meta name="twitter:image" property="twitter:image" content="https://www.spotware.com/user/pages/02.ctrader/01.trading/05.ctrader-open-api-trading/_a-what_is_open_api/pimgpsh_fullsize_distr.png" />
+    <meta name="twitter:site" property="twitter:site" content="@cTrader" />
+    <meta property="og:title" content="cTrader Open API | Build Your Own Applications" />
+    <meta property="og:description" content="Build your own applications using cTrader&#039;s Open API. It&#039;s a free and secure, publicly accessible API for anyone." />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_EN" />
+    <meta property="og:url" content="https://www.spotware.com/ctrader/trading/ctrader-open-api-trading" />
+    <meta property="og:image" content="https://www.spotware.com/user/pages/02.ctrader/01.trading/05.ctrader-open-api-trading/_a-what_is_open_api/pimgpsh_fullsize_distr.png" />
+    <script defer type="text/javascript" src="../../user/themes/spotware/cookies/config.min.js"></script>
+<script defer type="text/javascript" src="../../user/themes/spotware/cookies/consent.js" data-config="consentConfig" data-stylePrefix="klaro"></script>    
+                                                                        
+
+                                                                                        
+
+            <link href="../../assets/af8a01011fda50c04e3816017ce57390ab85.css?g-8558e39d" type="text/css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com/">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    
+</head>
+
+<body id="top" class="">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe data-name="analytic" data-src="https://www.googletagmanager.com/ns.html?id=GTM-K75D2F7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div id="wrapper">
+                    
+
+<header id="mobile-site-header" class="mobile-header">
+    <div id="mobile-site-logo">
+        <a href="../../index.html">
+            <img class="" src="../../user/themes/spotware/images/logo-10years-white.png" alt="Spotware 10 Years">
+        </a>
+    </div>
+
+    <div id="mobile-header-sidebar" class="clearfix">
+        <div id="text-30" class="widget widget_text">
+            <div class="textwidget"></div>
+        </div>
+    </div>
+    <a href="#mobile-site-navigation" class="toggle-mobile-menu"><i class="fa fa-bars"></i></a>
+</header>
+
+<header id="site-header" class="header-style-default">
+    <div id="header-wrapper" class="">
+        <div id="header-container" class="header-container container clearfix">
+
+            <div id="" class="site-navigation menu-float-right">
+                <div class="site-logo">
+                    <a href="../../index.html">
+                    <img class="" src="../../user/themes/spotware/images/svg/logo-10years.svg" alt="Spotware 10 Years" width="300px">
+                    </a>
+                </div>
+
+                <div class="site-links menu-float-right secondary-navigation-container">
+                    <nav id="secondary-navigation" class="menu-container-2 menu-float-right">
+                        <ul id="menu-secondary-menu" class="menu">
+                            <li class="menu-startup menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" rel="noopener noreferrer" href="https://startup.spotware.com/">Start Brokerage</a></li>
+                            <li class="menu-ctrader menu-item menu-item-type-custom menu-item-object-custom"><a href="../../beta.html">Try cTrader</a></li>
+                            <li class="menu-community menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" rel="noopener noreferrer" href="https://ctrader.com/">cTrader Community</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div id="" class="site-navigation menu-float-right">
+                <div class="site-links menu-float-right primary-navigation-container">
+                    <nav id="primary-navigation" class="menu-container">
+                        <ul id="menu-main-menu" class="menu">
+                                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../crypto-exchange.html" class="">cXchange</a>
+                </li>
+                                                            <li class="megamenu columns-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children "><a class=" text-green">cTrader Suite</a>
+                    <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Trading platforms and features</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-trading-platform-overview.html" class="">cTrader Overview</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-trading-platform.html" class="">cTrader Trading</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-charting.html" class="">cTrader Charting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-copy.html" class="">cTrader Copy</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-open-api-trading.html" class=" text-green">cTrader Open API</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-automated-trading-platform.html" class="">cTrader Automate</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-fix-api-trading.html" class="">cTrader FIX API</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-web-trading-platform.html" class="">cTrader Web</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-mobile-trading-platform.html" class="">cTrader Mobile</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Back-office features and add-ons</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/trading-account-management.html" class="">cTrader Account Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/ctrader-risk-management.html" class="">cTrader Risk Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/ctrader-symbol-management.html" class="">cTrader Symbol Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/ctrader-reporting.html" class="">cTrader Reporting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/white-labels.html" class="">cTrader White Labels</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/ctrader-partner-programs.html" class="">cTrader Partner Programs</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/fifo-netting-trading-account.html" class="">cTrader FIFO Netting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/ctrader-spread-betting.html" class="">cTrader Spread Betting</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Server-side components and services</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../server/server.html" class="">cTrader Server</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../server/proxy-cloud.html" class="">cTrader Proxy Cloud</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../server/ctrader-extensibility.html" class="">cTrader Extensibility</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../server/service-assurance.html" class="">cTrader Service Assurance</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../server/reporting-api.html" class="">Reporting API</a></li>
+                                                                                                            </ul>
+                            </li>
+                                            </ul>
+                </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../custom-development.html" class="">Development</a>
+                </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../integrations.html" class="">Integrations</a>
+                </li>
+                                                            <li class="megamenu columns-1 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children "><a class="">About Us</a>
+                    <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">About</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/about/spotware.html" class="">About Spotware</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/about/testimonials.html" class="">Testimonials</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/about/leadership-team.html" class="">Leadership Team</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/about/awards.html" class="">cTrader Awards</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/about/spotware-news.html" class="">Spotware News</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Careers</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/careers/why-spotware.html" class="">Why Spotware</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/careers/vacancies.html" class="">Vacancies</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><p class="ml-3 mb-3 font-weight-bold">Contacts</p>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../contact-us.html" class="">Contact Us</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../contact-us%23subscribe.html" class="">Subscribe to Product Updates</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../contact-us%23get-demo.html" class="">Request a Demo</a></li>
+                                                                                                            </ul>
+                            </li>
+                                            </ul>
+                </li>
+                        
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="site-links menu-float-right">
+                </div>
+            </div><!-- #site-navigation -->
+
+            <div class="header-search">
+                <div class="searchform-wrapper">
+                    <form method="get" class="searchform" action="https://www.spotware.com/">
+                        <input onfocus="this.value=''" onblur="this.value='Type and hit enter to search ...'" type="text" value="Search..." name="s" class="search-input">
+                    </form>
+                </div>
+                <div class="toggle-header-search">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+        </div><!-- #header-container -->
+    </div><!-- #header-wrapper -->
+</header>
+
+            <div class="right-sticky-block">
+    <a href="../../beta.html" class="">
+        <img alt="Get Demo" data-src="/user/themes/spotware/images/sticky-buttons/get-demo.png" class=" lazyloaded" src="../../user/themes/spotware/images/sticky-buttons/get-demo.png" loading="lazy"><noscript><img src="../../user/themes/spotware/images/sticky-buttons/get-demo.png" alt="Get Demo"></noscript>
+        <span>Get Demo</span>
+    </a>
+    <a href="../../featured-ctrader-brokers.html" class="">
+        <img alt="Get Demo" data-src="/user/themes/spotware/images/sticky-buttons/brokers.png" class=" lazyloaded" src="../../user/themes/spotware/images/sticky-buttons/brokers.png" loading="lazy"><noscript><img src="../../user/themes/spotware/images/sticky-buttons/brokers.png" alt="Get Demo"></noscript>
+        <span>Brokers</span>
+    </a>
+    <a href="../../contact-us.html#subscribe"> <!-- class="fancybox"-->
+        <img alt="Subscribe" data-src="/user/themes/spotware/images/sticky-buttons/subscribe.png" class=" lazyloaded" src="../../user/themes/spotware/images/sticky-buttons/subscribe.png" loading="lazy"><noscript><img src="../../user/themes/spotware/images/sticky-buttons/subscribe.png" alt="Subscribe"></noscript>
+        <span>Subscribe</span>
+    </a>
+
+    <a href="../../contact-us.html" class="">
+        <img alt="Contact" data-src="/user/themes/spotware/images/sticky-buttons/contact.png" class=" lazyloaded" src="../../user/themes/spotware/images/sticky-buttons/contact.png" loading="lazy"><noscript><img src="../../user/themes/spotware/images/sticky-buttons/contact.png" alt="Contact"></noscript>
+        <span>Contact</span>
+    </a>
+
+</div>        
+        
+                <section id="body" class=" clearfix">
+                        <div class="page-header bg-bottom bg-norepeat bg-waves">
+	
+	<div class="container">
+				<h1>cTrader Open API</h1>
+							<p class="font-weight-bold">Build your own application, using cTrader’s Open API. It’s a free, secure and publicly accessible API for anyone. A trader, developer or technology provider can use it to integrate with cTrader’s proprietary technology.</p>
+			</div>
+</div>
+            
+<div id=""
+     class="bg-white py-5 bg-right-center bg-norepeat"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g row-class" style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-5-12 d-flex" style="">
+            <div class="align-self-cente mb-auto mt-auto" style="
+                                                
+                ">            
+                            <h2 class="" id="" style="">
+        What is an Open API?    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        An Application Programming Interface, abbreviated to API, is a purposefully built interface for an application to be created on top of an existing technology framework. In this case – it’s cTrader. Unlike Spotware’s private APIs, which are restricted and used only by brokers for their internal business processes, the Open API is free and publicly available to anyone, who wants to use it to build their own application for a personal initiative or business venture. cTrader Open API is ideal for anyone interested in developing a proprietary trading system, or a trading-related service.    </p>
+                            <h2 class="" id="" style="">
+        Why is an Open API Important?    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        For brokers, an Open API is important, because it enables one to provide a service to third parties, who are interested in building their own, customized trading applications. Commercial users may promote their development in conjunction with a preferred broker, or act as an Introducing Broker, and leverage their application to recruit traders, investors or subscribers. Without an Open API, this growing segment of partners and investors would be unattainable.    </p>
+            
+                        </div>        </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-7-12" style="">
+                        
+                            <img src="../../user/pages/02.ctrader/01.trading/05.ctrader-open-api-trading/_a-what_is_open_api/pimgpsh_fullsize_distr.png"
+                                    class=""
+            alt="">
+            
+                                </div>
+    </div>            </div>
+</div>
+            
+<div id=""
+     class="bg-light py-5 bg-right-center bg-norepeat"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div id="" class="text-center" data-animation=""><h2 class="" id="" style="">
+        Resources    </h2>
+</div>                    <div id="" class="text-center" data-animation=""><p class="font-weight-bold" id="" style="">
+        cTrader Open API comes with considerable resources to aid in<br> development and troubleshooting throughout the entire project lifecycle.    </p>
+</div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3" style="">
+                        
+                            <div class="card text-center mx-3 h100 shadow" style="">
+                <div class="card-body ">
+                            <img src="../../user/pages/02.ctrader/01.trading/05.ctrader-open-api-trading/_b-resources/documentation.png"
+                                    class=""
+            alt="">
+                            <h5 class="" id="" style="">
+        Documentation    </h5>
+                            <p class="" id="" style="">
+        Detailed and well-structured developer library and documentation, available in a variety of languages.    </p>
+                            <p class="" id="" style="">
+    <a href="https://connect.spotware.com/docs/open_api_2" target="_blank" rel="" class="" style="">    Learn More    </a></p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3" style="">
+                        
+                            <div class="card text-center mx-3  h100 shadow" style="">
+                <div class="card-body ">
+                            <img src="../../user/pages/02.ctrader/01.trading/05.ctrader-open-api-trading/_b-resources/sandbox.png"
+                                    class=""
+            alt="">
+                            <h5 class="" id="" style="">
+        Sandbox    </h5>
+                            <p class="" id="" style="">
+        Access to a sandbox environment for testing the tools you developed, prior to going live.    </p>
+                            <p class="" id="" style="">
+    <a href="https://connect.spotware.com/docs/open_api_2/Spotware_Sandbox" target="_blank" rel="" class="" style="">    Learn More    </a></p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-2 pure-u-lg-1-3" style="">
+                        
+                            <div class="card text-center mx-3  h100 shadow" style="">
+                <div class="card-body ">
+                            <img src="../../user/pages/02.ctrader/01.trading/05.ctrader-open-api-trading/_b-resources/examples.png"
+                                    class=""
+            alt="">
+                            <h5 class="" id="" style="">
+        Examples    </h5>
+                            <p class="" id="" style="">
+        commonly used languages: from C# to Java, Java Script and Xamarin, for further ease.    </p>
+                            <p class="" id="" style="">
+    <a href="https://connect.spotware.com/docs/open_api_2/example_projects" target="_blank" rel="" class="" style="">    Learn More    </a></p>
+                    </div>
+        </div>
+            
+                                </div>
+    </div>            </div>
+</div>
+            <div class="bg-orange text-white">
+    <div class="container">
+        <div class="pure-g py-3">
+            <div class="pure-u-1-1 pure-u-md-1-2 d-flex">
+                <div class="my-auto ml-auto mr-3">
+                                            <h6 class="text-white text-right my-0">Offer your traders a unique Open API<br> trading solution out-of-the box</h6>
+                                                                            </div>
+            </div>
+
+            <div class="pure-u-1-1 d-block d-md-none d-lg-none">&nbsp;</div>
+
+            <div class="pure-u-1-1 pure-u-md-1-2 d-flex">
+                <div class="my-auto ml-3">
+                    <a href="../../contact-us.html" class="btn btn-green font-weight-bold btn-lg btn-round px-5" target="_top">Become a cTrader Broker</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+<div id=""
+     class="bg-light py-5"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-3-4 pure-u-lg-3-4" style="">
+                        
+                            <h2 class="" id="" style="">
+        Support    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Spotware will either provide direct support to users of the Open API,<br> or offer in-depth training to broker support teams, in order to help clients avoid the trouble of supporting a technical and complex product by themselves.    </p>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-4 pure-u-lg-1-4" style="">
+                        
+                            <img src="../../user/pages/02.ctrader/01.trading/05.ctrader-open-api-trading/_d-support/support.png"
+                                    class=""
+            alt="">
+            
+                                </div>
+    </div>            </div>
+</div>
+            
+<div id=""
+     class="bg-white py-5 text-center"
+     style="                    ">
+
+    <div class="container px-2 px-xl-0">
+                    <h2 class="" id="" style="">
+        What can cTrader Open API be used for?    </h2>
+                    <p class="font-weight-bold" id="" style="">
+        Anyone with a creative or breakthrough idea can help deliver value and profitability to traders <br> by bringing it to life with cTrader Open API.    </p>
+                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-2 mb-4" style="">
+                        
+                            <div class="card text-center mx-4 h-100 shadow" style="">
+                <div class="card-body ">
+                            <h2 class="" id="" style="">
+        Display Trading Results    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        One of the most common-use cases is using account information to broadcast trading strategies by populating an online profile, such as Myfxbook.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-2 mb-4" style="">
+                        
+                            <div class="card text-center mx-4 h-100 shadow" style="">
+                <div class="card-body ">
+                            <h2 class="" id="" style="">
+        Create Trading Applications    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Create your own front-end GUI to trade from, and connect it to any cTrader account to build your own platform, leveraging the cTrader back-end.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+    </div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-2 mb-4" style="">
+                        
+                            <div class="card text-center mx-4 h-100 shadow" style="">
+                <div class="card-body ">
+                            <h2 class="" id="" style="">
+        Create a Trading Robot    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Connect your proprietary black box algo or trading system to any cTrader account, to execute trades via your preferred cTrader broker.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-2 mb-4" style="">
+                        
+                            <div class="card text-center mx-4 h-100 shadow" style="">
+                <div class="card-body ">
+                            <h2 class="" id="" style="">
+        Create a Notification System    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        You can integrate cTrader with your preferred messaging platform, such as Telegram or Skype, to receive alerts or even send trade requests.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+    </div>                    <div  class="pure-g " style="
+        ">
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-2 mb-4" style="">
+                        
+                            <div class="card text-center mx-4 h-100 shadow" style="">
+                <div class="card-body ">
+                            <h2 class="" id="" style="">
+        Create Charts and Widgets    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Get a real-time price feed to create your own charts and widgets, and embed them into your website, blog or forum.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+            <div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-2 mb-4" style="">
+                        
+                            <div class="card text-center mx-4 h-100 shadow" style="">
+                <div class="card-body ">
+                            <h2 class="" id="" style="">
+        Create a Copy Trading System    </h2>
+                            <p class="font-weight-bold" id="" style="">
+        Open API contains all the necessary options to build a copy trading system that will duplicate orders from one cTrader account to other ones.    </p>
+                    </div>
+        </div>
+            
+                                </div>
+    </div>            </div>
+</div>
+                </section>
+        
+                    <section id="follow_us">
+	<div class="container px-sm-2  px-md-2  px-lg-0">
+		<div class="follow text-sm-left text-lg-center">
+		<div class="pure-g">
+			<div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3 mb-lg-0">
+				<span class="mr-3 font-weight-bold">Follow Spotware</span>
+				<a href="https://www.linkedin.com/company/2576819/" target="_blank" class="mr-3 text-muted">
+
+					<i class="fab fa-linkedin-in" aria-hidden="true"></i>
+				</a>
+				<a href="https://medium.com/@spotware" target="_blank" class=" text-muted">
+					<i class="fab fa-medium-m" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3 mb-lg-0">
+				<span class="mr-3 font-weight-bold">Follow cTrader</span>
+				<a href="https://t.me/cTrader_Official" target="_blank" class="mr-3 text-muted">
+					<i class="fab fa-telegram-plane" aria-hidden="true"></i>
+				</a>
+				<a href="https://www.facebook.com/spotware/" target="_blank" class="mr-3 text-muted">
+					<i class="fab fa-facebook-f" aria-hidden="true"></i>
+				</a>
+				<a href="https://twitter.com/cTrader" target="_blank" class="mr-3 text-muted">
+					<i class="fab fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="https://youtube.com/spotware" target="_blank" class=" text-muted">
+					<i class="fab fa-youtube" aria-hidden="true"></i>
+				</a>
+			</div>
+			<div class="pure-u-1-1 pure-u-md-1-1 pure-u-lg-1-3 mb-3 mb-lg-0">
+				<span class="mr-3 font-weight-bold">Follow cXchange</span>
+				<a href="https://www.facebook.com/spotwarecxchange" target="_blank" class="mr-3 text-muted">
+					<i class="fab fa-facebook-f" aria-hidden="true"></i>
+				</a>
+				<a href="https://twitter.com/c_X_change" target="_blank" class="mr-3 text-muted">
+					<i class="fab fa-twitter" aria-hidden="true"></i>
+				</a>
+				<a href="https://www.youtube.com/channel/UC0mG7T6-UIqj6EkLTW0gaBg" target="_blank" class=" text-muted">
+					<i class="fab fa-youtube" aria-hidden="true"></i>
+				</a>
+			</div>
+		</div>
+		</div>
+	</div>
+</section>
+            <footer class="site-footer clearfix  font-weight-bold" id="site-footer">
+    <div class="container px-2  px-md-2  px-lg-0 py-3 py-md-4 py-lg-5">
+        <div class="pure-g">
+            <div class="pure-u-1-1 pure-u-lg-1-4">
+                <ul class=" mb-3 mb-lg-0">
+                                            <li><a href="../../beta.html" rel="nofollow">cTrader Demo</a></li>
+                                            <li><a href="https://ctrader.com/" rel="nofollow">cTrader Community Forum</a></li>
+                                            <li><a href="https://connect.spotware.com/" rel="nofollow">Spotware Open API</a></li>
+                                            <li><a href="https://help.ctrader.com/" rel="nofollow">User Guide</a></li>
+                                            <li><a href="../../featured-ctrader-brokers.html" rel="nofollow">Featured Brokers</a></li>
+                                    </ul>
+            </div>
+            <div class="pure-u-1-1 pure-u-lg-1-4">
+                <ul class=" mb-3 mb-lg-0">
+                                            <li><a href="../../company/careers/vacancies.html">Vacancies</a></li>
+                                            <li><a href="../../contact-us.html">Contact Us</a></li>
+                                            <li><a href="../../contact-us/index.html#subscribe">Subscribe to Updates</a></li>
+                                    </ul>
+            </div>
+            <div class="pure-u-1-1 pure-u-lg-1-4">
+                <ul class=" mb-3 mb-lg-0">
+                                            <li><a href="../../eula.html" rel="nofollow">EULA</a></li>
+                                            <li><a href="../../legal-notices.html" rel="nofollow">Legal Notices</a></li>
+                                            <li><a href="../../privacy-policy.html" rel="nofollow">Privacy Policy</a></li>
+                                            <li><a href="../../datasheets-resources.html" rel="nofollow">Whitepapers</a></li>
+                                    </ul>
+            </div>
+        </div>
+        <div class="copyright-separator"></div>
+        <div class="pure-g mb-5">
+            <div class="pure-u-1-1 pure-u-sm-1-1 pure-u-md-2-3 pure-u-lg-2-3 mb-3 mb-md-0">
+                <div class="copyright font-weight-bold">Copyright © 2020 Spotware Systems Ltd. cTrader®, cAlgo®, cBroker®, cMirror®, cXchange®. All rights reserved.</div>
+                <div class="copyright font-weight-bold">Spotware Systems Ltd. is a software development company that provides software solutions (products) and development services to enterprises and corporate clients. The information on this website is not directed towards retail investors nor solicitation of retail investors.</div>
+            </div>
+
+            <div class="pure-u-1-1 pure-u-sm-1-1 pure-u-md-1-3 pure-u-lg-1-3 text-center text-md-right">
+                <div class="footer-logo mt-n2">
+                    <a href="../../index.html"><img src="../../user/themes/spotware/images/footer_logo.png" alt="Spotware Systems Ltd" width="211px" \></a>
+                </div>
+                <div class="clearfix"></div>
+                <div class="footer-logo">
+                    <a href="https://ctrader.com/" target="_blank"><img src="../../user/themes/spotware/images/ctrader_logo_traders_first.png" alt="cTrader" \></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>                <div id="mobile-menu-bg"></div>
+    </div>
+    <!-- #wrapper -->
+            
+<nav id="mobile-site-navigation" class="">
+    <span class="mobile-menu-header"><span class="mobile-menu-heading">Menu</span><i class="fa fa-times toggle-mobile-menu"></i></span>
+
+    <ul id="mobile-main-menu" class="menu">
+                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../crypto-exchange.html">cXchange</a>
+                </li>
+                                                            <li class="megamenu columns-3 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  active"><a>cTrader Suite</a><span></span>
+                    <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Trading platforms and features</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-trading-platform-overview.html">cTrader Overview</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-trading-platform.html">cTrader Trading</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-charting.html">cTrader Charting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-copy.html">cTrader Copy</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-open-api-trading.html">cTrader Open API</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-automated-trading-platform.html">cTrader Automate</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-fix-api-trading.html">cTrader FIX API</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-web-trading-platform.html">cTrader Web</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="ctrader-mobile-trading-platform.html">cTrader Mobile</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Back-office features and add-ons</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/trading-account-management.html">cTrader Account Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/ctrader-risk-management.html">cTrader Risk Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/ctrader-symbol-management.html">cTrader Symbol Management</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/ctrader-reporting.html">cTrader Reporting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/white-labels.html">cTrader White Labels</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/ctrader-partner-programs.html">cTrader Partner Programs</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/fifo-netting-trading-account.html">cTrader FIFO Netting</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../back-office/ctrader-spread-betting.html">cTrader Spread Betting</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Server-side components and services</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../server/server.html">cTrader Server</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../server/proxy-cloud.html">cTrader Proxy Cloud</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../server/ctrader-extensibility.html">cTrader Extensibility</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../server/service-assurance.html">cTrader Service Assurance</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../server/reporting-api.html">Reporting API</a></li>
+                                                                                                            </ul>
+                            </li>
+                                            </ul>
+                </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../custom-development.html">Development</a>
+                </li>
+                                                            <li class="menu-item menu-item-type-post_type menu-item-object-page ">
+                    <a href="../../integrations.html">Integrations</a>
+                </li>
+                                                            <li class="megamenu columns-3 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  "><a>About Us</a><span></span>
+                    <ul class="sub-menu">
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">About</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/about/spotware.html">About Spotware</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/about/testimonials.html">Testimonials</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/about/leadership-team.html">Leadership Team</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/about/awards.html">cTrader Awards</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/about/spotware-news.html">Spotware News</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Careers</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/careers/why-spotware.html">Why Spotware</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../company/careers/vacancies.html">Vacancies</a></li>
+                                                                                                            </ul>
+                            </li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Contacts</a><span></span>
+                                <ul class="sub-menu">
+                                                                                                                        <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../contact-us.html">Contact Us</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../contact-us%23subscribe.html">Subscribe to Product Updates</a></li>
+                                                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page "><a href="../../contact-us%23get-demo.html">Request a Demo</a></li>
+                                                                                                            </ul>
+                            </li>
+                                            </ul>
+                </li>
+                        
+    </ul>
+    <hr>
+    <ul id="mobile-secondary-menu" class="menu site-links">
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-startup"><a target="_blank" rel="noopener noreferrer" href="https://startup.spotware.com/">Start Brokerage</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-ctrader"><a href="../../beta.html">Try cTrader</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-community"><a target="_blank" rel="noopener noreferrer" href="https://ctrader.com/">cTrader Community</a></li>
+    </ul>
+
+</nav>
+
+    <style>
+    .scrollToTop {
+        width: 38px;
+        height: 38px;
+        line-height: 36px;
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        position: fixed;
+        z-index: 9999;
+        bottom: -45px;
+        left: 15px;
+        border-radius: 38px;
+        overflow: hidden;
+        transition: bottom .4s cubic-bezier(.55,0,.1,1);
+        background-color: #009247;
+    }
+    .scrollToTop.scrollactive {
+        bottom: 15px;
+    }
+</style>
+<a href="#top" class="scrollToTop"><i class="fa fa-angle-up"></i></a>
+    <script src="../../assets/1d1231a85240d83e13f130e598097db9ab85.js?g-8558e39d"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.spotware.com#organization","name":"Spotware LTD","url":"https://www.spotware.com","sameAs":["https://www.facebook.com/spotware","https://www.linkedin.com/company/2576819","https://youtube.com/spotware"]},{"@type":"WebSite","@id":"https://www.spotware.com#website","url":"https://www.spotware.com","name":"Spotware Systems Ltd","publisher":{"@id":"https://www.spotware.com#organization"}},{"@type":"WebPage","@id":"https://www.spotware.com/ctrader/trading/ctrader-open-api-trading#webpage","url":"https://www.spotware.com/ctrader/trading/ctrader-open-api-trading","inLanguage":"en","name":"cTrader Open API | Build Your Own Applications | Spotware Systems Ltd","isPartOf":{"@id":"https://www.spotware.com#website"},"datePublished":"2021-03-12T20:21:09+00:00","dateModified":"2021-03-12T20:21:09+00:00"}]}
+</script>
+
+    
+    
+            <script>
+        // singlePageNav initialization & configuration
+        $('#navbar').singlePageNav({
+            offset: $('#header').outerHeight(),
+            filter: ':not(.external)',
+            updateHash: true,
+            currentClass: 'active'
+        });
+        </script>
+    </body>
+
+<!-- Mirrored from www.spotware.com/ctrader/trading/ctrader-open-api-trading by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Mar 2021 20:16:29 GMT -->
+</html>
