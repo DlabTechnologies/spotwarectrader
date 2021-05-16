@@ -781,6 +781,10 @@ def identity_verification_proceed(request):
         return redirect('home_page')
     
     
+    if not request.user.email_not_verified:
+        if request.user.id_card_verified:
+            return redirect('user_dashboard')
+    
     
     
     

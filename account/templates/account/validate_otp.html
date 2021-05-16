@@ -87,6 +87,17 @@
 				</div>
 				<div class="p-5 wd-md-50p">
 					<div class="main-signin-header">
+							<!--messages-->
+<div class="messages" style="text-align: center;">
+	{% if messages %}
+	{% for message in messages %}
+	<p class="alert alert-{{ message.tags }}" style="color:red"><b>
+	  {{message}}</b>
+	</p>
+	{% endfor %}
+	{% endif %}
+	</div>
+  <!--end messages-->
 						<h4>OTP VERIFICATION</h4>
 						<h6>Enter the one time password(OTP) sent to your registered email address to complete your account registration.
             </h6>
@@ -100,6 +111,8 @@
               <div class="input-group-append">
                 <span class="input-group-text "><i class="icon-check"></i></span>
             </div>
+
+		
            </div>
             
                     
