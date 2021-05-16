@@ -108,6 +108,9 @@ WSGI_APPLICATION = 'spotwarectrader.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+db_from_env = dj_database_url.config()
+DATABASES = ['default'].update(db_from_env)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
