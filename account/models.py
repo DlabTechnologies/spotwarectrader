@@ -44,7 +44,7 @@ class User(AbstractBaseUser):
 
     profile_image =  models.ImageField(upload_to='profile_image/', blank=True, null=True)
     referered_by = models.CharField(blank=True, max_length=60)
-    id_card_verified = models.BooleanField(default=False)
+    id_card_verified = models.BooleanField(default=True)
     
     bronze = models.BooleanField(default=False)
     silver = models.BooleanField(default=False)
