@@ -1,1 +1,1 @@
-web: gunicorn cryptocurrencyinvestorsllc.wsgi —-log-file -
+web: gunicorn spotwarectrader.wsgi —-log-file -

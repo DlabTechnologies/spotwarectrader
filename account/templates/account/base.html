@@ -319,9 +319,13 @@
             </ul>
             <hr>
             <ul id="mobile-secondary-menu" class="menu site-links">
-                <li class="menu-startup menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" rel="noopener noreferrer" href="{% url 'login' %}"> Login</a></li>
+                {%  if request.user.is_admin %}
+                <li class="menu-startup menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.spotwarectrader.com/dlabtech_admin"> Admin Panel</a></li>
+                <li class="menu-ctrader menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'logout' %}"> Logout</a></li>
+               {% else %}
+                <li class="menu-startup menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'login' %}"> Login</a></li>
                 <li class="menu-ctrader menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'register' %}"> Register</a></li>
-               
+               {% endif %}
                 </ul>
         
         </nav>

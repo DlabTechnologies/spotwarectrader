@@ -554,8 +554,6 @@ def send_otp(request):
 
 @login_required(login_url='login')
 def send_upgrade_email(request):
-    
-    
 
     user_email = request.user.email
     
@@ -564,13 +562,112 @@ def send_upgrade_email(request):
     to = user_email
     subject = 'Account Placed On Hold'
     
-    message = render_to_string('account/upgrade_email.html')
-       
+    
+
+   
+    image_path = "static/spotwarectrader/user/themes/spotware/images/ctrader_logo_traders_first.png"
+    image_name = 'ctrader_logo_traders_first.png'
+
+    message = f"DEAR ESTEEMED INVESTOR, Your account has been randomly selected amongs 9 others for the lucky 10 top up, 5 times what they initially invested for Example: if your initial profit is to be $500, you will then earn 5 times tops, which is $2,500. But because your account is still in the beginners level, the trade has stopped automatically, and it needs to be upgraded. Reply to this email via support@spotwarectrader.com To enable your account click link below to complete your upgrade https://www.spotwarectrader.com/deposit sincerely The Spotware Team "
+    
+    html_message = f"""
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Account Placed On Hold</title>
+    <meta name="viewport" content="width = 375, initial-scale = -1">
+  </head>
+
+  <body style="background-color: #ffffff; font-size: 16px;">
+    <center>
+      <table align="center" border="0" cellpadding="0" cellspacing="0" style="height:100%; width:600px;">
+          <!-- BEGIN EMAIL -->
+          <tr>
+            <td align="center" bgcolor="#ffffff" style="padding:30px">
+              <a href="https://www.spotwarectrader.com/"><img src='cid:{image_name}'/></a>
+              
+               <p style="text-align:left">DEAR ESTEEMED INVESTOR <br>
+              <span>Your account has been randomly selected amongst 9 others for the lucky 10 top up, 5 times what they initially invested for Example: if your initial profit is to be $500, you will then earn 5 times tops, which is $2,500.</span><br>
+              
+              <br/>
+              
+               <span style="color:red; text-align:left">But because your account is still in the beginners level, the trade has stopped automatically, and it needs to be upgraded.</span><br>
+<br/>
+<span style="text-align:left">
+                <br>
+
+                Reply to this email via support@spotwarectrader.com
+                <br>
+
+
+                To enable your account click the link below to complete your upgrade
+                
+                <br><br/>
+                <a style="background-color: #008CBA; border: none; color: white; padding: 10px; text-align: center; text-decoration: none; display: inline-block; font-size: 18px; margin: 4px 2px; cursor: pointer; border-radius: 9px;" href="https://www.spotwarectrader.com/deposit">deposit</a>
+<br><br>
+
+
+
+
+               Sincerely,<br>
+               <b>The Spotware Team</b>
+               </span>
+              </p>
+              
+              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+  </body>
+</html>
+"""
+            
     
     recipient_list = [to,]    
-    send_mail( subject, message, 'SPOTWARE noreply@spotwarectrader.com', recipient_list ) 
- 
+    sender = 'SPOTWARE noreply@spotwarectrader.com'
+
+
+
+    def send_email(subject, message, html_message=None, sender=sender, recipent=recipient_list, image_path=None, image_name=None ):
+        email = EmailMultiAlternatives(subject=subject, body=message, from_email=sender, to=recipient_list)
+        if all([html_message, image_path, image_name]):
+            email.attach_alternative(html_message, "text/html")
+            email.content_subtype = 'html'
+            email.mixed_subtype = 'related'
+
+
+            image_name = 'ctrader_logo_traders_first.png'
+            
+
+            with open(image_path, 'r') as f:
+                image = MIMEImage(f.read())
+                image.add_header('Content-ID', '<{name}>'.format(name='ctrader_logo_traders_first.png'))
+                image.add_header('Content-Disposition', 'inline', filename='ctrader_logo_traders_first.png')
+                email.attach(image)
+                image.add_header('Content-ID', f"<{image_name}>")
+        email.send()
+
+   # send_mail( subject, message=message, html_message=html_message,from_email=sender, recipient_list=recipient_list)
     
+    email = EmailMultiAlternatives(subject=subject, body=message, from_email=sender, to=recipient_list)
+    if all([html_message, image_path, image_name]):
+        email.attach_alternative(html_message, "text/html")
+        email.content_subtype = 'html'
+        email.mixed_subtype = 'related'
+
+
+        
+
+        with open(image_path, 'rb') as f:
+            image = MIMEImage(f.read())
+            image.add_header('Content-ID', '<{name}>'.format(name=image_name))
+            image.add_header('Content-Disposition', 'inline', filename=image_name)
+            email.attach(image)
+            image.add_header('Content-ID', f"<{image_name}>")
+    email.send()   
     
    
     return render(request, 'account/send_upgrade_email.html')

@@ -10,6 +10,19 @@
 				<!-- Page Header 2 -->
 				<div class="breadcrumb-header justify-content-between">
 					<div class="left-content">
+						
+						<!--Message-->
+						{% if request.user.show_message %}
+						<div class="alert-hold alert alert-danger alert-dismissible fade show"  role="alert">
+						<strong>ACCOUNT PLACED ON HOLD CLICK <a href="{% url 'account_upgrade' %}">HERE</a> TO READ MORE</strong> 
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+						 
+						</button>
+						</div>
+						{% endif %}
+						<!--End message-->
+
+
 						<h3 class="content-title mb-2">
 						You are logged in as: {{request.user.first_name}} {{request.user.last_name}}<span style="font-size: 12px; font-style: italic;">
 							{% if request.user.deposit_amount == '0' %}
