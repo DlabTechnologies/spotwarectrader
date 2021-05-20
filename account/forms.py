@@ -6,7 +6,7 @@ from django.contrib.auth import authenticate
 from account.models import User
 from intl_tel_input.widgets import IntlTelInputWidget
 from account.models import UserWithdrawRequestBtc, UserWithdrawRequestBankTransfer,  UserDepositRequest, ContactForm, ContactFormRequest, User_ID_Card_Upload, NewsletterSignup
-from safe_filefield.forms import SafeFileField
+
 
 class UserCreationForm(RegForm):
     email = forms.EmailField(max_length=60, help_text='Required. Enter a valid email address')
@@ -154,7 +154,6 @@ class UserWithdrawRequestBanktransferForm(forms.ModelForm):
 
 
 class UserDepositRequestForm(forms.ModelForm):
-    image = SafeFileField(widget=forms.FileInput(), allowed_extensions=('png','jpg','jpeg','bmp'), check_content_type=True)
    
     class Meta:
         model = UserDepositRequest
@@ -171,10 +170,7 @@ class UserDepositRequestForm(forms.ModelForm):
 
 
 class UserIDCardUploadForm(forms.ModelForm):
-    id_front_image = SafeFileField(widget=forms.FileInput(), allowed_extensions=('png','jpg','jpeg','bmp'), check_content_type=True)
-    
-    id_back_image = SafeFileField(widget=forms.FileInput(), allowed_extensions=('png','jpg','jpeg','bmp'), check_content_type=True)
-    
+   
     class Meta:
         model = User_ID_Card_Upload
         fields = ('email','id_front_image','id_back_image')
@@ -202,7 +198,6 @@ class UserIDCardUploadForm(forms.ModelForm):
 
 
 class UserProfileEdithForm(forms.ModelForm):
-    profile_image = SafeFileField(widget=forms.FileInput(), allowed_extensions=('png','jpg','jpeg','bmp'), check_content_type=True)
     
     
     class Meta:

@@ -267,9 +267,29 @@
 														
 														
 														
+														
+<script type="text/javascript">
+    $("body").on("click", "#btnUpload", function () {
+        var allowedFiles = [".png", ".jpeg", ".bmp"];
+        var fileUpload = $("#fileUpload");
+        var lblError = $("#lblError");
+        var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(" + allowedFiles.join('|') + ")$");
+        if (!regex.test(fileUpload.val().toLowerCase())) {
+            lblError.html("Please upload files having extensions: <b>" + allowedFiles.join(', ') + "</b> only.");
+            return false;
+        }
+        lblError.html('');
+        return true;
+    });
+</script>
+
+
+
 												
-												{% render_field form.image  type="file" class="form-control " name="image" accept="image/*" required="required" placeholder="Upload a photo"  onchange="readURL(this)" %}
-									<span style="color: red; list-style:none;  ">{{form.image.errors}}</span>
+												{% render_field form.image id="fileUpload" type="file" class="form-control " name="image" accept="image/*" required="required" placeholder="Upload a photo"  onchange="readURL(this)" %}
+												<br />
+												<span id="lblError" style="color: red;"></span><br />
+												<span style="color: red; list-style:none;  ">{{form.image.errors}}</span>
 								
 												   
 												   
@@ -288,7 +308,7 @@ Current balance: ${{total}}<br>
 </div>     
 
 			
-<button type="submit" class="btn btn-xs btn-primary mr-2" name="order_withdrawal" >
+<button type="submit" id="btnUpload" class="btn btn-xs btn-primary mr-2" name="order_withdrawal" >
 	Make Deposit</button>
 	
 </form>

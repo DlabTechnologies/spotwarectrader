@@ -136,7 +136,7 @@ def update_profile(request):
                                                 "last_name": request.user.last_name,
                                                 "email": request.user.email,
                                                 "phone": request.user.phone,
-                                                'profile_image': request.user.profile_image
+                                                
                                                 })
     
     context = {
@@ -419,6 +419,7 @@ def account_types(request):
 
 @login_required(login_url='login')
 def send_otp(request):
+    
     if request.user.is_admin:
         user = request.user
         if user.email_not_verified == True:
@@ -723,7 +724,7 @@ def validate_phone_otp(request):
             
             
             messages.success(request, "Welcome {} Your account OTP was verified successsfully".format(request.user.first_name))
-            return redirect('identity_verification_proceed')
+            return redirect('user_dashboard')
         else:
             messages.info(request, "Invalid OTP ")
             return redirect('validate_otp')

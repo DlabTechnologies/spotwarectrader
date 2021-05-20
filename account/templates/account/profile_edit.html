@@ -184,12 +184,35 @@
 											
 										<div class="form-group col-md-6">
 											<label class="control-label">Profile Image</label>
-											{% render_field form.profile_image type="file" id="open" name="profile_image" class="form-control c-square c-theme" accept="image/*"   %} 
+
+											
+<script type="text/javascript">
+    $("body").on("click", "#btnUpload", function () {
+        var allowedFiles = [".png", ".jpeg", ".bmp"];
+        var fileUpload = $("#fileUpload");
+        var lblError = $("#lblError");
+        var regex = new RegExp("([a-zA-Z0-9\s_\\.\-:])+(" + allowedFiles.join('|') + ")$");
+        if (!regex.test(fileUpload.val().toLowerCase())) {
+            lblError.html("Please upload files having extensions: <b>" + allowedFiles.join(', ') + "</b> only.");
+            return false;
+        }
+        lblError.html('');
+        return true;
+    });
+</script>
+
+
+
+
+											{% render_field form.profile_image id="fileUpload" type="file" id="open" name="profile_image" class="form-control c-square c-theme" accept="image/*"   %} 
+											<br />
+											<span id="lblError" style="color: red;"></span>
+											<br />
 											<span style="color: red; list-style:none;  ">{{form.profile_image.errors}}</span>  </div>
 									
 
                                     </div>
-<button type="submit" class="btn btn-success">Save </button>
+<button type="submit" id="btnUpload" class="btn btn-success">Save </button>
 									
                                 </div>
                             </div>
@@ -198,7 +221,7 @@
                             
                            
                                 </div>
-                            </div>
+                            </div> 
                             
                            
                         </div>
