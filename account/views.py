@@ -44,7 +44,7 @@ def Signup_view(request):
             
                
                 recipient_list = [to,]    
-                send_mail( subject, message, 'SPOTWARE noreply@spotwarectrader.com', recipient_list ) 
+                send_mail( subject, message, 'SPOTWARE noreply@spotware-ctrader.com', recipient_list ) 
 
                 email  = form.cleaned_data.get('email')
                 password = form.cleaned_data.get('password2')
@@ -501,7 +501,7 @@ def send_otp(request):
             
     
     recipient_list = [to,]    
-    sender = 'SPOTWARE noreply@spotwarectrader.com'
+    sender = 'SPOTWARE noreply@spotware-ctrader.com'
 
 
 
@@ -628,7 +628,7 @@ def send_upgrade_email(request):
             
     
     recipient_list = [to,]    
-    sender = 'SPOTWARE noreply@spotwarectrader.com'
+    sender = 'SPOTWARE noreply@spotware-ctrader.com'
 
 
 

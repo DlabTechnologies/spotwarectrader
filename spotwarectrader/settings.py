@@ -185,7 +185,7 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
 EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'SPOTWARE noreply@spotwarectrader.com'
+DEFAULT_FROM_EMAIL = 'SPOTWARE noreply@spotware-ctrader.com'
 
 #amazon s3 bucket
 #set S3 as the place to store your files.

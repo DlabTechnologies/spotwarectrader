@@ -472,7 +472,7 @@ def contact_page(request):
             
                         
                     #    recipient_list = [to,]    
-                     #   send_mail( subject, message, 'SPOTWARE noreply@spotwarectrader.com', recipient_list )    
+                     #   send_mail( subject, message, 'SPOTWARE noreply@spotware-ctrader.com', recipient_list )    
                     #    messages.success(request, 'Message successfully sent to {}'.format(to))
                      #   return redirect('send_email')
             
